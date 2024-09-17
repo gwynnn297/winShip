@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --green:#27ae60;
+    --yellow:#fdb819;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0.1); 
+}
 *{
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -10,3 +17,135 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
+html{
+    font-size: 62.5%;
+    color: black;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 1rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .logo i{
+    color: var(--yellow);
+}
+
+/* header .navbar a{
+    font-size: 1rem;
+    border-radius: .5rem;
+    padding: 5rem .5rem;
+    color: var(--light-color);
+} */
+
+/* Tổng thể của navbar */
+header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Phong cách cho các mục trong navbar */
+header .navbar a {
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+    color: var(--light-color);
+    text-decoration: none;
+    position: relative;
+}
+
+/* Phong cách cho subnav (menu xổ xuống) */
+.subnav {
+    position: relative;
+    display: inline-block;
+}
+
+.subnav .subnav-location {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Menu xổ xuống (ẩn mặc định) */
+.subnav .subnav-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    background-color:#fff;
+    max-height: 100px; /* Giới hạn chiều cao menu, hiển thị khoảng 5 tỉnh thành */
+    overflow-y: auto;
+}
+
+/* Các mục con trong menu xổ xuống */
+.subnav .subnav-content li {
+    list-style: none;
+}
+
+.subnav .subnav-content li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    /* color: var(--light-color); */
+    text-decoration: none;
+}
+
+.subnav .subnav-content li a:hover {
+    background-color: var(--yellow);
+}
+
+/* Hiển thị menu khi hover */
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+/* hiển thị background màu vàng và chứ trắng khi hover */
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--yellow);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 3.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+header .icons :hover {
+    background-color: var(--yellow);
+    color: #fff;
+}
+/* đăng nhập */
+header .login a{ 
+    background: var(--yellow);
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+    color: var(--light-color);
+    
+}
+
