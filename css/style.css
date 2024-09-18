@@ -116,7 +116,7 @@ header .navbar a {
 }
 
 /* hiển thị background màu vàng và chứ trắng khi hover */
-header .navbar a.active,
+header .navbar a.hover-firt,
 header .navbar a:hover{
     color: #fff;
     background: var(--yellow);
@@ -141,11 +141,69 @@ header .icons :hover {
 }
 /* đăng nhập */
 header .login a{ 
-    background: var(--yellow);
+    background:#eee ;
     font-size: 1.5rem;
     border-radius: .5rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     color: var(--light-color);
     
 }
+header .login a:hover{
+    background-color: var(--yellow);
+    color: #fff;
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- media queries --> */
+@media(max-width:991px){
+    html{
+        font-size:55%;
+    }
+    header{
+        padding:1rem 2rem;
+    }
+}
+
+@media(max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0; right: 0;
+        background-color: #fff;
+        border-top: .1rem solid rgb(0, 0, 0, .2);
+        border-bottom: .1rem solid rgb(0, 0, 0, .2);
+        padding:1rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        transition: clip-path 0.5s ease;
+    } 
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important; /* Hiển thị toàn bộ khi active */
+    }
+    .header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+        
+    }
+    .header .navbar {
+        display: block;
+    }
+
+}
