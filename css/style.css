@@ -149,3 +149,90 @@ header .login a{
     
 }
 
+.card-group {
+    display: flex; /* Sử dụng Flexbox để bố trí các thẻ .card bên trong */
+    gap: 25px; /* Thêm khoảng cách 25px giữa các thẻ .card */
+    width: 88%; /* Đặt chiều rộng của nhóm thẻ */
+    justify-content: space-between;
+    color: #fff;
+    margin: 100px auto;
+}
+
+
+.card {
+    width: 225px; /* Đặt chiều rộng của thẻ card là 225px */
+    height: 400px; /* Đặt chiều cao của thẻ card là 400px */
+    border-radius: 18px; /* Bo tròn các góc của thẻ card với bán kính 18px */
+    overflow: hidden; /* Ẩn các phần nội dung nằm ngoài khu vực của thẻ .card */
+    position: relative; /* Đặt vị trí của thẻ card theo kiểu tương đối */
+    transition: 0.5s; /* Áp dụng hiệu ứng chuyển tiếp mượt mà trong 0.5 giây cho các thay đổi thuộc tính */
+    cursor: pointer; /* Hiển thị con trỏ chuột dưới dạng mũi tên khi di chuột qua thẻ .card */
+}
+
+
+.card img {
+    width: 100%; /* Đặt chiều rộng của hình ảnh để bao phủ toàn bộ khu vực của thẻ .card */
+    height: 100%; /* Đặt chiều cao của hình ảnh để bao phủ toàn bộ khu vực của thẻ .card */
+    object-fit: cover; /* Làm cho hình ảnh bao phủ toàn bộ thẻ mà không bị biến dạng */
+    pointer-events: none; /* Ngăn không cho hình ảnh phản ứng với các sự kiện chuột */
+    transition: 0.5s; /* Áp dụng hiệu ứng chuyển tiếp mượt mà trong 0.5 giây cho các thay đổi thuộc tính */
+}
+
+
+.card .layer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Tạo hiệu ứng gradient từ màu đen hoàn toàn ở dưới lên trong suốt ở trên */
+    position: absolute; /* Đặt vị trí của lớp này theo kiểu tuyệt đối, dựa trên thẻ .card */
+    bottom: 0; /* Đặt lớp này ở phía dưới cùng của thẻ .card */
+    width: 100%; /* Đặt chiều rộng của lớp này là 100% của thẻ .card */
+    height: 75%; /* Đặt chiều cao của lớp này là 75% của thẻ .card */
+    opacity: 0; /* Đặt độ mờ của lớp này thành 0 (hoàn toàn trong suốt) khi không có hiệu ứng hover */
+    transition: 0.3s; /* Áp dụng hiệu ứng chuyển tiếp mượt mà trong 0.3 giây cho các thay đổi thuộc tính */
+}
+
+
+.card .info {
+    position: absolute; /* Đặt vị trí của thông tin theo kiểu tuyệt đối, dựa trên thẻ .card */
+    bottom: -50%; /* Đặt thông tin nằm bên dưới thẻ card và ẩn đi */
+    padding: 15px; /* Thêm khoảng đệm 15px xung quanh nội dung của phần tử info */
+    transition: 0.5s bottom, 1.75s opacity; /* Áp dụng hiệu ứng chuyển tiếp mượt mà trong 0.5 giây cho thuộc tính bottom và 1.75 giây cho thuộc tính opacity */
+}
+
+
+.info p {
+    font-size: 14px; /* Đặt kích thước chữ là 14px */
+    margin: 3px; /* Thêm khoảng cách 3px xung quanh các đoạn văn */
+}
+
+
+.info button {
+    background: rgb(197, 209, 23); /* Đặt màu nền của nút là màu vàng xanh (mã RGB: 197, 209, 23) */
+    border: none; /* Loại bỏ đường viền của nút */
+    padding: 8px 12px; /* Thêm khoảng đệm 8px theo chiều dọc và 12px theo chiều ngang cho nút */
+    font-weight: bold; /* Đặt chữ trong nút thành đậm */
+    border-radius: 8px; /* Bo tròn các góc của nút với bán kính 8px */
+    margin-top: 8px; /* Thêm khoảng cách 8px phía trên nút */
+}
+
+
+.card:hover,
+.card:hover img {
+    transform: scale(1.1); /* Phóng to thẻ card và hình ảnh lên 1.1 lần kích thước ban đầu khi di chuột qua */
+}
+
+
+.card:hover > .layer {
+    opacity: 1; /* Đặt độ mờ của lớp layer thành 1 (hoàn toàn không trong suốt), làm cho nó hiển thị */
+}
+
+
+.card:hover > .info {
+    bottom: 0; /* Đặt thông tin nằm ở phía dưới cùng của thẻ card khi di chuột qua */
+    opacity: 1; /* Đặt độ mờ của thông tin thành 1 (hoàn toàn không trong suốt), làm cho nó hiển thị */
+}
+
+
+.card-group:hover > .card:not(:hover) {
+    filter: blur(5px); /* Làm mờ các thẻ card không được hover với độ mờ 5px khi di chuột qua nhóm thẻ .card-group */
+}
+
+
