@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WinShip</title>
-    <!-- font link -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-     <!-- css link -->
-      <link rel="stylesheet" href="css/style.css">
+    <!-- js slider link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="body">
         <!-- thanh công cụ -->
-         <!-- nhiệm vụ của phúc -->
-         <header class="header">
+        <!-- nhiệm vụ của phúc -->
+        <header class="header">
             <a href="#" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
             <nav class="navbar">
                 <div class="subnav">
-                    <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i>
-                    </a></a>
+                    <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="subnav-content">
                         <li><a href="#">Hà Nội</a></li>
                         <li><a href="#">Hồ Chí Minh</a></li>
@@ -32,7 +33,7 @@
                         <li><a href="#">Cần Thơ</a></li>
                     </ul>
                 </div>
-                <a class="active" href="#">Thử Quán Mới</a>
+                <a class="active" href="#house">Thử Quán Mới</a>
                 <a href="#home">Đang Khuyến Mãi</a>
                 <a href="#home">Thương Hiệu Quen Thuộc</a>
                 <a href="#home">Cửa Hàng Gần Bạn</a>
@@ -47,116 +48,100 @@
                 <a href="#" class="login-btn">Đăng Nhập</a>
             </div>
         </header>
+
         <!-- phân hiển thị tất cả thông tin chính -->
-       <div class="container">
-        <!-- thanh quảng cáo có lướt được, có thông tin các món ăn -->
-         <!-- nhiệm vụ của doanh -->
-            <div id="slider">
-                <div class="card-group">
-        
-                    <div class="card">
-                         <img src="css/img/img1.jpeg"> 
-                        <div class="layer"></div>
-                        <div class="info">
-                            <h1>Bánh Chưng</h1>
-                            <p>Món ăn có nguồn gốc từ thời vua Hùng Vương thứ 6, theo truyền thuyết Lang Liêu là người đã sáng tạo ra món bánh này để dâng lên vua cha.</p>
-                            <button>mua</button>
+        <div class="container">
+            <!-- thanh quảng cáo có lướt được, có thông tin các món ăn -->
+            <!-- nhiệm vụ của doanh -->
+            <section class="house" id="house">
+                <div class="swiper house-slider">
+                    <!-- Sửa class 'swiper-wrappe' thành 'swiper-wrapper' -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Món ăn đặt biệt</span>
+                                <h1>Bánh chưng</h1>
+                                <p>Theo truyền thuyết Lang Liêu là người đã sáng tạo ra món bánh này để dâng lên vua cha.</p>
+                                <a href="#" class="btn">mua</a>
+                            </div>
+                            <div id="image">
+                                <img src="css/img/img1.jpeg" alt="Bánh chưng">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Món ăn đặt biệt</span>
+                                <h1>Phở</h1>
+                                <p>Món ăn bắt nguồn từ miền Bắc Việt Nam vào đầu thế kỷ 20, phổ biến nhất ở Hà Nội và Nam Định.</p>
+                                <a href="#" class="btn">mua</a>
+                            </div>
+                            <div id="image">
+                                <img src="css/img/img2.jpeg" alt="Phở">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Món ăn đặt biệt</span>
+                                <h1>Bún đậu mắm tôm</h1>
+                                <p>Món ăn dân dã bắt nguồn từ miền Bắc Việt Nam, đặc biệt phổ biến ở Hà Nội.</p>
+                                <a href="#" class="btn">mua</a>
+                            </div>
+                            <div id="image">
+                                <img src="css/img/img3.jpg" alt="Bún đậu mắm tôm">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Món ăn đặt biệt</span>
+                                <h1>Bánh xèo</h1>
+                                <p>Món ăn truyền thống Việt Nam, có nguồn gốc từ miền Trung, sau đó phổ biến khắp cả nước.</p>
+                                <a href="#" class="btn">mua</a>
+                            </div>
+                            <div id="image">
+                                <!-- Xóa dấu " thừa sau .jpg -->
+                                <img src="css/img/img4.jpg" alt="Bánh xèo">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Món ăn đặt biệt</span>
+                                <h1>Bánh căn</h1>
+                                <p>Món ăn dân dã, phổ biến ở miền Trung Việt Nam, đặc biệt là Ninh Thuận và Đà Lạt.</p>
+                                <a href="#" class="btn">mua</a>
+                            </div>
+                            <div id="image">
+                                <img src="css/img/img5.jpg" alt="Bánh căn">
+                            </div>
                         </div>
                     </div>
-            
-            
-                    <div class="card">
-                         <img src="css/img/img2.jpeg"> 
-                        <div class="layer"></div>
-                        <div class="info">
-                            <h1>Phở</h1>
-                            <p>Món ăn bắt nguồn từ miền Bắc Việt Nam vào đầu thế kỷ 20, phổ biến nhất ở Hà Nội và Nam Định. Ban đầu, phở chỉ có phở bò, sau đó phở gà xuất hiện.</p>
-                            <button>mua</button>
-                        </div>
-                    </div>
-            
-            
-                    <div class="card">
-                        <img src="css/img/img3.jpg"> 
-                        <div class="layer"></div>
-                        <div class="info">
-                            <h1>Bún đậu mắm tôm</h1>
-                            <p>Món ăn dân dã bắt nguồn từ miền Bắc Việt Nam, đặc biệt phổ biến ở Hà Nội.</p>
-                            <button>mua</button>
-                        </div>
-                    </div>
-            
-                    <div class="card">
-                        <img src="css/img/img4.jpg"> 
-                        <div class="layer"></div>
-                        <div class="info">
-                            <h1>Bánh xèo</h1>
-                            <p>Món ăn truyền thống Việt Nam, có nguồn gốc từ miền Trung, sau đó phổ biến khắp cả nước</p>
-                            <button>mua</button>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="css/img/img5.jpg"> 
-                        <div class="layer"></div>
-                        <div class="info">
-                            <h1>Bánh căn</h1>
-                            <p>Món ăn dân dã, phổ biến ở miền Trung Việt Nam, đặc biệt là Ninh Thuận và Đà Lạt.</p>
-                            <button>mua</button>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
-         
+            </section>
 
             <!-- phần menu các món ăn -->
-             <!-- nhiệm vụ của đạt -->
-            <div class="container-menu"></div> 
+            <!-- nhiệm vụ của đạt -->
+            <div class="container-menu"></div>
 
             <!-- phần hiển thị tất cả các món ăn -->
-             <!-- nhiệm vụ của phúc -->
+            <!-- nhiệm vụ của phúc -->
             <div class="container-content"></div>
 
-            <!-- phần tin tức  -->
-             <!-- nhiệm cụ của quyết -->
+            <!-- phần tin tức -->
+            <!-- nhiệm vụ của quyết -->
             <div class="container-news"></div>
-       </div>
-       <!-- phần thông tin tổng thể, nhà tài trợ, thông tin công ty...-->
+        </div>
+
+        <!-- phần thông tin tổng thể, nhà tài trợ, thông tin công ty... -->
         <!-- nhiệm vụ của Cao -->
-       <div class="footer">
-
-       </div>
-
+        <div class="footer"></div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
