@@ -28,7 +28,8 @@ html {
 }
 
 section {
-    padding: 2rem 9%;
+    margin: 0 5% 0 9%; /* Lề trên, phải, dưới, trái tương ứng */
+    padding: 2rem;
 }
 
 section:nth-child(even) {
@@ -237,7 +238,7 @@ header .login a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding-top: 9rem;
+    padding-top: 9rem; /* Thêm dòng này để cách lề bên phải 8% */
 }
 
 .house .house-slider .slider .content {
@@ -254,14 +255,17 @@ header .login a:hover {
     height: 300px; /* Đặt chiều cao cố định */
     border-radius: 50%; /* Bo tròn để tạo hình tròn */
     object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn */
-    
+    margin: 20px 10px 30px 15px;
 }
 
 
 
 .house .house-slider .slider .content span {
-    color: var(--green);
+    color: #fdb819; /* Màu sắc nổi bật */
+    font-weight: 700; /* Đậm hơn để nổi bật hơn */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Thêm bóng chữ để tạo chiều sâu */
     font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 .house .house-slider .slider .content h1 {
@@ -270,8 +274,22 @@ header .login a:hover {
 }
 
 .house .house-slider .slider .content p {
-    color: var(--light-color);
-    font-size: 2.2rem;
-    padding: 5rem 0;
+    color: var(--black); /* Màu chữ nổi bật */
+    font-size: 2.5rem; /* Kích thước chữ */
+    font-weight: 600; /* Đậm hơn để nổi bật */
+    padding: 2rem; /* Khoảng cách nội dung với viền khung */
     line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ */
+    border: 2px solid var(--yellow); /* Viền khung với màu nổi bật */
+    border-radius: auto; /* Bo góc khung nếu muốn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng cho khung */
+}
+.house .house-slider .slider .content h2 {
+    color: var(--black); /* Màu vàng nổi bật */
+    font-size: 3rem; /* Kích thước chữ phù hợp với thiết kế */
+    font-weight: 700; /* Đậm để nổi bật */
+    margin-top: 1rem; /* Khoảng cách từ phần tử phía trên */
+    margin-bottom: 1rem; /* Khoảng cách từ phần tử phía dưới */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ nhẹ để tạo chiều sâu */
+    text-align: right; 
 }
