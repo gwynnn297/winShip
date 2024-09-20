@@ -167,14 +167,15 @@ header .icons a {
     background: #eee;
 }
 
-header .icons:hover {
+header .icons a:hover,
+header .icons i:hover {
     background-color: var(--yellow);
     color: #fff;
 }
 
 /* đăng nhập */
 header .login a {
-    background: var(--yellow);
+    background: #eee;
     font-size: 1.5rem;
     border-radius: .5rem;
     padding: 0.5rem 1rem;
