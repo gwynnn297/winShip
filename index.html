@@ -17,7 +17,7 @@
         <!-- thanh công cụ -->
         <!-- nhiệm vụ của phúc -->
         <header class="header">
-            
+            <!-- start header -->
             <a href="#" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
             <nav class="navbar">
                 <div class="subnav">
@@ -34,7 +34,7 @@
                         <li><a href="#">Cần Thơ</a></li>
                     </ul>
                 </div>
-                <a class="active" href="#house">Thử Quán Mới</a>
+                <a class="navbar-hover-firt-item" href="#house">Thử Quán Mới</a>
                 <a href="#home">Đang Khuyến Mãi</a>
                 <a href="#home">Thương Hiệu Quen Thuộc</a>
                 <a href="#home">Cửa Hàng Gần Bạn</a>
@@ -49,8 +49,16 @@
                 <a href="#" class="login-btn">Đăng Nhập</a>
             </div>
         </header>
+        <!-- start header -->
 
-        <!-- phân hiển thị tất cả thông tin chính -->
+        <!-- start form -->
+         <form action="" id="search-form">
+            <input type="search" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+             <i class="fas fa-times" id="close"></i>
+         </form>
+
+        <!-- phần hiển thị tất cả thông tin chính -->
         <div class="container">
             <!-- thanh quảng cáo có lướt được, có thông tin các món ăn -->
             <!-- nhiệm vụ của doanh -->
@@ -134,7 +142,15 @@
 
             <!-- phần hiển thị tất cả các món ăn -->
             <!-- nhiệm vụ của phúc -->
-            <div class="container-content"></div>
+
+            <!-- container-menu start -->
+            <div class="container-content">
+                <!-- row item -->
+                <div class="dishes" id="dishes">
+                    
+                </div>
+            </div>
+            <!-- container-menu start -->
 
             <!-- phần tin tức -->
             <!-- nhiệm vụ của quyết -->

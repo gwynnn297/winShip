@@ -62,7 +62,7 @@ section:nth-child(even) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 1000; /*chồng lên các phần tử khác*/
     box-shadow: var(--box-shadow);
 }
 
@@ -187,8 +187,68 @@ header .login a:hover {
     color: #fff;
 }
 
+/* end header */
+
+
+ /* stater search form */
+#search-form{
+    position: fixed;
+    top: -110%; 
+    left: 0;
+    height: 100%;  /* cho bìa to full màn */
+    width: 100%;
+    z-index: 1004;  /* nổi lên cao nhất*/
+    background: rgba(0, 0, 0, .8);
+    display: flex;  /* đặt flex chia bố cục */
+    align-items: center;  /* cho xuống giữa*/
+    justify-content: center;  /* đặt ra chính diện*/
+}
+#search-form.active{
+    top: 0;
+}
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-decoration: none;
+    background: none;
+}
+
+/* luôn hiển thị */
+#search-form #search-box::placeholder{
+    color: #eee;
+}
+/* loại bỏ dấu x mặc định */
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+
+}
+
+#search-form label:hover{
+    color: var(--yellow);
+
+}
+#search-form #close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
 /* <!-- media queries --> */
-@media(max-width: 991px) {
+/* @media(max-width: 991px) {
     html {
         font-size: 55%;
     }
@@ -196,9 +256,9 @@ header .login a:hover {
     header {
         padding: 1rem 2rem;
     }
-}
+} */
 
-@media(max-width: 768px) {
+@media(max-width: 922px) {
     header .icons #menu-bars {
         display: inline-block;
     }
@@ -231,6 +291,33 @@ header .login a:hover {
     .header .navbar {
         display: block;
     }
+
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+}
+@media(max-width: 1336px) {
+    html{
+        font-size: 55%;
+    }
+    header .navbar {
+        gap: 0;
+    }
+
+    
+
+}
+@media(max-width: 1126px) {
+    html{
+        font-size: 45%;
+    }
+    header .navbar {
+        gap: 0;
+    }
+
+    
+
 }
 
 /* Thiết lập lại để các hình ảnh trong slider cùng kích thước */
