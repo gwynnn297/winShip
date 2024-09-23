@@ -13,6 +13,27 @@
     } else {
         console.error("Element '#menu-bars' or '.navbar' not found");
     }
+
+
+    var swiperContainer = document.querySelector('.house-slider');
+    if (swiperContainer) {
+        var swiper = new Swiper(".house-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
+    } else {
+        console.error("Element '.house-slider' not found");
+    }
+
     // Lựa chọn phần tử Swiper
 var swiperContainer = document.querySelector('.house-slider'); // Tìm phần tử đầu tiên có lớp 'house-slider'
 
@@ -35,3 +56,23 @@ if (swiperContainer) { // Nếu phần tử tồn tại
 } else {
     console.error("Element '.house-slider' not found"); // In thông báo lỗi nếu phần tử không tồn tại
 }
+
+
+
+
+    window.onscroll = () =>{
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }
+    document.querySelector('#search-icon').onclick = () =>{
+        document.querySelector('#search-form').classList.toggle('active');
+
+    }
+    document.querySelector('#close').onclick = () =>{
+        document.querySelector('#search-form').classList.remove('active');
+
+    }
+    
+
+
+
