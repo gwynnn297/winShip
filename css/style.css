@@ -322,62 +322,61 @@ header .login a:hover {
 
 /* Thiết lập lại để các hình ảnh trong slider cùng kích thước */
 .house .house-slider .slider {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding-top: 9rem; /* Thêm dòng này để cách lề bên phải 8% */
+    display: flex; /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    flex-wrap: wrap; /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
+    gap: 2rem; /* Khoảng cách giữa các phần tử con là 2rem */
+    padding-top: 9rem; /* Thêm khoảng cách từ trên xuống cho slider */
 }
 
 .house .house-slider .slider .content {
-    flex: 1 1 45rem;
+    flex: 1 1 45rem; /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
 }
 
 .house .house-slider .slider .image {
-    flex: 1 1 45rem;
-    
+    flex: 1 1 45rem; /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
 }
 
 .slider img {
-    width: 300px; /* Đặt chiều rộng cố định */
-    height: 300px; /* Đặt chiều cao cố định */
+    width: 300px; /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 300px; /* Đặt chiều cao cố định cho hình ảnh */
     border-radius: 50%; /* Bo tròn để tạo hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn */
-    margin: 20px 10px 30px 15px;
+    object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
+    margin: 20px 10px 30px 15px; /* Đặt khoảng cách cho các cạnh (trên, phải, dưới, trái) */
 }
 
-
-
 .house .house-slider .slider .content span {
-    color: #fdb819; /* Màu sắc nổi bật */
-    font-weight: 700; /* Đậm hơn để nổi bật hơn */
+    color: #fdb819; /* Màu sắc nổi bật cho văn bản */
+    font-weight: 700; /* Đặt trọng số chữ là 700 để nổi bật hơn */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Thêm bóng chữ để tạo chiều sâu */
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    font-size: 2.5rem; /* Kích thước chữ là 2.5rem */
+    text-transform: uppercase; /* Chuyển đổi tất cả chữ thành chữ hoa */
 }
 
 .house .house-slider .slider .content h1 {
-    color: var(--black);
-    font-size: 7rem;
+    color: var(--black); /* Màu chữ cho h1 từ biến đã định nghĩa */
+    font-size: 7rem; /* Kích thước chữ là 7rem */
 }
 
 .house .house-slider .slider .content p {
-    color: var(--black); /* Màu chữ nổi bật */
-    font-size: 2.5rem; /* Kích thước chữ */
-    font-weight: 600; /* Đậm hơn để nổi bật */
-    padding: 2rem; /* Khoảng cách nội dung với viền khung */
-    line-height: 1.5;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ */
-    border: 2px solid var(--yellow); /* Viền khung với màu nổi bật */
-    border-radius: auto; /* Bo góc khung nếu muốn */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng cho khung */
+    color: var(--black); /* Màu chữ cho đoạn văn */
+    font-size: 2.5rem; /* Kích thước chữ cho đoạn văn */
+    font-weight: 600; /* Trọng số chữ là 600 */
+    padding: 2rem; /* Khoảng cách bên trong cho đoạn văn */
+    line-height: 1.5; /* Chiều cao dòng là 1.5 để dễ đọc */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ cho đoạn văn */
+    border: 2px solid var(--yellow); /* Viền khung với màu vàng */
+    border-radius: auto; /* Bo góc khung (có thể tùy chỉnh thêm) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng cho khung để tạo chiều sâu */
 }
+
 .house .house-slider .slider .content h2 {
-    color: black; 
-    font-size: 3rem; /* Kích thước chữ phù hợp với thiết kế */
-    font-weight: 700; /* Đậm để nổi bật */
+    color: black; /* Màu chữ cho h2 */
+    font-size: 3rem; /* Kích thước chữ cho h2 */
+    font-weight: 700; /* Trọng số chữ là 700 để nổi bật */
     margin-top: 1rem; /* Khoảng cách từ phần tử phía trên */
     margin-bottom: 1rem; /* Khoảng cách từ phần tử phía dưới */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ nhẹ để tạo chiều sâu */
-    text-align: right; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ nhẹ cho h2 */
+    text-align: right; /* Căn chỉnh chữ sang bên phải */
 }
+
