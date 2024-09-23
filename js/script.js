@@ -10,9 +10,7 @@
             menu.classList.toggle('fa-times');
             navbar.classList.toggle('active');
         };
-    } else {
-        console.error("Element '#menu-bars' or '.navbar' not found");
-    }
+    } 
 
 
     var swiperContainer = document.querySelector('.house-slider');
