@@ -4,7 +4,7 @@
     --yellow: #fdb819;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0.1);
+    --box-shadow: 0 .2rem 1rem rgba(0, 0, 0.1);
 }
 
 * {
@@ -248,17 +248,8 @@ header .login a:hover {
 
 
 /* <!-- media queries --> */
-/* @media(max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
 
-    header {
-        padding: 1rem 2rem;
-    }
-} */
-
-@media(max-width: 922px) {
+@media(max-width: 956px) {
     header .icons #menu-bars {
         display: inline-block;
     }
@@ -380,3 +371,261 @@ header .login a:hover {
     text-align: right; /* Căn chỉnh chữ sang bên phải */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*bắt đầu trang web xôi lá việt html*/
+.container-nextpage {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px; /* Ensures content appears below the fixed header */
+}
+
+/* Enlarge and bold "Xôi Lá Việt" */
+.restaurant-info h1 {
+    font-size: 6rem; /* Larger size for "Xôi Lá Việt" */
+    font-weight: bold; /* Make it bold */
+    margin-left: 6%; /* Cách lề bên trái 6% */
+}
+
+.restaurant-info p {
+    font-size: 2rem; /* Tăng kích thước chữ */
+    line-height: 1.8; /* Tăng khoảng cách giữa các dòng */
+    margin-left: 6%; /* Cách lề bên trái 6% */
+}
+
+.restaurant-info {
+    padding: 20px;
+    background-color: white; /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
+    position: relative;
+}
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 0.1px solid #fdb819; 
+    position: sticky; /* Giữ sticky-nav cố định khi cuộn */
+    top: 60px; /* Đặt vị trí dưới header */
+    z-index: 999; /* Đặt z-index thấp hơn header */
+    margin-top: 1rem; /* Khoảng cách dưới header */
+}
+
+.deal-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 20px; /* Thêm khoảng cách cho nút */
+    transition: color 0.3s;
+}
+
+.deal-button:hover {
+    color: #fdb819; /* Thay đổi màu khi hover */
+}
+
+
+
+
+.restaurant-info .img {
+    width: 22rem; /* Đặt kích thước tùy ý cho ảnh */
+    height: 22rem; /* Đặt kích thước tùy ý cho ảnh */
+    border-radius: 50%; /* Tạo hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 20px; /* Khoảng cách từ phía trên */
+    right: 20px; /* Khoảng cách từ bên phải */
+    margin-right: 6%;
+}
+
+.container-nextpage i, .restaurant-info i {
+    color: #fdb819; 
+}
+
+
+/* Đặt lại một số thuộc tính cho khung chứa */
+#sticky-food,
+#sticky-drink,
+#sticky-combo,
+#sticky-promotion {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#sticky-food .logo,
+#sticky-drink .logo,
+#sticky-combo .logo,
+#sticky-promotion .logo {
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    margin: 15rem 0 20px; /* Kết hợp margin-top và margin-bottom */
+}
+
+#sticky-food .container,
+#sticky-drink .container,
+#sticky-combo .container,
+#sticky-promotion .container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng */
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 0 6%;
+}
+
+#sticky-food .content-food,
+#sticky-drink .content-drink,
+#sticky-combo .content-combo,
+#sticky-promotion .content-promotion {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 30px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#sticky-food .content-food .image img,
+#sticky-drink .content-drink .image img,
+#sticky-combo .content-combo .image img,
+#sticky-promotion .content-promotion .image img {
+    width: 100%; /* Đặt chiều rộng của ảnh là 100% của container cha */
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo chiều rộng */
+    border-radius: 10px;
+}
+
+#sticky-food .content-food .first-p,
+#sticky-drink .content-drink .first-p,
+#sticky-combo .content-combo .first-p,
+#sticky-promotion .content-promotion .first-p {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#sticky-food .content-food .two-p,
+#sticky-drink .content-drink .two-p,
+#sticky-promotion .content-promotion .two-p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#sticky-food .content-food .money-p,
+#sticky-drink .content-drink .money-p,
+#sticky-combo .content-combo .money-p,
+#sticky-promotion .content-promotion .money-p {
+    font-size: 1.5rem;
+    display: inline-flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 0  40px; /* Đặt margin cho phần tiền */
+}
+
+#sticky-food .btn-xoi,
+#sticky-drink .btn-xoi,
+#sticky-combo .btn-xoi,
+#sticky-promotion .btn-xoi {
+    margin-bottom: 0; 
+    display: inline-flex; 
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 5rem;
+    background: var(--black);
+    cursor: pointer;
+    padding: .8rem 3rem;
+    align-items: center; 
+}
+
+#sticky-food .btn-xoi:hover,
+#sticky-drink .btn-xoi:hover,
+#sticky-combo .btn-xoi:hover,
+#sticky-promotion .btn-xoi:hover {
+    background-color: #fdb819;
+}
+
+#sticky-promotion i,
+#sticky-food i,
+#sticky-drink i,
+#sticky-combo i
+{
+    color: #fdb819;
+}
+
+.footer {
+    background-color: #fdb819; /* Màu nền vàng */
+    color: black;
+    padding: 20px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto 6%; /* Cách lề trái và phải 6% */
+}
+
+.footer .logo {
+    font-size: 32px; /* Chữ to hơn */
+    font-weight: bold; /* In đậm chữ */
+    margin-right: 10px;
+}
+
+.footer .nav {
+    display: flex;
+    gap: 40px; /* Cách đều nhau */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.footer .nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.4rem; /* Chữ to hơn */
+    font-weight: bold; /* In đậm chữ */
+}
+
+.footer .nav a:hover {
+    text-decoration: underline;
+}
+
+.footer .icons {
+    display: flex; /* Sử dụng flexbox để sắp xếp theo hàng ngang */
+    gap: 15px; /* Khoảng cách giữa các icon */
+    align-items: center; /* Căn giữa các icon theo chiều dọc */
+    margin-left: auto; /* Đẩy phần icons sang phải */
+    padding-left: 20px;
+}
+
+/* Nếu bạn muốn các icon nằm trong khối riêng */
+.footer .icons p {
+    margin: 0; /* Bỏ margin mặc định */
+    font-size: 20px;
+    padding: 0;
+}
+
+
+
+
+
+
+
+/*kết thúc trang web xôi lá việt html*/
