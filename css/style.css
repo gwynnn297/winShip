@@ -377,16 +377,6 @@ header .login a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*bắt đầu trang web xôi lá việt html*/
 .container-nextpage {
     width: 100%;
@@ -629,3 +619,100 @@ header .login a:hover {
 
 
 /*kết thúc trang web xôi lá việt html*/
+
+/* start css dishes */
+.dishes{
+    padding: 2rem 6%;
+}
+.dishes .box{
+    margin-top: 2rem;
+}
+.sub-heading{
+    text-align: center;
+    color: var(--yellow);
+    font-size: 4rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+
+.dishes .box-container{
+    display: grid;
+    /* 1fr: Kích thước tối đa của mỗi cột là 1 phần (fraction) của không gian còn lại trong grid, chia đều cho các cột. */
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.dishes .box-container .box{
+    
+    border-radius: 3%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.dishes .box-container .box img{
+    width: 100%;
+}
+
+.dishes .box-container .box .promotag{
+    position: absolute;
+    left: -3px;
+    z-index: 1;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0 2px 2px 0;
+    background-color: var(--yellow);
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6px;
+}
+
+.dishes .box-container .box h3{
+    padding-top: 1.2rem;
+    color: var(--black);
+    font-size: 1.9rem;
+}
+
+.basic-infor{
+    padding-top: 1.5rem;
+    font-size: 1.7rem;
+    color: var(--light-color);
+}
+
+.basic-infor .infor-icon{
+    padding-top: .6rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.basic-infor .infor-icon .star-infor i{
+    color: var(--yellow);
+}
+
+.basic-infor .infor-icon .km-infor i{
+    font-size: 6px;
+    vertical-align: middle;
+}
+.box .basic-infor-bottom {
+    padding-top: .6rem;
+}
+.box .basic-infor-bottom i{
+    color: var(--yellow);
+}
+.box .basic-infor-bottom {
+    font-size: 1.7rem;
+    color: #666;
+}
+/* end css dishes */
+
