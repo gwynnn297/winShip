@@ -759,7 +759,6 @@ header .login a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
     padding: 50px;
     gap: 20px; 
 }
