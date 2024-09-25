@@ -380,8 +380,7 @@ header .login a:hover {
 /*bắt đầu trang web xôi lá việt html*/
 .container-nextpage {
     width: 100%;
-    margin: 0 auto;
-    padding-top: 100px; /* Ensures content appears below the fixed header */
+    margin: 0 auto; /* Ensures content appears below the fixed header */
 }
 
 /* Enlarge and bold "Xôi Lá Việt" */
