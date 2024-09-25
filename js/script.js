@@ -7,7 +7,7 @@
         // Xử lý sự kiện khi nhấp vào biểu tượng menu
         menu.onclick = () => {
             console.log('Menu clicked!');
-            menu.classList.toggle('fa-times');
+
             navbar.classList.toggle('active');
         };
     } 
