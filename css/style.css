@@ -712,3 +712,73 @@ header .login a:hover {
 }
 /* end css dishes */
 
+/* nhiệm vụ của đạt */
+#body {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 120px;
+    
+   
+}
+.menu .box{
+    background-color: white;
+    position: relative;
+    width: 150px;
+    height: 160px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 25px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng nhẹ */
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover*/
+}
+
+.menu .titleMenu {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+
+
+.menu .box:hover {
+    transform: scale(1.05); /* Phóng to hộp khi hover */
+}
+
+.contentMenu {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 20px; 
+}
+
+.menu .box .image .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+
+.menu .box .titleBox {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px; /* Để khoảng cách giữa hình ảnh và chữ */
+    margin-bottom: -200px;
+}
+
+
+/* kết thúc nhiệm vụ  */
