@@ -408,7 +408,7 @@ header .login a:hover {
     justify-content: space-around;
     background-color: white;
     padding: 10px 0;
-    border-bottom: 0.1px solid #fdb819; 
+    border-bottom: 4px solid #fdb819; 
     position: sticky; /* Giữ sticky-nav cố định khi cuộn */
     top: 60px; /* Đặt vị trí dưới header */
     z-index: 999; /* Đặt z-index thấp hơn header */
@@ -464,7 +464,7 @@ header .login a:hover {
     text-align: center;
     font-size: 40px;
     color: #333;
-    margin: 15rem 0 20px; /* Kết hợp margin-top và margin-bottom */
+    margin: 9rem 0 20px; /* Kết hợp margin-top và margin-bottom */
 }
 
 #sticky-food .container,
