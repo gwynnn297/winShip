@@ -12,6 +12,32 @@
         };
     } 
 
+    var swiper = new Swiper(".review-slider", {
+        
+        spaceBetween: 20,
+        centeredSlides: true,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        loop:true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+   
 
     var swiperContainer = document.querySelector('.house-slider');
     if (swiperContainer) {
@@ -28,7 +54,9 @@
             },
             loop: true,
         });
-    } 
+    } else {
+        console.error("Element '.house-slider' not found");
+    }
 
     // Lựa chọn phần tử Swiper
 var swiperContainer = document.querySelector('.house-slider'); // Tìm phần tử đầu tiên có lớp 'house-slider'
@@ -49,7 +77,9 @@ if (swiperContainer) { // Nếu phần tử tồn tại
         },
         loop: true, // Cho phép slider quay vòng
     });
-} 
+} else {
+    console.error("Element '.house-slider' not found"); // In thông báo lỗi nếu phần tử không tồn tại
+}
 
 
 
@@ -67,3 +97,4 @@ if (swiperContainer) { // Nếu phần tử tồn tại
 
     }
     
+
