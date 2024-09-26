@@ -249,7 +249,7 @@ header .login a:hover {
 
 /* <!-- media queries --> */
 
-@media(max-width: 956px) {
+@media(max-width: 922px) {
     header .icons #menu-bars {
         display: inline-block;
     }
@@ -616,6 +616,10 @@ header .login a:hover {
 
 
 /* start css dishes */
+.dishes-container{
+    padding-top: 5rem;
+}
+
 .dishes{
     padding: 2rem 6%;
 }
@@ -631,7 +635,7 @@ header .login a:hover {
 
 .heading{
     text-align: center;
-    color: var(--black);
+    color: var(--yellow);
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
@@ -712,16 +716,11 @@ header .login a:hover {
 /* end css dishes */
 
 /* nhiệm vụ của đạt */
-#body {
-    margin-top: 70px;
-    width: 100%;
-}
 
 .menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 0 120px;
+    padding: 0 6%;
     
    
 }
@@ -735,16 +734,18 @@ header .login a:hover {
     justify-content: center; 
     align-items: center; 
     border-radius: 25px;
-    margin: 15px;
+    margin: 1.5rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng nhẹ */
     transition: transform 0.2s ease; /* Hiệu ứng khi hover*/
 }
 
 .menu .titleMenu {
     text-align: center;
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 20px;
+    color: var(--yellow);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    
+    text-transform: uppercase;
 }
 
 
@@ -754,11 +755,10 @@ header .login a:hover {
 }
 
 .contentMenu {
-    background-color: rgb(245, 245, 245);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 0;
     gap: 20px; 
 }
 
@@ -772,8 +772,9 @@ header .login a:hover {
 }
 
 .menu .box .titleBox {
-    font-size: 16px;
-    font-weight: 600;
+    color: var(--black); /* Màu chữ cho đoạn văn */
+    font-size: 1.7rem; /* Kích thước chữ cho đoạn văn */
+    font-weight: 600; /* Trọng số chữ là 600 */
     text-align: center;
     margin-top: 10px; /* Để khoảng cách giữa hình ảnh và chữ */
     margin-bottom: -200px;
