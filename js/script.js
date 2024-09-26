@@ -98,8 +98,3 @@ if (swiperContainer) { // Nếu phần tử tồn tại
     }
     
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 2b8a9ed0b6fa6d676035f2848e0094d4eb7fb2d4
