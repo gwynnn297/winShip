@@ -557,13 +557,13 @@ header .login a:hover {
     color: #fdb819;
 }
 
-.footer {
+.footer-xoila {
     background-color: #fdb819; /* Màu nền vàng */
     color: black;
     padding: 20px 0;
 }
 
-.footer .container {
+.footer-xoila .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -571,20 +571,20 @@ header .login a:hover {
     margin: auto 6%; /* Cách lề trái và phải 6% */
 }
 
-.footer .logo {
+.footer-xoila .logo {
     font-size: 32px; /* Chữ to hơn */
     font-weight: bold; /* In đậm chữ */
     margin-right: 10px;
 }
 
-.footer .nav {
+.footer-xoila .nav {
     display: flex;
     gap: 40px; /* Cách đều nhau */
     padding-right: 15px;
     padding-left: 15px;
 }
 
-.footer .nav a {
+.footer-xoila .nav a {
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -592,11 +592,11 @@ header .login a:hover {
     font-weight: bold; /* In đậm chữ */
 }
 
-.footer .nav a:hover {
+.footer-xoila .nav a:hover {
     text-decoration: underline;
 }
 
-.footer .icons {
+.footer-xoila .icons {
     display: flex; /* Sử dụng flexbox để sắp xếp theo hàng ngang */
     gap: 15px; /* Khoảng cách giữa các icon */
     align-items: center; /* Căn giữa các icon theo chiều dọc */
@@ -605,7 +605,7 @@ header .login a:hover {
 }
 
 /* Nếu bạn muốn các icon nằm trong khối riêng */
-.footer .icons p {
+.footer-xoila .icons p {
     margin: 0; /* Bỏ margin mặc định */
     font-size: 20px;
     padding: 0;
