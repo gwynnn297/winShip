@@ -54,7 +54,9 @@
             },
             loop: true,
         });
-    } 
+    } else {
+        console.error("Element '.house-slider' not found");
+    }
 
     // Lựa chọn phần tử Swiper
 var swiperContainer = document.querySelector('.house-slider'); // Tìm phần tử đầu tiên có lớp 'house-slider'
@@ -75,7 +77,9 @@ if (swiperContainer) { // Nếu phần tử tồn tại
         },
         loop: true, // Cho phép slider quay vòng
     });
-} 
+} else {
+    console.error("Element '.house-slider' not found"); // In thông báo lỗi nếu phần tử không tồn tại
+}
 
 
 
@@ -95,3 +99,7 @@ if (swiperContainer) { // Nếu phần tử tồn tại
     
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b8a9ed0b6fa6d676035f2848e0094d4eb7fb2d4
