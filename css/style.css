@@ -780,34 +780,33 @@ header .login a:hover {
     margin-bottom: -200px;
 }
 
-.review .slide{
-    padding:2rem;
-    box-shadow:var(--box-shadow);
-    border:.1rem solid rgba(0, 0, 0, 0.2);
+.review .slide {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, 0.2);
     border-radius: .5rem;
     position: relative;
 }
 
-.review .slide .fa-quote-right{
-    position: absolute;
-    top:2rem; right:2rem;
-    font-size: 6rem;
-    color:#ccc;
-}
-
-.review .slide .user{
+.review .slide .user {
     display: flex;
-    gap:1.5rem;
+    gap: 1.5rem;
     align-items: center;
     padding-bottom: 1.5rem;
 }
 
-.review .slide .user img{
+.review .slide .user img {
     height: 7rem;
     width: 7rem;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* Đảm bảo ảnh có kích thước phù hợp */
 }
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Đặt chữ nằm dọc */
+    justify-content: center; /* Căn giữa chữ theo chiều dọc */
+}
+
 
 .review .slide .user h3{
     color:var(--black);
@@ -815,10 +814,7 @@ header .login a:hover {
     padding-bottom: .5rem;
 }
 
-.review .slide .user i{
-    font-size: 1.3rem;
-    color:var(--yellow);
-}
+
 .review .slide p{
     font-size: 1.5rem;
     line-height: 1.8;
