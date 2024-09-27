@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinShip</title>
+    <!-- js slider link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- quyết làm -->
+     <!-- page chỉ bao gồm header không có danh mục, slider, địa chỉ đang ở,footer -->
+    <div id="body">
+        <!-- thanh công cụ -->
+        <!-- nhiệm vụ của phúc -->
+        <header class="header">
+            <!-- start header -->
+            <a href="#" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
+            <nav class="navbar">
+                <div style=" margin-left: -45rem;" class="subnav">
+                    <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="subnav-content">
+                        <li><a href="#">Hà Nội</a></li>
+                        <li><a href="#">Hồ Chí Minh</a></li>
+                        <li><a href="#">Quảng Trị</a></li>
+                        <li><a href="#">Đà Lạt</a></li>
+                        <li><a href="#">Nha Trang</a></li>
+                        <li><a href="#">Hải Phòng</a></li>
+                        <li><a href="#">Vũng Tàu</a></li>
+                        <li><a href="#">Huế</a></li>
+                        <li><a href="#">Cần Thơ</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <div style=" margin-right: -47rem;" class="icons">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+            <div class="login">
+                <a href="#" class="login-btn">Đăng Nhập</a>
+            </div>
+        </header>
+        <!-- endl header -->
+
+        <!-- start form -->
+         <form action="" id="search-form">
+            <input type="search" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+             <i class="fas fa-times" id="close"></i>
+         </form>
+
+         <!-- start search location -->
+         <div class="search-location">
+            
+         </div>
+        <!-- phần hiển thị tất cả thông tin chính -->
+        <div class="container">
+            <!-- thanh quảng cáo có lướt được, có thông tin các món ăn -->
+            <!-- nhiệm vụ của doanh -->
+            <section class="house" id="house">
+                <div class="swiper house-slider">
+                    <!-- Sửa class 'swiper-wrappe' thành 'swiper-wrapper' -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Reign energy drink x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Nước tăng lực</h1>
+                                <p>Bão trị vì, nho thu hoạch, nước tăng lực sạch, 12 fluid ounce</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imggg1.webp" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>MSalmar ASA x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Cá hồi Na uy</h1>
+                                <p>Cá hồi Nauy nổi tiếng với chất lượng cao, thịt mềm, hương vị tươi ngon và giàu omega</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg2.jpg" alt="Phở">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Kamada x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Nước tương</h1>
+                                <p>Thương hiệu nước tương 234 năm huyền thoại từ Nhật</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>honey garden x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Mật ong Úc</h1>
+                                <p>Mật ong Úc cao cấp, tự nhiên và 100% từ thiên nhiên</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <!-- Xóa dấu " thừa sau .jpg -->
+                                <img src="images/img-slider-index.html/imgg4.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>King river x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Thịt bò wagiu</h1>
+                                <p>Thịt 200 năm tuổi ngon nhất nước Úc</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!-- hết nhiệm vụ doanh -->
+
+
+            <!-- phần menu các món ăn -->
+            <!-- nhiệm vụ của đạt -->
+            <div class="container-menu">
+                    
+                        <div class="menu">
+                            <h1 class="titleMenu">menu</h1>
+                            <div class="contentMenu">
+                                <div class="box">
+                                    <div class="image">
+                                       <img class="img" src="https://daotaobeptruong.vn/wp-content/uploads/2021/01/banh-mi-viet-nam.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Bánh mỳ</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://i.ytimg.com/vi/_0JVXwg56l8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAyNh9uwhtvutsebqeKvOOHYhMEtQ" alt="">
+                                    </div>
+                                    <div class="titleBox">Bánh xôi</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://product.hstatic.net/200000264775/product/ca_phe_ae27c2fffbc4489884c2efbef3d639bb_1024x1024.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cafe</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://getngo.vn/wp-content/uploads/2023/04/olong-tra-sua-dac-biet.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Trà sữa</div>
+                                </div>
+    
+                                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn3.ivivu.com/2016/05/ba-mon-an-trua-nhe-bung-o-da-nang-ivivu-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Ăn trưa</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://dulichsontra.com/wp-content/uploads/2021/12/anh-dai-dien-quan-an-sang-da-nang.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Ăn sáng</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cafefcdn.com/203337114487263232/2022/7/23/photo-1-16585821912571146207773.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Bữa tối </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn.tgdd.vn/Files/2017/05/16/982787/chon-nuoc-ep-hay-sinh-to-cho-be-202304131615146615.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Nước ép trái cây</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn.tgdd.vn/Files/2019/10/19/1210128/3-cach-nau-lau-cua-dong-thom-ngon-ngot-nuoc-don-gian-tai-nha-202203161321088395.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Lẩu</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://vinastory.vn/wp-content/uploads/2021/07/xay-dung-thuc-don-com-van-phong-2.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm văn phòng </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://static.vinwonders.com/production/com-tam-da-nang-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm tấm</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://static.vinwonders.com/2023/02/com-ga-da-nang-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm gà</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83ejS0dw1zYhHgbx3Ft3tQUBBsG3yBFWQxA&s" alt="">
+                                    </div>
+                                    <div class="titleBox">Hủ tiếu </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBb0X4K0a0gsya6VVNTSpVl9fqLiBVQb-1MQ&s" alt="">
+                                    </div>
+                                    <div class="titleBox">Chè</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+            </div>
+            <!-- hết nhiệm vụ đạt -->
+            
+            <!-- phần câu hỏi thường gặp -->
+            <div class="container-question">
+                
+            </div>
+            <!-- hết phần câu hỏi thường gặp -->
+            
+
+        <!-- phần thông tin tổng thể, nhà tài trợ, thông tin công ty... -->
+        <!-- nhiệm vụ của Cao -->
+        <div class="footer"></div>
+    </div>
+
+    <!-- js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
