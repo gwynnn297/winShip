@@ -52,7 +52,8 @@ section:nth-child(even) {
     letter-spacing: .1rem;
 }
 
-.header {
+.header,
+.header-pay {
     position: fixed;
     top: 0;
     left: 0;
@@ -66,13 +67,13 @@ section:nth-child(even) {
     box-shadow: var(--box-shadow);
 }
 
-header .logo {
+.header .logo {
     color: var(--black);
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
-header .logo i {
+.header .logo i {
     color: var(--yellow);
 }
 
@@ -377,6 +378,17 @@ header .login a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*bắt đầu trang web xôi lá việt html*/
 .container-nextpage {
     width: 100%;
@@ -397,7 +409,8 @@ header .login a:hover {
 }
 
 .restaurant-info {
-    padding: 20px;
+    padding: 10px;
+    margin-top: 100px;
     background-color: white; /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
     position: relative;
 }
@@ -504,7 +517,7 @@ header .login a:hover {
 #sticky-drink .content-drink .first-p,
 #sticky-combo .content-combo .first-p,
 #sticky-promotion .content-promotion .first-p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 10px 0;
     font-weight: bold;
 }
@@ -521,19 +534,17 @@ header .login a:hover {
 #sticky-combo .content-combo .money-p,
 #sticky-promotion .content-promotion .money-p {
     font-size: 1.5rem;
+    margin: 0 20px; /* Xóa margin để không ảnh hưởng đến căn chỉnh */
     display: inline-flex; 
-    flex-direction: row; 
     align-items: center; 
-    margin: 0  40px; /* Đặt margin cho phần tiền */
 }
 
 #sticky-food .btn-xoi,
 #sticky-drink .btn-xoi,
 #sticky-combo .btn-xoi,
 #sticky-promotion .btn-xoi {
-    margin-bottom: 0; 
-    display: inline-flex; 
-    font-size: 1.7rem;
+    margin: 0; /* Xóa margin dưới để không bị dịch chuyển */
+    font-size: 1.6rem;
     color: #fff;
     border-radius: 5rem;
     background: var(--black);
@@ -541,7 +552,6 @@ header .login a:hover {
     padding: .8rem 3rem;
     align-items: center; 
 }
-
 #sticky-food .btn-xoi:hover,
 #sticky-drink .btn-xoi:hover,
 #sticky-combo .btn-xoi:hover,
@@ -611,6 +621,17 @@ header .login a:hover {
     padding: 0;
 }
 /*kết thúc trang web xôi lá việt html*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -823,7 +844,46 @@ header .login a:hover {
 
 
 
+/*bắt đầu giao diện thanh toán*/
+.container-pay{
+    margin-top: 100px;
+    background-color: white; /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
+    text-align: center;
 
+}
+
+.container-pay h1{
+    font-size: 3rem; /* Larger size for "Xôi Lá Việt" */
+    font-weight: bold; /* Make it bold */
+    color: var(--black);
+    text-align: center;
+    border-bottom: 4px solid #fdb819;
+}
+.container-pay i{
+    color: #fdb819;
+}
+
+
+.content-pay {
+    background: #ece4e4;
+    margin: auto 15% auto 15%;
+}
+.content-pay .content-give {
+    display: flex;
+    justify-content: flex-start; /* Đảm bảo căn sát lề trái */
+}
+.content-pay .content-give h3 {
+    color: var(--black);
+    margin-top: 100px;
+    margin-left: 0;
+    font-size: 2rem;
+}
+
+
+
+
+
+/*kết thúc giao diện thanh toán*/
 /* kết thúc nhiệm vụ  */
 
 /* start new */
