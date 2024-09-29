@@ -32,9 +32,9 @@ section {
     padding: 2rem;
 }
 
-section:nth-child(even) {
+/* section:nth-child(even) {
     background: #eee;
-}
+} */
 
 .btn {
     margin-top: 1rem;
