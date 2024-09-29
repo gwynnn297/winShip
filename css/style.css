@@ -426,7 +426,7 @@ header .login a:hover {
     padding: 10px 0;
     border-bottom: 4px solid #fdb819; 
     position: sticky; /* Giữ sticky-nav cố định khi cuộn */
-    top: 60px; /* Đặt vị trí dưới header */
+    top: 40px; /* Đặt vị trí dưới header */
     z-index: 999; /* Đặt z-index thấp hơn header */
     margin-top: 1rem; /* Khoảng cách dưới header */
 }
