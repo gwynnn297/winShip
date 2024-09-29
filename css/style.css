@@ -880,7 +880,139 @@ header .login a:hover {
 }
 
 
+/* begin footer css */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 6%;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-top: 1px solid #eaeaea; /* Đường viền trên nhẹ */
+    color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo chiều sâu */
+}
 
+
+.footer .grid {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent; /* Bỏ màu nền */
+}
+
+/* Row cho footer */
+.grid .grid_row1 {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid ; */
+}
+
+.grid .grid_row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 {
+    flex-basis: calc(15% - 10px);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Định dạng heading */
+.grid .grid_row1 .grid_column_2_4 .footer_heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item {
+    margin-bottom: 10px;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Định dạng cho QR và app */
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload .footer_dowload_qr {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload .footer_dowload_app img {
+    width: 120px;
+    margin: 5px 0;
+}
+.grid .grid_row1 .grid_column_2_4 .footer_heading_Winship{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    color: #fdb819;
+}
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline{
+    color: #555;
+    font-size: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_number{
+    font-size: 30px;
+    color: #fdb819;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    font-weight: bold;
+
+}
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link .footer_recognize-image{
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.grid .grid_row2 .footer_text{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end footer*/
 
 
 /*kết thúc giao diện thanh toán*/
