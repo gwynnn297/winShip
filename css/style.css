@@ -743,7 +743,7 @@ header .login a:hover {
 .menu {
     display: flex;
     flex-direction: column;
-    padding: 0 6%;
+    padding: 2rem 6%;
     
    
 }
@@ -1050,15 +1050,17 @@ header .login a:hover {
 
 /* bắt đầu phần mục tìm kiếm */
 .searchContainer {
-    padding: 35px; 
+
+    left: 15rem;
+    top: 31rem;
+    max-width: 305px;
+    padding: 26px; 
     border: 1px solid #ccc; /* Viền cho container */
     border-radius: 5px; /* Bo góc cho container */
     background-color: #fff; /* Màu nền trắng */
-    max-width: 250px; /* Giới hạn chiều rộng tối đa */
-    margin-left: 0; /* Căn trái */
-    margin-right: auto; /* Căn phải tự động */
-    position: relative; /* Đặt vị trí tương đối cho container */
-    z-index: 1000; /* Đặt z-index cao hơn để che các mục phía sau */
+    
+    position: absolute;
+    z-index: 300; /* Đặt z-index cao hơn để che các mục phía sau */
 }
 
 .heading {
