@@ -15,7 +15,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 
@@ -28,12 +27,12 @@ html {
 }
 
 section {
-    margin: 0 5% 0 9%; /* Lề trên, phải, dưới, trái tương ứng */
+    margin: 0 6% 0 6%; /* Lề trên, phải, dưới, trái tương ứng */
     padding: 2rem;
 }
 
 section:nth-child(even) {
-    background: #eee;
+    background: #fff;
 }
 
 .btn {
@@ -803,46 +802,73 @@ header .login a:hover {
     margin-bottom: -200px;
 }
 
-.review .slide {
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    border: .1rem solid rgba(0, 0, 0, 0.2);
-    border-radius: .5rem;
-    position: relative;
-}
 
-.review .slide .user {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    padding-bottom: 1.5rem;
-}
+/*bắt đầu tin tức*/
 
-.review .slide .user img {
-    height: 7rem;
-    width: 7rem;
-    object-fit: cover; /* Đảm bảo ảnh có kích thước phù hợp */
-}
-
-.text-container {
-    display: flex;
-    flex-direction: column; /* Đặt chữ nằm dọc */
-    justify-content: center; /* Căn giữa chữ theo chiều dọc */
+.review-slider .header-review {
+    font-size: 3rem;          /* Kích thước chữ */
+    color: #fdb819;           /* Màu chữ */
+    text-align: center;       /* Căn giữa chữ */
+    margin-top: 10px;
+    text-transform: uppercase;
 }
 
 
-.review .slide .user h3{
-    color:var(--black);
-    font-size: 2rem;
-    padding-bottom: .5rem;
+
+
+.review .review-slider .slider-review {
+    display: flex; /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    flex-wrap: wrap; /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
+    gap: 2rem; /* Khoảng cách giữa các phần tử con là 2rem */
+    padding-top: 9rem; /* Thêm khoảng cách từ trên xuống cho slider */
+    margin-bottom: 40px;
+}
+
+.review .review-slider .slider-review .content {
+    flex: 1 1 45rem; /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
+    text-align: center;
+}
+
+.review .review-slider .slider-review .image {
+    flex: 1 1 45rem; /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
+}
+
+.slider-review img {
+    width: 100%; /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 200px; /* Đặt chiều cao cố định cho hình ảnh */ /* Bo tròn để tạo hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
+}
+
+.review .review-slider .slider-review .content p {
+    color: var(--black); /* Màu chữ cho đoạn văn */
+    font-size: 1.3rem; /* Kích thước chữ cho đoạn văn */
+    font-weight: 400; /* Trọng số chữ là 600 */; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Chiều cao dòng là 1.5 để dễ đọc */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ cho đoạn văn */
+    text-align: justify; /* Căn chữ đều hai bên */
 }
 
 
-.review .slide p{
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color:var(--light-color);
+.btn-review {
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 5rem;
+    background: var(--black);
+    cursor: pointer;
+    padding: .8rem 3rem;
 }
+
+.btn-review:hover {
+    background: #fdb819;
+    letter-spacing: .1rem;
+}
+
+/*kết thúc phần tin tức*/
 
 
 
@@ -880,6 +906,8 @@ header .login a:hover {
     margin-left: 0;
     font-size: 2rem;
 }
+
+/*kết thúc giao diện thanh toán*/
 
 
 /* begin footer css */
@@ -1016,7 +1044,7 @@ header .login a:hover {
 /* end footer*/
 
 
-/*kết thúc giao diện thanh toán*/
+
 
 
 /* bắt đầu phần câu hỏi */
