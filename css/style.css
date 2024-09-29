@@ -1015,6 +1015,106 @@ header .login a:hover {
 
 
 /*kết thúc giao diện thanh toán*/
+
+
+/* bắt đầu phần câu hỏi */
+.câuhỏi {
+    margin-top: 100px;
+    position: relative;
+    font-size: 2.5rem;
+    
+}
+
+.câuhỏi h1 {
+    font-weight: 800;
+    margin-top: 100px;
+    color: #fdb819;
+}
+.câuhỏi .whyWinshipList {
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+.câuhỏi .whyWinshipList .tickv {
+    color: #fdb819;
+}
+.câuhỏi .whyWinshipList .bold___2_Blq {
+    font-weight: 900;
+}
+.câuhỏi .whyWinshipList p{
+    margin-top: 25px;
+}
+
+/* kết thúc phần câu hỏi */
+
+/* bắt đầu phần mục tìm kiếm */
+.searchContainer {
+    padding: 35px; 
+    border: 1px solid #ccc; /* Viền cho container */
+    border-radius: 5px; /* Bo góc cho container */
+    background-color: #fff; /* Màu nền trắng */
+    max-width: 250px; /* Giới hạn chiều rộng tối đa */
+    margin-left: 0; /* Căn trái */
+    margin-right: auto; /* Căn phải tự động */
+    position: relative; /* Đặt vị trí tương đối cho container */
+    z-index: 1000; /* Đặt z-index cao hơn để che các mục phía sau */
+}
+
+.heading {
+    margin-bottom: 15px; 
+}
+
+.searchGreeting {
+    font-size: 17px; /* Kích thước chữ */
+    font-weight: bold; /* Tô đậm chữ */
+    color: black; /* Đổi màu chữ về màu đen */
+    text-align: left; /* Căn lề trái cho chữ */
+}
+
+.searchHeading {
+    font-size: 20px; 
+    font-weight: bold; /* Tô đậm chữ */
+    color: black; /* Đổi màu chữ về màu đen */
+    text-align: left; /* Căn lề trái cho chữ */
+}
+
+.inputContainer {
+    margin-bottom: 9px; 
+    border: 1px solid #ccc; /* Viền cho ô nhập */
+    border-radius: 5px; /* Bo góc cho ô nhập */
+    background-color: #e0e0e0; /* Màu nền sẫm hơn cho ô nhập */
+}
+
+.inputField {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px; 
+    border: none; /* Bỏ viền cho ô nhập */
+    outline: none; /* Bỏ viền khi ô nhập được chọn */
+    background-color: transparent; /* Nền trong suốt */
+}
+
+/* Hiệu ứng cho ô nhập khi focus */
+.inputField:focus {
+    border: 1px solid #28a745; /* Thêm màu viền khi focus */
+}
+
+.submitBtn {
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 10px;
+    cursor: pointer; 
+    width: 100%; /* Chiều rộng nút bằng 100% */
+    border-radius: 5px; /* Bo góc cho nút */
+}
+
+.submitBtn:hover {
+    background-color: #218838; 
+}
+
+/* kết thúc phần tìm kiếm */
+
+
 /* kết thúc nhiệm vụ  */
 
 /* start new */
