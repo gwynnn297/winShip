@@ -158,14 +158,16 @@ header .icons i,
 header .icons a {
     cursor: pointer;
     margin-left: .5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    width:3.5rem;
+    justify-content: center;
     text-align: center;
     font-size: 1.5rem;
     color: var(--black);
     border-radius: 50%;
     background: #eee;
+    box-shadow: 0 0 0.5rem rgb(4, 4, 4);
 }
 
 header .icons a:hover,
