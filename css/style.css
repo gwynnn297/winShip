@@ -32,9 +32,11 @@ section {
     padding: 2rem;
 }
 
+
 section:nth-child(even) {
     background: #fff;
 }
+
 
 .btn {
     margin-top: 1rem;
@@ -158,14 +160,16 @@ header .icons i,
 header .icons a {
     cursor: pointer;
     margin-left: .5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    width:3.5rem;
+    justify-content: center;
     text-align: center;
     font-size: 1.5rem;
     color: var(--black);
     border-radius: 50%;
     background: #eee;
+    box-shadow: 0 0 0.5rem rgb(4, 4, 4);
 }
 
 header .icons a:hover,
@@ -741,7 +745,7 @@ header .login a:hover {
 .menu {
     display: flex;
     flex-direction: column;
-    padding: 0 6%;
+    padding: 2rem 6%;
     
    
 }
@@ -918,10 +922,243 @@ header .login a:hover {
 }
 
 
+/* begin footer css */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 6%;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-top: 1px solid #eaeaea; /* Đường viền trên nhẹ */
+    color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo chiều sâu */
+}
 
+
+.footer .grid {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent; /* Bỏ màu nền */
+}
+
+/* Row cho footer */
+.grid .grid_row1 {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid ; */
+}
+
+.grid .grid_row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 {
+    flex-basis: calc(15% - 10px);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Định dạng heading */
+.grid .grid_row1 .grid_column_2_4 .footer_heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item {
+    margin-bottom: 10px;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Định dạng cho QR và app */
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload .footer_dowload_qr {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload .footer_dowload_app img {
+    width: 120px;
+    margin: 5px 0;
+}
+.grid .grid_row1 .grid_column_2_4 .footer_heading_Winship{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    color: #fdb819;
+}
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline{
+    color: #555;
+    font-size: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_number{
+    font-size: 30px;
+    color: #fdb819;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    font-weight: bold;
+
+}
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link .footer_recognize-image{
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.grid .grid_row2 .footer_text{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end footer*/
 
 
 /*kết thúc giao diện thanh toán*/
+
+
+/* bắt đầu phần câu hỏi */
+.câuhỏi {
+    margin-top: 100px;
+    position: relative;
+    font-size: 2.5rem;
+    
+}
+
+.câuhỏi h1 {
+    font-weight: 800;
+    margin-top: 100px;
+    color: #fdb819;
+}
+.câuhỏi .whyWinshipList {
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+.câuhỏi .whyWinshipList .tickv {
+    color: #fdb819;
+}
+.câuhỏi .whyWinshipList .bold___2_Blq {
+    font-weight: 900;
+}
+.câuhỏi .whyWinshipList p{
+    margin-top: 25px;
+}
+
+/* kết thúc phần câu hỏi */
+
+/* bắt đầu phần mục tìm kiếm */
+.searchContainer {
+
+    left: 15rem;
+    top: 31rem;
+    max-width: 305px;
+    padding: 26px; 
+    border: 1px solid #ccc; /* Viền cho container */
+    border-radius: 5px; /* Bo góc cho container */
+    background-color: #fff; /* Màu nền trắng */
+    
+    position: absolute;
+    z-index: 300; /* Đặt z-index cao hơn để che các mục phía sau */
+}
+
+.heading {
+    margin-bottom: 15px; 
+}
+
+.searchGreeting {
+    font-size: 17px; /* Kích thước chữ */
+    font-weight: bold; /* Tô đậm chữ */
+    color: black; /* Đổi màu chữ về màu đen */
+    text-align: left; /* Căn lề trái cho chữ */
+}
+
+.searchHeading {
+    font-size: 20px; 
+    font-weight: bold; /* Tô đậm chữ */
+    color: black; /* Đổi màu chữ về màu đen */
+    text-align: left; /* Căn lề trái cho chữ */
+}
+
+.inputContainer {
+    margin-bottom: 9px; 
+    border: 1px solid #ccc; /* Viền cho ô nhập */
+    border-radius: 5px; /* Bo góc cho ô nhập */
+    background-color: #e0e0e0; /* Màu nền sẫm hơn cho ô nhập */
+}
+
+.inputField {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px; 
+    border: none; /* Bỏ viền cho ô nhập */
+    outline: none; /* Bỏ viền khi ô nhập được chọn */
+    background-color: transparent; /* Nền trong suốt */
+}
+
+/* Hiệu ứng cho ô nhập khi focus */
+.inputField:focus {
+    border: 1px solid #28a745; /* Thêm màu viền khi focus */
+}
+
+.submitBtn {
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    padding: 10px;
+    cursor: pointer; 
+    width: 100%; /* Chiều rộng nút bằng 100% */
+    border-radius: 5px; /* Bo góc cho nút */
+}
+
+.submitBtn:hover {
+    background-color: #218838; 
+}
+
+/* kết thúc phần tìm kiếm */
+
+
 /* kết thúc nhiệm vụ  */
 
 /* start new */
