@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="header">
         <!-- start header -->
@@ -48,24 +50,77 @@
     <!-- start header -->
 
     <!-- start form -->
-     <form action="" id="search-form">
+    <form action="" id="search-form">
         <input type="search" placeholder="search here..." id="search-box">
         <label for="search-box" class="fas fa-search"></label>
-         <i class="fas fa-times" id="close"></i>
-     </form>
+        <i class="fas fa-times" id="close"></i>
+    </form>
 
 
-     <!--content-->
-     <div class="container-pay">
-        <h1><i class="fa-solid fa-circle-dollar-to-slot"></i> Bước cuối cùng-Thanh toán <i class="fa-solid fa-circle-dollar-to-slot"></i></h1>
+    <!--content-->
+
+    <div class="container-pay">
+        <h1><i class="fa-solid fa-circle-dollar-to-slot"></i> Bước cuối cùng - Thanh toán <i
+                class="fa-solid fa-circle-dollar-to-slot"></i></h1>
         <div class="content-pay">
+
             <div class="content-give">
-                <h3>Giao đến</h3>
+                <h4>Giao đến</h4>
                 <p>Thời gian giao hàng đến</p>
-                <p> <i class="fa-regular fa-clock"></i> 25 phút  <i class="fa-solid fa-road"></i> 5,6 km</p>
+                <h2>25 phút <i class="fa-regular fa-clock"></i>5,6 km<i class="fa-solid fa-road"></i></h2>
+
+                <div class="address-container">
+                    <div class="address-image">
+                        <img src="images/ảnh duy tân.png" alt="Map" />
+                    </div>
+                    <div class="address-info">
+                        <h5>Địa chỉ</h5>
+                        <input type="text" value="120 Hoàng Minh Thảo, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000"
+                            readonly />
+
+                        <h5>Chi tiết địa chỉ</h3>
+                            <textarea rows="2"
+                                placeholder="120 Hoàng Minh Thảo, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000"></textarea>
+
+                            <h5>Ghi chú cho tài xế</h3>
+                                <textarea rows="2" placeholder="Hãy gặp tôi tại sảnh"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="order-summary">
+            <h3>Tóm tắt đơn hàng</h3>
+            <div class="order-item">
+                <!-- Nút trừ, số lượng, và nút cộng -->
+                <div class="quantity-controls">
+                    <button id="decrease">-</button>
+                    <span id="quantity">1</span>
+                    <button id="increase">+</button>
+                </div>
+                <img src="images/img-giaodienxoila.html/sell-combo.png" alt="Bún bò Huế">
+                <span>combo</span>
+                <h6 id="price">99.000</h6> <!-- Thêm id cho giá -->
+
+
+            </div>
+            <div class="total-cost">
+                <p><span>Tạm tính</span><span id="total-price">99.000</span></p>
+                <p><span>Phí vận chuyển</span><span>29,000</span></p>
             </div>
         </div>
-     </div>
+
+        <!-- <div class="footer">
+            <div class="footer-content">
+                <div class="total-cost">
+                    <span>Tổng cộng</span>
+                    <span class="original-price">159.000 đ</span>
+                </div>
+                <button class="order-button">Đặt đơn</button>
+            </div>
+        </div> -->
 
 
 
@@ -76,8 +131,10 @@
 
 
 
-    <!-- js link -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+
+        <!-- js link -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
 </body>
+
 </html>

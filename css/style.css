@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
 :root {
     --green: #27ae60;
     --yellow: #fdb819;
@@ -27,7 +28,8 @@ html {
 }
 
 section {
-    margin: 0 6% 0 6%; /* Lề trên, phải, dưới, trái tương ứng */
+    margin: 0 6% 0 6%;
+    /* Lề trên, phải, dưới, trái tương ứng */
     padding: 2rem;
 }
 
@@ -62,7 +64,8 @@ section:nth-child(even) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000; /*chồng lên các phần tử khác*/
+    z-index: 1000;
+    /*chồng lên các phần tử khác*/
     box-shadow: var(--box-shadow);
 }
 
@@ -159,7 +162,7 @@ header .icons a {
     margin-left: .5rem;
     height: 3.5rem;
     line-height: 3.5rem;
-    width:3.5rem;
+    width: 3.5rem;
     justify-content: center;
     text-align: center;
     font-size: 1.5rem;
@@ -192,23 +195,30 @@ header .login a:hover {
 /* end header */
 
 
- /* stater search form */
-#search-form{
+/* stater search form */
+#search-form {
     position: fixed;
-    top: -110%; 
+    top: -110%;
     left: 0;
-    height: 100%;  /* cho bìa to full màn */
+    height: 100%;
+    /* cho bìa to full màn */
     width: 100%;
-    z-index: 1004;  /* nổi lên cao nhất*/
+    z-index: 1004;
+    /* nổi lên cao nhất*/
     background: rgba(0, 0, 0, .8);
-    display: flex;  /* đặt flex chia bố cục */
-    align-items: center;  /* cho xuống giữa*/
-    justify-content: center;  /* đặt ra chính diện*/
+    display: flex;
+    /* đặt flex chia bố cục */
+    align-items: center;
+    /* cho xuống giữa*/
+    justify-content: center;
+    /* đặt ra chính diện*/
 }
-#search-form.active{
+
+#search-form.active {
     top: 0;
 }
-#search-form #search-box{
+
+#search-form #search-box {
     width: 50rem;
     border-bottom: .1rem solid #fff;
     padding: 1rem 0;
@@ -219,26 +229,28 @@ header .login a:hover {
 }
 
 /* luôn hiển thị */
-#search-form #search-box::placeholder{
+#search-form #search-box::placeholder {
     color: #eee;
 }
+
 /* loại bỏ dấu x mặc định */
-#search-form #search-box::-webkit-search-cancel-button{
+#search-form #search-box::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
-#search-form label{
+#search-form label {
     color: #fff;
     cursor: pointer;
     font-size: 3rem;
 
 }
 
-#search-form label:hover{
+#search-form label:hover {
     color: var(--yellow);
 
 }
-#search-form #close{
+
+#search-form #close {
     position: absolute;
     top: 2rem;
     right: 3rem;
@@ -285,92 +297,131 @@ header .login a:hover {
         display: block;
     }
 
-    #search-form #search-box{
+    #search-form #search-box {
         width: 90%;
         margin: 0 1rem;
     }
 }
+
 @media(max-width: 1336px) {
-    html{
+    html {
         font-size: 55%;
     }
+
     header .navbar {
         gap: 0;
     }
 
-    
+
 
 }
+
 @media(max-width: 1126px) {
-    html{
+    html {
         font-size: 45%;
     }
+
     header .navbar {
         gap: 0;
     }
 
-    
+
 
 }
 
 /* Thiết lập lại để các hình ảnh trong slider cùng kích thước */
 .house .house-slider .slider {
-    display: flex; /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    flex-wrap: wrap; /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
-    gap: 2rem; /* Khoảng cách giữa các phần tử con là 2rem */
-    padding-top: 9rem; /* Thêm khoảng cách từ trên xuống cho slider */
+    display: flex;
+    /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    flex-wrap: wrap;
+    /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
+    gap: 2rem;
+    /* Khoảng cách giữa các phần tử con là 2rem */
+    padding-top: 9rem;
+    /* Thêm khoảng cách từ trên xuống cho slider */
 }
 
 .house .house-slider .slider .content {
-    flex: 1 1 45rem; /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
+    flex: 1 1 45rem;
+    /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
 }
 
 .house .house-slider .slider .image {
-    flex: 1 1 45rem; /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
+    flex: 1 1 45rem;
+    /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
 }
 
 .slider img {
-    width: 300px; /* Đặt chiều rộng cố định cho hình ảnh */
-    height: 300px; /* Đặt chiều cao cố định cho hình ảnh */
-    border-radius: 50%; /* Bo tròn để tạo hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
-    margin: 20px 10px 30px 15px; /* Đặt khoảng cách cho các cạnh (trên, phải, dưới, trái) */
+    width: 300px;
+    /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 300px;
+    /* Đặt chiều cao cố định cho hình ảnh */
+    border-radius: 50%;
+    /* Bo tròn để tạo hình tròn */
+    object-fit: cover;
+    /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
+    margin: 20px 10px 30px 15px;
+    /* Đặt khoảng cách cho các cạnh (trên, phải, dưới, trái) */
 }
 
 .house .house-slider .slider .content span {
-    color: #fdb819; /* Màu sắc nổi bật cho văn bản */
-    font-weight: 700; /* Đặt trọng số chữ là 700 để nổi bật hơn */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Thêm bóng chữ để tạo chiều sâu */
-    font-size: 2.5rem; /* Kích thước chữ là 2.5rem */
-    text-transform: uppercase; /* Chuyển đổi tất cả chữ thành chữ hoa */
+    color: #fdb819;
+    /* Màu sắc nổi bật cho văn bản */
+    font-weight: 700;
+    /* Đặt trọng số chữ là 700 để nổi bật hơn */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Thêm bóng chữ để tạo chiều sâu */
+    font-size: 2.5rem;
+    /* Kích thước chữ là 2.5rem */
+    text-transform: uppercase;
+    /* Chuyển đổi tất cả chữ thành chữ hoa */
 }
 
 .house .house-slider .slider .content h1 {
-    color: var(--black); /* Màu chữ cho h1 từ biến đã định nghĩa */
-    font-size: 7rem; /* Kích thước chữ là 7rem */
+    color: var(--black);
+    /* Màu chữ cho h1 từ biến đã định nghĩa */
+    font-size: 7rem;
+    /* Kích thước chữ là 7rem */
 }
 
 .house .house-slider .slider .content p {
-    color: var(--black); /* Màu chữ cho đoạn văn */
-    font-size: 2.5rem; /* Kích thước chữ cho đoạn văn */
-    font-weight: 600; /* Trọng số chữ là 600 */
-    padding: 2rem; /* Khoảng cách bên trong cho đoạn văn */
-    line-height: 1.5; /* Chiều cao dòng là 1.5 để dễ đọc */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ cho đoạn văn */
-    border: 2px solid var(--yellow); /* Viền khung với màu vàng */
-    border-radius: auto; /* Bo góc khung (có thể tùy chỉnh thêm) */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng cho khung để tạo chiều sâu */
+    color: var(--black);
+    /* Màu chữ cho đoạn văn */
+    font-size: 2.5rem;
+    /* Kích thước chữ cho đoạn văn */
+    font-weight: 600;
+    /* Trọng số chữ là 600 */
+    padding: 2rem;
+    /* Khoảng cách bên trong cho đoạn văn */
+    line-height: 1.5;
+    /* Chiều cao dòng là 1.5 để dễ đọc */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Bóng chữ nhẹ cho đoạn văn */
+    border: 2px solid var(--yellow);
+    /* Viền khung với màu vàng */
+    border-radius: auto;
+    /* Bo góc khung (có thể tùy chỉnh thêm) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng cho khung để tạo chiều sâu */
 }
 
 .house .house-slider .slider .content h2 {
-    color: black; /* Màu chữ cho h2 */
-    font-size: 3rem; /* Kích thước chữ cho h2 */
-    font-weight: 700; /* Trọng số chữ là 700 để nổi bật */
-    margin-top: 1rem; /* Khoảng cách từ phần tử phía trên */
-    margin-bottom: 1rem; /* Khoảng cách từ phần tử phía dưới */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ nhẹ cho h2 */
-    text-align: right; /* Căn chỉnh chữ sang bên phải */
+    color: black;
+    /* Màu chữ cho h2 */
+    font-size: 3rem;
+    /* Kích thước chữ cho h2 */
+    font-weight: 700;
+    /* Trọng số chữ là 700 để nổi bật */
+    margin-top: 1rem;
+    /* Khoảng cách từ phần tử phía trên */
+    margin-bottom: 1rem;
+    /* Khoảng cách từ phần tử phía dưới */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    /* Bóng chữ nhẹ cho h2 */
+    text-align: right;
+    /* Căn chỉnh chữ sang bên phải */
 }
 
 
@@ -393,26 +444,34 @@ header .login a:hover {
 /*bắt đầu trang web xôi lá việt html*/
 .container-nextpage {
     width: 100%;
-    margin: 0 auto; /* Ensures content appears below the fixed header */
+    margin: 0 auto;
+    /* Ensures content appears below the fixed header */
 }
 
 /* Enlarge and bold "Xôi Lá Việt" */
 .restaurant-info h1 {
-    font-size: 6rem; /* Larger size for "Xôi Lá Việt" */
-    font-weight: bold; /* Make it bold */
-    margin-left: 6%; /* Cách lề bên trái 6% */
+    font-size: 6rem;
+    /* Larger size for "Xôi Lá Việt" */
+    font-weight: bold;
+    /* Make it bold */
+    margin-left: 6%;
+    /* Cách lề bên trái 6% */
 }
 
 .restaurant-info p {
-    font-size: 2rem; /* Tăng kích thước chữ */
-    line-height: 1.8; /* Tăng khoảng cách giữa các dòng */
-    margin-left: 6%; /* Cách lề bên trái 6% */
+    font-size: 2rem;
+    /* Tăng kích thước chữ */
+    line-height: 1.8;
+    /* Tăng khoảng cách giữa các dòng */
+    margin-left: 6%;
+    /* Cách lề bên trái 6% */
 }
 
 .restaurant-info {
     padding: 10px;
     margin-top: 100px;
-    background-color: white; /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
+    background-color: white;
+    /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
     position: relative;
 }
 
@@ -421,11 +480,15 @@ header .login a:hover {
     justify-content: space-around;
     background-color: white;
     padding: 10px 0;
-    border-bottom: 4px solid #fdb819; 
-    position: sticky; /* Giữ sticky-nav cố định khi cuộn */
-    top: 60px; /* Đặt vị trí dưới header */
-    z-index: 999; /* Đặt z-index thấp hơn header */
-    margin-top: 1rem; /* Khoảng cách dưới header */
+    border-bottom: 4px solid #fdb819;
+    position: sticky;
+    /* Giữ sticky-nav cố định khi cuộn */
+    top: 50px;
+    /* Đặt vị trí dưới header */
+    z-index: 999;
+    /* Đặt z-index thấp hơn header */
+    margin-top: 1rem;
+    /* Khoảng cách dưới header */
 }
 
 .deal-button {
@@ -434,30 +497,40 @@ header .login a:hover {
     font-size: 2rem;
     color: #333;
     cursor: pointer;
-    padding: 10px 20px; /* Thêm khoảng cách cho nút */
+    padding: 10px 20px;
+    /* Thêm khoảng cách cho nút */
     transition: color 0.3s;
 }
 
 .deal-button:hover {
-    color: #fdb819; /* Thay đổi màu khi hover */
+    color: #fdb819;
+    /* Thay đổi màu khi hover */
 }
 
 
 
 
 .restaurant-info .img {
-    width: 22rem; /* Đặt kích thước tùy ý cho ảnh */
-    height: 22rem; /* Đặt kích thước tùy ý cho ảnh */
-    border-radius: 50%; /* Tạo hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
-    position: absolute; /* Đặt vị trí tuyệt đối */
-    top: 20px; /* Khoảng cách từ phía trên */
-    right: 20px; /* Khoảng cách từ bên phải */
+    width: 22rem;
+    /* Đặt kích thước tùy ý cho ảnh */
+    height: 22rem;
+    /* Đặt kích thước tùy ý cho ảnh */
+    border-radius: 50%;
+    /* Tạo hình tròn */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+    position: absolute;
+    /* Đặt vị trí tuyệt đối */
+    top: 20px;
+    /* Khoảng cách từ phía trên */
+    right: 20px;
+    /* Khoảng cách từ bên phải */
     margin-right: 6%;
 }
 
-.container-nextpage i, .restaurant-info i {
-    color: #fdb819; 
+.container-nextpage i,
+.restaurant-info i {
+    color: #fdb819;
 }
 
 
@@ -477,7 +550,8 @@ header .login a:hover {
     text-align: center;
     font-size: 40px;
     color: #333;
-    margin: 9rem 0 20px; /* Kết hợp margin-top và margin-bottom */
+    margin: 9rem 0 20px;
+    /* Kết hợp margin-top và margin-bottom */
 }
 
 #sticky-food .container,
@@ -485,7 +559,8 @@ header .login a:hover {
 #sticky-combo .container,
 #sticky-promotion .container {
     display: flex;
-    flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng */
+    flex-wrap: wrap;
+    /* Cho phép các phần tử tự động xuống dòng */
     justify-content: flex-start;
     gap: 10px;
     margin: 0 6%;
@@ -509,8 +584,10 @@ header .login a:hover {
 #sticky-drink .content-drink .image img,
 #sticky-combo .content-combo .image img,
 #sticky-promotion .content-promotion .image img {
-    width: 100%; /* Đặt chiều rộng của ảnh là 100% của container cha */
-    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo chiều rộng */
+    width: 100%;
+    /* Đặt chiều rộng của ảnh là 100% của container cha */
+    height: auto;
+    /* Đảm bảo chiều cao tự động điều chỉnh theo chiều rộng */
     border-radius: 10px;
 }
 
@@ -535,24 +612,27 @@ header .login a:hover {
 #sticky-combo .content-combo .money-p,
 #sticky-promotion .content-promotion .money-p {
     font-size: 1.5rem;
-    margin: 0 20px; /* Xóa margin để không ảnh hưởng đến căn chỉnh */
-    display: inline-flex; 
-    align-items: center; 
+    margin: 0 20px;
+    /* Xóa margin để không ảnh hưởng đến căn chỉnh */
+    display: inline-flex;
+    align-items: center;
 }
 
 #sticky-food .btn-xoi,
 #sticky-drink .btn-xoi,
 #sticky-combo .btn-xoi,
 #sticky-promotion .btn-xoi {
-    margin: 0; /* Xóa margin dưới để không bị dịch chuyển */
+    margin: 0;
+    /* Xóa margin dưới để không bị dịch chuyển */
     font-size: 1.6rem;
     color: #fff;
     border-radius: 5rem;
     background: var(--black);
     cursor: pointer;
     padding: .8rem 3rem;
-    align-items: center; 
+    align-items: center;
 }
+
 #sticky-food .btn-xoi:hover,
 #sticky-drink .btn-xoi:hover,
 #sticky-combo .btn-xoi:hover,
@@ -563,13 +643,13 @@ header .login a:hover {
 #sticky-promotion i,
 #sticky-food i,
 #sticky-drink i,
-#sticky-combo i
-{
+#sticky-combo i {
     color: #fdb819;
 }
 
 .footer-xoila {
-    background-color: #fdb819; /* Màu nền vàng */
+    background-color: #fdb819;
+    /* Màu nền vàng */
     color: black;
     padding: 20px 0;
 }
@@ -579,18 +659,22 @@ header .login a:hover {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: auto 6%; /* Cách lề trái và phải 6% */
+    margin: auto 6%;
+    /* Cách lề trái và phải 6% */
 }
 
 .footer-xoila .logo {
-    font-size: 32px; /* Chữ to hơn */
-    font-weight: bold; /* In đậm chữ */
+    font-size: 32px;
+    /* Chữ to hơn */
+    font-weight: bold;
+    /* In đậm chữ */
     margin-right: 10px;
 }
 
 .footer-xoila .nav {
     display: flex;
-    gap: 40px; /* Cách đều nhau */
+    gap: 40px;
+    /* Cách đều nhau */
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -599,8 +683,10 @@ header .login a:hover {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.4rem; /* Chữ to hơn */
-    font-weight: bold; /* In đậm chữ */
+    font-size: 1.4rem;
+    /* Chữ to hơn */
+    font-weight: bold;
+    /* In đậm chữ */
 }
 
 .footer-xoila .nav a:hover {
@@ -608,19 +694,25 @@ header .login a:hover {
 }
 
 .footer-xoila .icons {
-    display: flex; /* Sử dụng flexbox để sắp xếp theo hàng ngang */
-    gap: 15px; /* Khoảng cách giữa các icon */
-    align-items: center; /* Căn giữa các icon theo chiều dọc */
-    margin-left: auto; /* Đẩy phần icons sang phải */
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp theo hàng ngang */
+    gap: 15px;
+    /* Khoảng cách giữa các icon */
+    align-items: center;
+    /* Căn giữa các icon theo chiều dọc */
+    margin-left: auto;
+    /* Đẩy phần icons sang phải */
     padding-left: 20px;
 }
 
 /* Nếu bạn muốn các icon nằm trong khối riêng */
 .footer-xoila .icons p {
-    margin: 0; /* Bỏ margin mặc định */
+    margin: 0;
+    /* Bỏ margin mặc định */
     font-size: 20px;
     padding: 0;
 }
+
 /*kết thúc trang web xôi lá việt html*/
 
 
@@ -638,24 +730,26 @@ header .login a:hover {
 
 
 /* start css dishes */
-.dishes-container{
+.dishes-container {
     padding-top: 5rem;
 }
 
-.dishes{
+.dishes {
     padding: 2rem 6%;
 }
-.dishes .box{
+
+.dishes .box {
     margin-top: 2rem;
 }
-.sub-heading{
+
+.sub-heading {
     text-align: center;
     color: var(--yellow);
     font-size: 4rem;
     padding-top: 1rem;
 }
 
-.heading{
+.heading {
     text-align: center;
     color: var(--yellow);
     font-size: 3rem;
@@ -664,26 +758,26 @@ header .login a:hover {
 }
 
 
-.dishes .box-container{
+.dishes .box-container {
     display: grid;
     /* 1fr: Kích thước tối đa của mỗi cột là 1 phần (fraction) của không gian còn lại trong grid, chia đều cho các cột. */
-    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
 }
 
-.dishes .box-container .box{
-    
+.dishes .box-container .box {
+
     border-radius: 3%;
     position: relative;
     overflow: hidden;
-    
+
 }
 
-.dishes .box-container .box img{
+.dishes .box-container .box img {
     width: 100%;
 }
 
-.dishes .box-container .box .promotag{
+.dishes .box-container .box .promotag {
     position: absolute;
     left: -3px;
     z-index: 1;
@@ -700,41 +794,46 @@ header .login a:hover {
     top: 6px;
 }
 
-.dishes .box-container .box h3{
+.dishes .box-container .box h3 {
     padding-top: 1.2rem;
     color: var(--black);
     font-size: 1.9rem;
 }
 
-.basic-infor{
+.basic-infor {
     padding-top: 1.5rem;
     font-size: 1.7rem;
     color: var(--light-color);
 }
 
-.basic-infor .infor-icon{
+.basic-infor .infor-icon {
     padding-top: .6rem;
     display: flex;
     gap: 1.5rem;
 }
-.basic-infor .infor-icon .star-infor i{
+
+.basic-infor .infor-icon .star-infor i {
     color: var(--yellow);
 }
 
-.basic-infor .infor-icon .km-infor i{
+.basic-infor .infor-icon .km-infor i {
     font-size: 6px;
     vertical-align: middle;
 }
+
 .box .basic-infor-bottom {
     padding-top: .6rem;
 }
-.box .basic-infor-bottom i{
+
+.box .basic-infor-bottom i {
     color: var(--yellow);
 }
+
 .box .basic-infor-bottom {
     font-size: 1.7rem;
     color: #666;
 }
+
 /* end css dishes */
 
 /* nhiệm vụ của đạt */
@@ -743,22 +842,25 @@ header .login a:hover {
     display: flex;
     flex-direction: column;
     padding: 2rem 6%;
-    
-   
+
+
 }
-.menu .box{
+
+.menu .box {
     background-color: white;
     position: relative;
     width: 150px;
-    height: 160px; 
+    height: 160px;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px;
     margin: 1.5rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng nhẹ */
-    transition: transform 0.2s ease; /* Hiệu ứng khi hover*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tạo hiệu ứng đổ bóng nhẹ */
+    transition: transform 0.2s ease;
+    /* Hiệu ứng khi hover*/
 }
 
 .menu .titleMenu {
@@ -766,14 +868,15 @@ header .login a:hover {
     color: var(--yellow);
     font-size: 3rem;
     padding-bottom: 2rem;
-    
+
     text-transform: uppercase;
 }
 
 
 
 .menu .box:hover {
-    transform: scale(1.05); /* Phóng to hộp khi hover */
+    transform: scale(1.05);
+    /* Phóng to hộp khi hover */
 }
 
 .contentMenu {
@@ -781,7 +884,7 @@ header .login a:hover {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .menu .box .image .img {
@@ -794,11 +897,15 @@ header .login a:hover {
 }
 
 .menu .box .titleBox {
-    color: var(--black); /* Màu chữ cho đoạn văn */
-    font-size: 1.7rem; /* Kích thước chữ cho đoạn văn */
-    font-weight: 600; /* Trọng số chữ là 600 */
+    color: var(--black);
+    /* Màu chữ cho đoạn văn */
+    font-size: 1.7rem;
+    /* Kích thước chữ cho đoạn văn */
+    font-weight: 600;
+    /* Trọng số chữ là 600 */
     text-align: center;
-    margin-top: 10px; /* Để khoảng cách giữa hình ảnh và chữ */
+    margin-top: 10px;
+    /* Để khoảng cách giữa hình ảnh và chữ */
     margin-bottom: -200px;
 }
 
@@ -806,9 +913,12 @@ header .login a:hover {
 /*bắt đầu tin tức*/
 
 .review-slider .header-review {
-    font-size: 3rem;          /* Kích thước chữ */
-    color: #fdb819;           /* Màu chữ */
-    text-align: center;       /* Căn giữa chữ */
+    font-size: 3rem;
+    /* Kích thước chữ */
+    color: #fdb819;
+    /* Màu chữ */
+    text-align: center;
+    /* Căn giữa chữ */
     margin-top: 10px;
     text-transform: uppercase;
 }
@@ -817,38 +927,56 @@ header .login a:hover {
 
 
 .review .review-slider .slider-review {
-    display: flex; /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    flex-wrap: wrap; /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
-    gap: 2rem; /* Khoảng cách giữa các phần tử con là 2rem */
-    padding-top: 9rem; /* Thêm khoảng cách từ trên xuống cho slider */
+    display: flex;
+    /* Thiết lập kiểu hiển thị là flexbox để sắp xếp các phần tử con */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    flex-wrap: wrap;
+    /* Cho phép các phần tử con cuộn xuống dòng nếu không đủ chỗ */
+    gap: 2rem;
+    /* Khoảng cách giữa các phần tử con là 2rem */
+    padding-top: 9rem;
+    /* Thêm khoảng cách từ trên xuống cho slider */
     margin-bottom: 40px;
 }
 
 .review .review-slider .slider-review .content {
-    flex: 1 1 45rem; /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
+    flex: 1 1 45rem;
+    /* Thiết lập tỷ lệ co giãn: co giãn, không co giãn, và chiều rộng tối thiểu là 45rem */
     text-align: center;
 }
 
 .review .review-slider .slider-review .image {
-    flex: 1 1 45rem; /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
+    flex: 1 1 45rem;
+    /* Tương tự như trên, áp dụng cho phần tử hình ảnh */
 }
 
 .slider-review img {
-    width: 100%; /* Đặt chiều rộng cố định cho hình ảnh */
-    height: 200px; /* Đặt chiều cao cố định cho hình ảnh */ /* Bo tròn để tạo hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
+    width: 100%;
+    /* Đặt chiều rộng cố định cho hình ảnh */
+    height: 200px;
+    /* Đặt chiều cao cố định cho hình ảnh */
+    /* Bo tròn để tạo hình tròn */
+    object-fit: cover;
+    /* Đảm bảo ảnh vừa khít với hình tròn mà không bị méo */
 }
 
 .review .review-slider .slider-review .content p {
-    color: var(--black); /* Màu chữ cho đoạn văn */
-    font-size: 1.3rem; /* Kích thước chữ cho đoạn văn */
-    font-weight: 400; /* Trọng số chữ là 600 */; 
+    color: var(--black);
+    /* Màu chữ cho đoạn văn */
+    font-size: 1.3rem;
+    /* Kích thước chữ cho đoạn văn */
+    font-weight: 400;
+    /* Trọng số chữ là 600 */
+    ;
     margin-top: 20px;
     margin-bottom: 20px;
-    line-height: 1.5; /* Chiều cao dòng là 1.5 để dễ đọc */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bóng chữ nhẹ cho đoạn văn */
-    text-align: justify; /* Căn chữ đều hai bên */
+    line-height: 1.5;
+    /* Chiều cao dòng là 1.5 để dễ đọc */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Bóng chữ nhẹ cho đoạn văn */
+    text-align: justify;
+    /* Căn chữ đều hai bên */
 }
 
 
@@ -873,39 +1001,281 @@ header .login a:hover {
 
 
 /*bắt đầu giao diện thanh toán*/
-.container-pay{
-    margin-top: 100px;
-    background-color: white; /* Bạn có thể xóa dòng này nếu không muốn có viền dưới */
+.container-pay {
     text-align: center;
-
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
 }
 
-.container-pay h1{
-    font-size: 3rem; /* Larger size for "Xôi Lá Việt" */
-    font-weight: bold; /* Make it bold */
-    color: var(--black);
-    text-align: center;
-    border-bottom: 4px solid #fdb819;
+.container-pay h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
 }
-.container-pay i{
+
+.container-pay h1 i {
+    color: #fdb819;
+    /* Đổi màu cho các biểu tượng thành màu vàng */
+}
+
+.container-pay .content-pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-pay .content-give {
+    background-color: #fff;
+    padding: 0;
+    /* Bỏ padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    /* Tăng chiều rộng tối đa */
+    text-align: left;
+    margin: 0;
+    /* Không có khoảng cách trên và dưới */
+}
+
+.container-pay .content-give h4,
+.container-pay .content-give h5,
+.container-pay .content-give p {
+    margin: 0;
+    /* Bỏ margin */
+}
+
+.container-pay .content-give h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    /* Khoảng cách trên cho tiêu đề */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới cho tiêu đề */
+}
+
+.container-pay .content-give input,
+.container-pay .content-give textarea {
+    width: calc(100% - 20px);
+    /* Chiếm toàn bộ chiều rộng, trừ 20px để tạo khoảng cách với viền */
+    border: 1px solid #ccc;
+    /* Viền cho input và textarea */
+    border-radius: 5px;
+    /* Bo góc cho input và textarea */
+    padding: 10px;
+    /* Khoảng cách bên trong */
+    margin-bottom: 15px;
+    /* Khoảng cách giữa các phần tử */
+    font-size: 16px;
+    /* Kích thước chữ */
+    resize: none;
+    /* Không cho phép thay đổi kích thước cho textarea */
+}
+
+.container-pay .content-give textarea {
+    padding: 10px;
+    /* Khoảng cách bên trong cho textarea */
+}
+
+.container-pay .content-give h5 {
+    font-size: 14px;
+    color: #060606;
+    margin: 5px 0;
+    /* Khoảng cách dưới cho h5 */
+}
+
+.container-pay .content-give h4 {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 25px;
+    color: #030303;
+    margin: 0;
+    /* Bỏ margin */
+    border-bottom: 0.5px solid var(--black);
+    /* Viền dưới cho h4 */
+}
+
+.container-pay .content-give h2 {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #030303;
+    margin: 0;
+    /* Bỏ margin */
+    border-bottom: 0.5px solid var(--black);
+    /* Viền dưới cho h4 */
+    /* Thêm khoảng cách giữa nội dung và đường viền */
+}
+
+.container-pay .content-give p {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #030303;
+    margin: 0;
+    /* Bỏ margin */
+    font-weight: bold;
+}
+
+.container-pay .content-give h2 i {
+    margin-right: 5px;
     color: #fdb819;
 }
 
-
-.content-pay {
-    background: #ece4e4;
-    margin: auto 15% auto 15%;
-}
-.content-pay .content-give {
+/* Định dạng cho container địa chỉ */
+.address-container {
     display: flex;
-    justify-content: flex-start; /* Đảm bảo căn sát lề trái */
+    /* Sử dụng flexbox để đặt hình ảnh bên trái và thông tin bên phải */
+    align-items: flex-start;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    margin-top: 20px;
+    /* Khoảng cách trên cho container */
 }
-.content-pay .content-give h3 {
-    color: var(--black);
-    margin-top: 100px;
+
+.address-image {
+    flex: 0 0 150px;
+    /* Chiều rộng cố định cho hình ảnh */
+    margin-right: 15px;
+    /* Khoảng cách bên phải cho hình ảnh */
+    margin-left: 20px;
+}
+
+.address-image img {
+    width: calc(100% - 20px);
+    /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+    border-radius: 5px;
+    /* Bo góc cho hình ảnh */
+}
+
+.address-info {
+    flex: 1;
+    /* Chiếm phần không gian còn lại */
+}
+
+
+/*tack tóm tắt đơn hàng*/
+.order-summary {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* Căn giữa phần tử */
+    height: 200px;
+}
+
+.order-summary h3 {
+    font-size: 25px;
+    color: #333;
+    border-bottom: 0.5px solid var(--black);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+.order-summary .order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid var(--black);
+    padding: 0;
+    /* Loại bỏ padding để sát lề trái */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.order-summary .order-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 0;
+    /* Đảm bảo không có khoảng cách giữa ảnh và span */
+}
+
+.order-summary .order-item span {
+    font-size: 20px;
+    color: #333;
     margin-left: 0;
-    font-size: 2rem;
+    /* Đảm bảo không có khoảng cách giữa span và ảnh */
+    font-weight: bold;
 }
+
+.order-summary .order-item h6 {
+    font-size: 20px;
+    color: #333;
+    margin-left: auto;
+    /* Đẩy h6 về phía bên phải */
+    padding-left: 0;
+    padding-right: 3%;
+    /* Đảm bảo không có padding bên trái */
+    font-weight: bold;
+}
+
+.order-summary .total-cost {
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.order-summary .total-cost p {
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    /* Cách lề trái 20px */
+    margin-right: 3%;
+    /* Cách lề phải 3% */
+    font-weight: bold;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    background-color: #fff;
+    /* Đảm bảo nền khối lượng điều khiển là trắng */
+}
+
+
+.quantity-controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls #quantity {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.remove-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* Đường viền xám nhạt */
+    border-radius: 5px;
+    cursor: pointer;
+    color: #f00;
+    /* Màu đỏ cho nút Remove */
+    font-weight: bold;
+    /* Làm cho chữ trong nút đậm */
+    text-align: center;
+    /* Căn giữa chữ */
+}
+
+
 
 /*kết thúc giao diện thanh toán*/
 
@@ -921,9 +1291,11 @@ header .login a:hover {
     background-color: white;
     margin-top: 20px;
     margin-bottom: 5px;
-    border-top: 1px solid #eaeaea; /* Đường viền trên nhẹ */
+    border-top: 1px solid #eaeaea;
+    /* Đường viền trên nhẹ */
     color: #333;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo chiều sâu */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng để tạo chiều sâu */
 }
 
 
@@ -933,12 +1305,13 @@ header .login a:hover {
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    background-color: transparent; /* Bỏ màu nền */
+    background-color: transparent;
+    /* Bỏ màu nền */
 }
 
 /* Row cho footer */
 .grid .grid_row1 {
- 
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -949,7 +1322,7 @@ header .login a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 }
 
 .grid .grid_row1 .grid_column_2_4 {
@@ -963,7 +1336,7 @@ header .login a:hover {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-    
+
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list {
@@ -987,7 +1360,7 @@ header .login a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_dowload .footer_dowload_qr {
@@ -1000,34 +1373,39 @@ header .login a:hover {
     width: 120px;
     margin: 5px 0;
 }
-.grid .grid_row1 .grid_column_2_4 .footer_heading_Winship{
+
+.grid .grid_row1 .grid_column_2_4 .footer_heading_Winship {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 17px;
     color: #fdb819;
 }
-.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline{
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline {
     color: #555;
     font-size: 20px;
     margin-top: 15px;
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
     align-items: center;
     font-weight: bold;
 
 }
 
-.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_number{
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_number {
     font-size: 30px;
     color: #fdb819;
     margin-top: 5px;
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
     align-items: center;
     font-weight: bold;
 
 }
-.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link .footer_recognize-image{
+
+.grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link .footer_recognize-image {
     width: 200px;
     height: 150px;
     display: flex;
@@ -1035,12 +1413,14 @@ header .login a:hover {
     align-items: center;
     margin: 30px;
 }
-.grid .grid_row2 .footer_text{
+
+.grid .grid_row2 .footer_text {
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* end footer*/
 
 
@@ -1052,7 +1432,7 @@ header .login a:hover {
     margin: 0 9%;
 
     font-size: 2.5rem;
-    
+
 }
 
 .question-container h1 {
@@ -1060,17 +1440,21 @@ header .login a:hover {
     margin-top: 100px;
     color: #fdb819;
 }
+
 .question-container .whyWinshipList {
     font-size: 1.5rem;
     margin-top: 25px;
 }
+
 .question-container .whyWinshipList .tickv {
     color: #fdb819;
 }
+
 .question-container .whyWinshipList .bold___2_Blq {
     font-weight: 900;
 }
-.question-container .whyWinshipList p{
+
+.question-container .whyWinshipList p {
     margin-top: 25px;
 }
 
@@ -1082,66 +1466,86 @@ header .login a:hover {
     left: 15rem;
     top: 31rem;
     max-width: 305px;
-    padding: 26px; 
-    border: 1px solid #ccc; /* Viền cho container */
-    border-radius: 5px; /* Bo góc cho container */
-    background-color: #fff; /* Màu nền trắng */
-    
+    padding: 26px;
+    border: 1px solid #ccc;
+    /* Viền cho container */
+    border-radius: 5px;
+    /* Bo góc cho container */
+    background-color: #fff;
+    /* Màu nền trắng */
+
     position: absolute;
-    z-index: 300; /* Đặt z-index cao hơn để che các mục phía sau */
+    z-index: 300;
+    /* Đặt z-index cao hơn để che các mục phía sau */
 }
 
 .heading {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .searchGreeting {
-    font-size: 17px; /* Kích thước chữ */
-    font-weight: bold; /* Tô đậm chữ */
-    color: black; /* Đổi màu chữ về màu đen */
-    text-align: left; /* Căn lề trái cho chữ */
+    font-size: 17px;
+    /* Kích thước chữ */
+    font-weight: bold;
+    /* Tô đậm chữ */
+    color: black;
+    /* Đổi màu chữ về màu đen */
+    text-align: left;
+    /* Căn lề trái cho chữ */
 }
 
 .searchHeading {
-    font-size: 20px; 
-    font-weight: bold; /* Tô đậm chữ */
-    color: black; /* Đổi màu chữ về màu đen */
-    text-align: left; /* Căn lề trái cho chữ */
+    font-size: 20px;
+    font-weight: bold;
+    /* Tô đậm chữ */
+    color: black;
+    /* Đổi màu chữ về màu đen */
+    text-align: left;
+    /* Căn lề trái cho chữ */
 }
 
 .inputContainer {
-    margin-bottom: 9px; 
-    border: 1px solid #ccc; /* Viền cho ô nhập */
-    border-radius: 5px; /* Bo góc cho ô nhập */
-    background-color: #e0e0e0; /* Màu nền sẫm hơn cho ô nhập */
+    margin-bottom: 9px;
+    border: 1px solid #ccc;
+    /* Viền cho ô nhập */
+    border-radius: 5px;
+    /* Bo góc cho ô nhập */
+    background-color: #e0e0e0;
+    /* Màu nền sẫm hơn cho ô nhập */
 }
 
 .inputField {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
-    font-size: 16px; 
-    border: none; /* Bỏ viền cho ô nhập */
-    outline: none; /* Bỏ viền khi ô nhập được chọn */
-    background-color: transparent; /* Nền trong suốt */
+    font-size: 16px;
+    border: none;
+    /* Bỏ viền cho ô nhập */
+    outline: none;
+    /* Bỏ viền khi ô nhập được chọn */
+    background-color: transparent;
+    /* Nền trong suốt */
 }
 
 /* Hiệu ứng cho ô nhập khi focus */
 .inputField:focus {
-    border: 1px solid #28a745; /* Thêm màu viền khi focus */
+    border: 1px solid #28a745;
+    /* Thêm màu viền khi focus */
 }
 
 .submitBtn {
-    background-color: var(--yellow); 
-    color: white; 
-    border: none; 
+    background-color: var(--yellow);
+    color: white;
+    border: none;
     padding: 10px;
-    cursor: pointer; 
-    width: 100%; /* Chiều rộng nút bằng 100% */
-    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer;
+    width: 100%;
+    /* Chiều rộng nút bằng 100% */
+    border-radius: 5px;
+    /* Bo góc cho nút */
 }
 
 .submitBtn:hover {
-    background-color:#d39913; 
+    background-color: #d39913;
 }
 
 /* kết thúc phần tìm kiếm */
