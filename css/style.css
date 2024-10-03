@@ -1461,7 +1461,7 @@ header .login a:hover {
 /* kết thúc phần câu hỏi */
 
 /* bắt đầu phần mục tìm kiếm */
-.searchContainer {
+.searchContainer_Q {
 
     left: 15rem;
     top: 31rem;
@@ -1479,11 +1479,11 @@ header .login a:hover {
     /* Đặt z-index cao hơn để che các mục phía sau */
 }
 
-.heading {
+.heading_Q {
     margin-bottom: 15px;
 }
 
-.searchGreeting {
+.searchGreeting_Q {
     font-size: 17px;
     /* Kích thước chữ */
     font-weight: bold;
@@ -1494,7 +1494,7 @@ header .login a:hover {
     /* Căn lề trái cho chữ */
 }
 
-.searchHeading {
+.searchHeading_Q {
     font-size: 20px;
     font-weight: bold;
     /* Tô đậm chữ */
@@ -1504,7 +1504,7 @@ header .login a:hover {
     /* Căn lề trái cho chữ */
 }
 
-.inputContainer {
+.inputContainer_Q {
     margin-bottom: 9px;
     border: 1px solid #ccc;
     /* Viền cho ô nhập */
@@ -1514,7 +1514,7 @@ header .login a:hover {
     /* Màu nền sẫm hơn cho ô nhập */
 }
 
-.inputField {
+.inputField_Q {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -1527,12 +1527,12 @@ header .login a:hover {
 }
 
 /* Hiệu ứng cho ô nhập khi focus */
-.inputField:focus {
+.inputField_Q:focus {
     border: 1px solid #28a745;
     /* Thêm màu viền khi focus */
 }
 
-.submitBtn {
+.submitBtn_Q {
     background-color: var(--yellow);
     color: white;
     border: none;
@@ -1544,7 +1544,7 @@ header .login a:hover {
     /* Bo góc cho nút */
 }
 
-.submitBtn:hover {
+.submitBtn_Q:hover {
     background-color: #d39913;
 }
 
