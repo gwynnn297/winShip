@@ -1288,13 +1288,13 @@ header .login a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 6%;
-    background-color: white;
+    background-color: #eee;
     margin-top: 20px;
     margin-bottom: 5px;
     border-top: 1px solid #eaeaea;
     /* Đường viền trên nhẹ */
     color: #333;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    
     /* Đổ bóng để tạo chiều sâu */
 }
 
