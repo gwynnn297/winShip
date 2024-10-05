@@ -683,7 +683,7 @@ header .login a:hover {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     /* Chữ to hơn */
     font-weight: bold;
     /* In đậm chữ */
@@ -1003,11 +1003,11 @@ header .login a:hover {
 /*bắt đầu giao diện thanh toán*/
 .container-pay {
     text-align: center;
-    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
+    height: 1480px;
 }
 
 .container-pay h1 {
@@ -1082,7 +1082,7 @@ header .login a:hover {
 }
 
 .container-pay .content-give h5 {
-    font-size: 14px;
+    font-size: 18px;
     color: #060606;
     margin: 5px 0;
     /* Khoảng cách dưới cho h5 */
@@ -1101,7 +1101,7 @@ header .login a:hover {
 
 .container-pay .content-give h2 {
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 18px;
     color: #030303;
     margin: 0;
     /* Bỏ margin */
@@ -1157,7 +1157,7 @@ header .login a:hover {
 }
 
 
-/*tack tóm tắt đơn hàng*/
+/* tóm tắt đơn hàng*/
 .order-summary {
     background-color: #fff;
     border-radius: 10px;
@@ -1245,7 +1245,6 @@ header .login a:hover {
     /* Đảm bảo nền khối lượng điều khiển là trắng */
 }
 
-
 .quantity-controls button {
     padding: 5px 10px;
     font-size: 16px;
@@ -1275,7 +1274,200 @@ header .login a:hover {
     /* Căn giữa chữ */
 }
 
+/* CSS cho phần nhập mã khuyến mãi */
+.promo-entry {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* Căn giữa phần tử */
+    height: 350px;
+}
 
+.promo-entry h2 {
+    font-size: 25px;
+    color: #333;
+    border-bottom: 0.5px solid var(--black);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+.promo-entry textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 16px;
+    resize: none;
+}
+
+.content-price-code {
+    display: flex;
+    align-items: center;
+}
+
+.apply-button {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-button.active {
+    background-color: #fdb819;
+}
+
+.promo-details {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    
+}
+
+.promo-details p {
+    margin: 10px auto;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+
+}
+
+.promo-validity {
+    display: flex;
+    gap: 20px; /* Điều chỉnh khoảng cách giữa các phần tử */
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.promo-validity #apply-button2 {
+    padding: 10px 20px;
+    border: 2px solid #fdb819;
+    color: #030303;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px; /* Điều chỉnh khoảng cách giữa .promo-validity và nút Apply */
+}
+
+.promo-validity p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#promo-code-text {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.promo-details:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Màu vàng phát sáng */
+    transition: box-shadow 0.3s ease-in-out; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+
+#promo-code-text {
+    color: #fdb819;
+}
+
+
+
+/*Phương thức thanh toán*/
+.payment-details{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* Căn giữa phần tử */
+    height: 200px;
+}
+.payment-details h2{
+    font-size: 25px;
+    color: #333;
+    border-bottom: 0.5px solid var(--black);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+.payment-details h6{
+    font-size: 12px;
+    color: #333;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+
+.payment-details i{
+    color: #fdb819;
+}
+
+.payment-details input {
+    padding: 10px;
+    padding-right: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 16px;
+    resize: none;
+}
+
+.payment-details h5{
+    font-size: 18px;
+    margin: 10px 20px;
+}
+
+
+.footer-pay {
+    margin: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Căn giữa các phần tử */
+    align-items: center;
+    border-top: 1px solid #ddd;
+    position: fixed; /* Đặt vị trí là fixed */
+    bottom: 0; /* Gắn footer vào lề dưới */
+    left: 0; /* Đặt lề trái về 0 */
+    right: 0; /* Đặt lề phải về 0 */
+    z-index: 1000; /* Đảm bảo footer luôn nằm trên cùng */
+}
+
+.footer-content-pay {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40rem;
+}
+
+.order-button-pay {
+    background-color: #fdb819;
+    color: white;
+    font-size: 18px;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 40rem;
+}
 
 /*kết thúc giao diện thanh toán*/
 

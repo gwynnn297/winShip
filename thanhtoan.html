@@ -78,7 +78,7 @@
                         <input type="text" value="120 Hoàng Minh Thảo, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000"
                             readonly />
 
-                        <h5>Chi tiết địa chỉ</h3>
+                        <h3>Chi tiết địa chỉ</h3>
                             <textarea rows="2"
                                 placeholder="120 Hoàng Minh Thảo, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000"></textarea>
 
@@ -112,16 +112,45 @@
             </div>
         </div>
 
-        <!-- <div class="footer">
-            <div class="footer-content">
-                <div class="total-cost">
-                    <span>Tổng cộng</span>
-                    <span class="original-price">159.000 đ</span>
-                </div>
-                <button class="order-button">Đặt đơn</button>
+        <!--chi tiết thanh toán-->
+        <div class="payment-details">
+            <h2>Chi tiết thanh toán</h2>
+            <div class="Payment-method">
+                <h5>Phương thức thanh toán</h5>
+                <input type="text" value="Tiền mặt" 
+                readonly />
+                <h6><i class="fa-solid fa-triangle-exclamation"></i><i class="fa-solid fa-triangle-exclamation"></i>Hiện tại Winship chưa hỗ trợ chuyển khoản<i class="fa-solid fa-triangle-exclamation"></i><i class="fa-solid fa-triangle-exclamation"></i></h6>
             </div>
-        </div> -->
+            
+            
+        </div>
 
+        <!--Khuyến mãi-->
+        <div class="promo-entry">
+            <h2>Khuyến mãi</h2>
+            <div class="content-price-code">
+                <textarea id="promo-code" rows="2" placeholder="Mã khuyến mãi"></textarea>
+                <button id="apply-button" class="apply-button">Áp dụng</button>
+            </div>
+            <div class="promo-details">
+                <p>Giảm 7K, thêm ưu đãi bên dưới</p>
+                <p>Promo Code: <span id="promo-code-text">MFPSLNMM</span></p>
+                <div class="promo-validity">
+                    <p>Valid 2024-09-30 to 2024-12-30</p>
+                    <button id="apply-button2" onclick="applyPromoCode()">APPLY</button>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <!--footer-->
+        <footer class="footer-pay">
+            <div class="footer-content-pay">
+                <p><strong>Tổng cộng:</strong><span id="final-total-pay">128.000</span></p>
+            </div>
+            <button class="order-button-pay">Đặt đơn</button>
+        </footer>
 
 
 
