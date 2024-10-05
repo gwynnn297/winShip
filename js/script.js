@@ -91,35 +91,39 @@ function updateQuantity() {
     // Tính toán giá dựa trên số lượng
     const totalPrice = unitPrice * quantity; // Tính tổng giá
     const shippingFee = 29000; // Phí vận chuyển
+
+    // Nếu số lượng là 0, đặt tổng tiền là 0
+    if (quantity === 0) {
+        priceDisplay.textContent = '0'; // Đặt giá về 0
+        totalPriceDisplay.textContent = '0'; // Đặt tạm tính về 0
+        finalTotalDisplay.textContent = '0'; // Đặt tổng cộng về 0
+        return; // Kết thúc hàm nếu không có hàng
+    }
+
     const finalTotal = totalPrice + shippingFee; // Tổng tiền bao gồm phí vận chuyển
 
     // Cập nhật hiển thị
-    if (quantity === 0) {
-        priceDisplay.innerHTML = '<button id="remove-button" class="remove-button">Remove</button>'; // Thay đổi thành nút 'Remove'
-        document.getElementById('remove-button').addEventListener('click', removeItem); // Thêm sự kiện cho nút
-        totalPriceDisplay.textContent = '0'; // Đặt tạm tính về 0
+    priceDisplay.textContent = totalPrice.toLocaleString(); // Hiển thị giá với dấu phân cách ngàn
+    totalPriceDisplay.textContent = finalTotal.toLocaleString(); // Cập nhật tổng tạm tính
+
+    // Cập nhật giá trị tổng cộng trong footer
+    if (promoApplied) {
+        const discount = 7000; // Giảm giá nếu có mã khuyến mãi
+        const discountedTotal = finalTotal - discount; // Tính tổng sau khi giảm giá
+        finalTotalDisplay.textContent = discountedTotal.toLocaleString(); // Cập nhật tổng cộng
     } else {
-        priceDisplay.textContent = totalPrice.toLocaleString(); // Hiển thị giá với dấu phân cách ngàn
-        totalPriceDisplay.textContent = finalTotal.toLocaleString(); // Cập nhật tổng tạm tính
-
-        // Cập nhật giá trị tổng cộng trong footer
-        if (promoApplied) {
-            const discount = 7000; // Giảm giá nếu có mã khuyến mãi
-            const discountedTotal = finalTotal - discount; // Tính tổng sau khi giảm giá
-            finalTotalDisplay.textContent = discountedTotal.toLocaleString(); // Cập nhật tổng cộng
-        } else {
-            finalTotalDisplay.textContent = finalTotal.toLocaleString(); // Cập nhật tổng cộng
-        }
-
-        // Lưu tổng ban đầu
-        originalTotal = finalTotal;
+        finalTotalDisplay.textContent = finalTotal.toLocaleString(); // Cập nhật tổng cộng
     }
+
+    // Lưu tổng ban đầu
+    originalTotal = finalTotal;
 }
 
 // Hàm để xử lý việc xóa món hàng
 function removeItem() {
     alert("Món hàng đã được xóa!"); // Thực hiện hành động xóa
     quantity = 0; // Đặt lại số lượng về 0
+    promoApplied = false; // Đánh dấu là mã khuyến mãi đã bị gỡ bỏ
     updateQuantity(); // Cập nhật giao diện
 }
 
@@ -189,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 
 
