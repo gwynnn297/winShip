@@ -1,0 +1,182 @@
+:root {
+    --green: #27ae60;
+    --yellow: #fdb819;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .1rem 0.3rem rgba(0, 0, 0.1);
+    --private :#182537;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    color: black;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.body{
+    display: flex;
+    height: 100vh; /* Chiều cao toàn màn hình */
+    width: 100%;
+}
+/* start nav-bar */
+.nav-bar .logo #main-icon{
+    font-size: 3rem;
+    color: var(--yellow);
+}
+.nav-bar{
+    width: 24rem;
+    background: var(--private);
+    height: 100vh; /* Chiều cao bằng với màn hình */
+    position: fixed; /* Cố định nav-bar */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Đảm bảo nav-bar nằm trên cùng */
+    
+}
+.nav-bar nav{
+    height: 100%;
+}
+.nav-bar .logo{
+    text-align: center;
+    display: flex;
+    margin: .5rem 0 0 1rem;
+    color: var(--yellow);
+    font-size: 1.8rem;
+    display: table;
+    padding-left: 0.5rem;
+
+}
+.nav-bar .logo .nav-item{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.nav-bar .list-item {
+    /* text-align: center; */
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1.8rem; /* Điều chỉnh padding để tạo khoảng cách cho cả phần text và icon */
+    width: 100%; /* Đảm bảo thẻ a chiếm toàn bộ chiều rộng của li */
+    
+}
+
+.nav-bar .list-item:hover {
+    background:var(--yellow);
+    color: #fff;
+}
+
+.nav-bar .nav-item{ 
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+hr{
+    width: 24rem;
+    border-top:0.1rem solid #585858 ;
+    margin: 1.5rem auto ;
+}
+/* Định dạng menu con */
+.report-item .sub-menu {
+    display: none;
+    list-style: none;
+}
+
+.report-item .sub-menu{
+    width: 24rem;
+    height: 8rem;
+}
+.sub-menu li{
+    height: 50%;
+}
+.sub-menu .sub-item{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    line-height: 4.5rem;
+    width: 100%;
+}
+
+.sub-menu li:hover{
+    background-color: var(--yellow);
+}
+/* end nav-bar */
+
+/* start cho header */
+.header {
+    width: calc(100% - 24rem); /* Trừ đi chiều rộng của nav-bar */
+    height: 5.2rem; 
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 2rem; 
+    box-shadow: var(--box-shadow);
+    position: fixed; 
+    top: 0;
+    left: 24rem; 
+    z-index: 999;
+}
+.main-content {
+    margin-left: 24rem; /* Đẩy nội dung chính sang phải để tránh bị che bởi nav-bar */
+    flex-grow: 1; /* Cho phép nội dung chính chiếm hết không gian còn lại */
+    padding: 6rem 2rem; /* Padding để không bị che bởi header cố định */
+}
+
+
+.header .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black); 
+}
+
+
+.header .header-scfunction {
+    height: 5.5rem; 
+    display: flex;
+    align-items: center; 
+    
+}
+
+.header-scfunction a {
+    font-size: 1.5rem;
+    color: var(--black); 
+    margin-right: 4rem; 
+    display: flex;
+    align-items: center;
+}
+
+.header-scfunction a:hover {
+    color: var(--yellow); 
+    background-color: rgba(202, 200, 55, 0.1); 
+    height: 100%;
+    padding: 0 2rem; 
+}
+
+
+.header-scfunction i {
+    margin-right: 1rem; 
+    font-size: 2rem; 
+}
+
+.header-scfunction .header-scfunction-login i {
+    font-size: 2rem; 
+    margin-left: 0.5rem; 
+}
+
+/* end header */
+
+

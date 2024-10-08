@@ -1,0 +1,304 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-sans">
+  <div class="flex">
+   <!-- Sidebar -->
+   <div class="w-64 bg-gray-900 text-white h-screen">
+    <div class="flex items-center justify-center h-16 bg-gray-800">
+     <img alt="Sapo logo" class="h-8 w-8" height="40" src="https://storage.googleapis.com/a1aa/image/2X3Hv9NkE5YhCloB4DhGZT6RjhKGC4rKIrUiGmZ8kZzzD74E.jpg" width="40"/>
+     <span class="ml-2 text-2xl font-bold">
+      Sapo
+     </span>
+    </div>
+    <nav class="mt-10">
+     <a class="flex items-center py-2 px-6 bg-blue-600" href="#">
+      <i class="fas fa-home">
+      </i>
+      <span class="mx-3">
+       Tổng quan
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-chart-bar">
+      </i>
+      <span class="mx-3">
+       Báo cáo
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-file-invoice">
+      </i>
+      <span class="mx-3">
+       Hóa đơn
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-box">
+      </i>
+      <span class="mx-3">
+       Mặt hàng
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-calendar-alt">
+      </i>
+      <span class="mx-3">
+       Đặt bàn
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-user">
+      </i>
+      <span class="mx-3">
+       Nhân viên
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-users">
+      </i>
+      <span class="mx-3">
+       Khách hàng
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-user-tie">
+      </i>
+      <span class="mx-3">
+       Nhân viên chuỗi
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-tags">
+      </i>
+      <span class="mx-3">
+       Khuyến mại
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-warehouse">
+      </i>
+      <span class="mx-3">
+       Kho hàng
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-money-bill-wave">
+      </i>
+      <span class="mx-3">
+       Thu chi
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-check-circle">
+      </i>
+      <span class="mx-3">
+       Chấm công
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-store">
+      </i>
+      <span class="mx-3">
+       Kênh bán hàng
+      </span>
+     </a>
+     <a class="flex items-center py-2 px-6" href="#">
+      <i class="fas fa-handshake">
+      </i>
+      <span class="mx-3">
+       Đối tác tích hợp
+      </span>
+     </a>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 p-6">
+    <div class="flex justify-between items-center">
+     <h1 class="text-2xl font-semibold">
+      winship
+     </h1>
+     <div class="flex items-center space-x-4">
+      <a class="text-gray-600" href="#">
+       <i class="fas fa-dollar-sign">
+       </i>
+       Vay vốn kinh doanh
+      </a>
+      <a class="text-gray-600" href="#">
+       <i class="fas fa-question-circle">
+       </i>
+       Trợ giúp
+      </a>
+      <a class="text-gray-600" href="#">
+       <i class="fas fa-heart">
+       </i>
+       Góp ý
+      </a>
+      <div class="relative">
+       <img alt="User avatar" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/CkdScSaiFLavJtIQkytAqFaB2romZYX9RZrqecEQLVfNPsjTA.jpg" width="40"/>
+       <span class="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">
+        17
+       </span>
+      </div>
+      <div class="text-gray-600">
+       <span>
+        Hoàng Ngọc phúc
+       </span>
+       <span class="text-sm text-gray-500">
+        Gói Trial
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="mt-6">
+     <h2 class="text-xl font-semibold">
+      TỔNG QUAN KINH DOANH
+     </h2>
+     <div class="flex space-x-4 mt-4">
+      <select class="border border-gray-300 rounded px-4 py-2">
+       <option>
+        Hôm nay
+       </option>
+      </select>
+      <select class="border border-gray-300 rounded px-4 py-2">
+       <option>
+        Không so sánh
+       </option>
+      </select>
+     </div>
+     <div class="grid grid-cols-4 gap-4 mt-4">
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-money-bill-wave text-2xl text-blue-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-blue-500">
+          Tiền hàng
+         </h3>
+         <p class="text-2xl font-semibold">
+          0 đ
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-times-circle text-2xl text-gray-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-gray-500">
+          Hoàn hủy
+         </h3>
+         <p class="text-2xl font-semibold">
+          0 đ
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-gift text-2xl text-gray-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-gray-500">
+          Giảm giá
+         </h3>
+         <p class="text-2xl font-semibold">
+          0 đ
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-receipt text-2xl text-gray-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-gray-500">
+          Thuế phí
+         </h3>
+         <p class="text-2xl font-semibold">
+          0 đ
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow col-span-2">
+       <div class="flex items-center">
+        <i class="fas fa-users text-2xl text-orange-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-orange-500">
+          Số khách hàng
+         </h3>
+         <p class="text-2xl font-semibold">
+          0
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-file-invoice text-2xl text-teal-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-teal-500">
+          Số hóa đơn
+         </h3>
+         <p class="text-2xl font-semibold">
+          0
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <div class="flex items-center">
+        <i class="fas fa-box text-2xl text-purple-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-purple-500">
+          TB mặt hàng/ hóa đơn
+         </h3>
+         <p class="text-2xl font-semibold">
+          --
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded shadow col-span-2">
+       <div class="flex items-center">
+        <i class="fas fa-dollar-sign text-2xl text-pink-500">
+        </i>
+        <div class="ml-4">
+         <h3 class="text-pink-500">
+          TB doanh thu/ hóa đơn
+         </h3>
+         <p class="text-2xl font-semibold">
+          -- đ
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2 class="text-xl font-semibold mt-6">
+      DOANH THU TỔNG HỢP
+     </h2>
+     <div class="bg-white p-4 rounded shadow mt-4">
+      <div class="h-64">
+       <!-- Placeholder for chart -->
+       <img alt="Chart placeholder" class="w-full h-full" height="256" src="https://storage.googleapis.com/a1aa/image/2UJInD3UwmqfWiCxUxfDFPqB98oiNhfah8R1vu0y19OdewOOB.jpg" width="600"/>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
