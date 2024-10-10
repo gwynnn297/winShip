@@ -1746,3 +1746,28 @@ header .login a:hover {
 /* kết thúc nhiệm vụ  */
 
 /* start new */
+
+
+/*Bắt đầugiao diện đặt hàng thành công*/
+.container-OrderSuccessful {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20rem;
+
+}
+
+.content-OrderSuccessful h2 {
+    font-size: 6rem;
+    color: var(--yellow);
+}
+.content-OrderSuccessful i {
+    font-size: 6rem;
+    color: #fdb819;
+}
+.container-OrderSuccessful p {
+    font-size: 4rem;
+}
+/*Kết thúc giao diện đặt hàng thành công*/

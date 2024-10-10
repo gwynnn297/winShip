@@ -22,8 +22,34 @@ var swiper = new Swiper(".review-slider", {
     },
     loop: true,
 });
+// Phần mới
+document.getElementById('pay-button').addEventListener('click', () => {
+    // Thu thập dữ liệu từ các trường trong form
+    const orderData = {
+        dia_chi: document.querySelector('input[type="text"]').value,
+        ghi_chu: document.querySelectorAll('textarea')[1].value,
+        so_luong: document.getElementById('quantity').textContent,
+        ten_san_pham: 'Combo',
+        gia: document.getElementById('price').textContent,
+        tong_gia: document.getElementById('final-total-pay').textContent,
+        ma_khuyen_mai: document.getElementById('promo-code').value || 'Không có',
+        phuong_thuc_thanh_toan: 'Tiền mặt'
+    };
 
+    // Lưu dữ liệu vào Local Storage
+    localStorage.setItem('duLieuDonHang', JSON.stringify(orderData));
 
+    
+    setTimeout(() => {
+        window.location.href = 'OrderSuccessful.html';
+    }, 500); 
+});
+
+// Khi trang được tải, hiển thị dữ liệu đã lưu từ Local Storage
+localStorage.removeItem('orderData');
+localStorage.clear();
+
+// hết phần mới
 
 // Lựa chọn phần tử Swiper
 var swiperContainer = document.querySelector('.house-slider'); // Tìm phần tử đầu tiên có lớp 'house-slider'
