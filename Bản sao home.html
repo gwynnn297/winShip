@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinShip</title>
+    <!-- js slider link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- quyết làm -->
+     <!-- page chỉ bao gồm header không có danh mục, slider, địa chỉ đang ở,footer -->
+    <div id="body">
+        <!-- thanh công cụ -->
+        <!-- nhiệm vụ của phúc -->
+        <header class="header">
+            <!-- start header -->
+            <a href="home.html" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
+            <nav class="navbar">
+                <div style=" margin-left: -45rem;" class="subnav">
+                    <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="subnav-content">
+                        <li><a href="#">Hà Nội</a></li>
+                        <li><a href="#">Hồ Chí Minh</a></li>
+                        <li><a href="#">Quảng Trị</a></li>
+                        <li><a href="#">Đà Lạt</a></li>
+                        <li><a href="#">Nha Trang</a></li>
+                        <li><a href="#">Hải Phòng</a></li>
+                        <li><a href="#">Vũng Tàu</a></li>
+                        <li><a href="#">Huế</a></li>
+                        <li><a href="#">Cần Thơ</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <div style=" margin-right: -47rem;" class="icons">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+            <div class="login">
+                <a href="#" class="login-btn">Đăng Nhập</a>
+            </div>
+        </header>
+        <!-- endl header -->
+
+        <!-- start form -->
+         <form action="" id="search-form">
+            <input type="search" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+             <i class="fas fa-times" id="close"></i>
+         </form>
+
+         <!-- start search location -->
+         <div class="search-location">
+            
+         </div>
+        <!-- phần hiển thị tất cả thông tin chính -->
+        <div class="container">
+            <!-- thanh quảng cáo có lướt được, có thông tin các món ăn -->
+            <!-- nhiệm vụ của doanh -->
+            <section class="house" id="house">
+                <div class="swiper house-slider">
+                    <!-- Sửa class 'swiper-wrappe' thành 'swiper-wrapper' -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Reign energy drink x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Nước tăng lực</h1>
+                                <p>Bão trị vì, nho thu hoạch, nước tăng lực sạch, 12 fluid ounce</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imggg1.webp" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>MSalmar ASA x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Cá hồi Na uy</h1>
+                                <p>Cá hồi Nauy nổi tiếng với chất lượng cao, thịt mềm, hương vị tươi ngon và giàu omega</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg2.jpg" alt="Phở">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>Kamada x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Nước tương</h1>
+                                <p>Thương hiệu nước tương 234 năm huyền thoại từ Nhật</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>honey garden x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Mật ong Úc</h1>
+                                <p>Mật ong Úc cao cấp, tự nhiên và 100% từ thiên nhiên</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <!-- Xóa dấu " thừa sau .jpg -->
+                                <img src="images/img-slider-index.html/imgg4.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider">
+                            <div class="content">
+                                <span>King river x </span> <span class="logo">winship <i class="fa-solid fa-bowl-food"></i></span>
+                                <h1>Thịt bò wagiu</h1>
+                                <p>Thịt 200 năm tuổi ngon nhất nước Úc</p>
+                                <a href="#" class="btn">mua</a>
+                                <h2 class="logo"><i class="fa-solid fa-phone"></i>1900 3220</h2>
+                            </div>
+                            <div id="image">
+                                <img src="images/img-slider-index.html/imgg5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </section>
+            
+            <div class="searchContainer_Q">
+                <div class="heading_Q">
+                    <div class="searchGreeting_Q">Chào buổi chiều</div>
+                    <div class="searchHeading_Q">Hôm nay chúng ta sẽ giao đồ ăn đến đâu?</div>
+                </div>
+                <div class="inputContainer_Q">
+                    <input id="location-input_Q" placeholder="Nhập địa chỉ" class="inputField_Q" type="text">
+                </div>
+                <button type="button" class="submitBtn_Q" onclick="location.href='restaurants.html'">Tìm kiếm</button>
+            </div>
+            
+            <!-- hết nhiệm vụ doanh -->
+
+
+            <!-- phần menu các món ăn -->
+            <!-- nhiệm vụ của đạt -->
+            <div class="container-menu">
+                    
+                        <div class="menu">
+                            <h1 class="titleMenu">menu</h1>
+                            <div class="contentMenu">
+                                <div class="box">
+                                    <div class="image">
+                                       <img class="img" src="https://daotaobeptruong.vn/wp-content/uploads/2021/01/banh-mi-viet-nam.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Bánh mỳ</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://i.ytimg.com/vi/_0JVXwg56l8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAyNh9uwhtvutsebqeKvOOHYhMEtQ" alt="">
+                                    </div>
+                                    <div class="titleBox">Bánh xôi</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://product.hstatic.net/200000264775/product/ca_phe_ae27c2fffbc4489884c2efbef3d639bb_1024x1024.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cafe</div>
+                                </div>
+                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://getngo.vn/wp-content/uploads/2023/04/olong-tra-sua-dac-biet.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Trà sữa</div>
+                                </div>
+    
+                                
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn3.ivivu.com/2016/05/ba-mon-an-trua-nhe-bung-o-da-nang-ivivu-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Ăn trưa</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://dulichsontra.com/wp-content/uploads/2021/12/anh-dai-dien-quan-an-sang-da-nang.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Ăn sáng</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cafefcdn.com/203337114487263232/2022/7/23/photo-1-16585821912571146207773.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Bữa tối </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn.tgdd.vn/Files/2017/05/16/982787/chon-nuoc-ep-hay-sinh-to-cho-be-202304131615146615.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Nước ép trái cây</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://cdn.tgdd.vn/Files/2019/10/19/1210128/3-cach-nau-lau-cua-dong-thom-ngon-ngot-nuoc-don-gian-tai-nha-202203161321088395.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Lẩu</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://vinastory.vn/wp-content/uploads/2021/07/xay-dung-thuc-don-com-van-phong-2.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm văn phòng </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://static.vinwonders.com/production/com-tam-da-nang-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm tấm</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://static.vinwonders.com/2023/02/com-ga-da-nang-1.jpg" alt="">
+                                    </div>
+                                    <div class="titleBox">Cơm gà</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83ejS0dw1zYhHgbx3Ft3tQUBBsG3yBFWQxA&s" alt="">
+                                    </div>
+                                    <div class="titleBox">Hủ tiếu </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBb0X4K0a0gsya6VVNTSpVl9fqLiBVQb-1MQ&s" alt="">
+                                    </div>
+                                    <div class="titleBox">Chè</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+            </div>
+            <!-- hết nhiệm vụ đạt -->
+            
+            <!-- phần câu hỏi thường gặp -->
+            
+                <div class="question-container">   
+                    <h1>Vì sao bạn nên Order trên WinShip</h1>
+                    <ul class="whyWinshipList">                        
+                            <p>
+                            <span class="tickv"><span class="tickv">&checkmark;</span></span>
+                            <span class="bold___2_Blq">Nhanh nhất</span>
+                            <span> - WinShip cung cấp dịch vụ giao đồ ăn nhanh nhất thị trường.</span>
+                            </p>   
+
+                            <p>
+                            <span class="tickv">&checkmark;</span>
+                            <span class="bold___2_Blq">Dễ dàng nhất</span>
+                            <span> - Giờ đây, bạn chỉ cần thực hiện vài cú nhấp chuột hoặc chạm nhẹ là đã có thể đặt đồ ăn. Hãy đặt đồ ăn trực tuyến hoặc tải xuống siêu ứng dụng WinShip của chúng tôi để có trải nghiệm nhanh hơn và thú vị hơn.</span>
+                            </p>
+                        
+                        
+                            <p>
+                            <span class="tickv">&checkmark;</span>
+                            <span class="bold___2_Blq">Đáp ứng mọi nhu cầu</span>
+                            <span> - Từ món ăn đặc sản địa phương đến các nhà hàng được ưa thích, nhiều lựa chọn đa dạng chắc chắn sẽ luôn làm hài lòng khẩu vị của bạn.</span>
+                            </p>
+                        
+                        
+                            <p>
+                            <span class="tickv">&checkmark;</span>
+                            <span class="bold___2_Blq">Thanh toán dễ dàng</span>
+                            <span> - Giao và nhận đồ ăn thật dễ dàng. Thanh toán bằng WinShipPay thậm chí còn dễ dàng hơn nữa.</span>
+                            </p>
+                        
+                        
+                            <p>
+                            <span class="tickv">&checkmark;</span>
+                            <span class="bold___2_Blq">Nhiều quà tặng hơn</span>
+                            <span> - Tích điểm WinShipRewards cho mỗi đơn hàng của bạn và sử dụng điểm thưởng để đổi lấy nhiều ưu đãi hơn.</span>
+                            </p>
+                        
+                    </ul>           
+                            
+                </div>   
+            
+
+            <!-- hết phần câu hỏi thường gặp -->
+            
+
+        <!-- phần thông tin tổng thể, nhà tài trợ, thông tin công ty... -->
+        <!-- nhiệm vụ của Cao -->
+        <div class="footer">
+            <div class="grid">
+                <div class="grid_row1">
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading_Winship">Winship</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i class="fa-solid fa-house"></i> Công ty TNHH nhiều thành viên Winship </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i class="fa-solid fa-envelope"></i>Email:boy@winship.com</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-solid fa-location-dot"></i> Địa chỉ: 252 Nguyễn Văn Linh</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i class="fa-solid fa-clock"></i> Giờ làm việc:Từ 7h-21h với tất cả ngày trong tuần</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link_hooline"> Tổng đài hỗ trợ </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link_number"> 1900 1001 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">GIỚI THIỆU</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Về chúng tôi</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Liên hệ</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Phương thức thanh toán</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">DỊCH VỤ</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Premium services</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Gói quà biếu tặng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tích điểm khách hàng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tích điểm khác</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">THEO DÕI NGAY</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">Vào cửa hàng bằng ứng dụng khác</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">
+                                    <div class="footer_dowload">
+                                        <img src="https://khangnguyenco.vn/pub/media/magefan_blog/ma-qr-code.jpg" alt="" class="footer_dowload_qr">
+                                        <div class="footer_dowload_app">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Google_Play_Store_badge_FR.svg" alt="" class="dowload_app-img">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="" class="dowload_app-img">
+                                        </div>
+                                    </div>
+                                    <div class="footer_recognize">
+                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7W0B12D6YhARZsKN8zHJASoNVjP53yi8ShA&s" alt="" class="footer_recognize-image">      
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+                <div class="footer_bottom">
+                    <div class="grid_row2">
+                        <p class="footer_text">Copyrights © 2016 - 2024 Winship. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
