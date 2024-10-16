@@ -323,7 +323,7 @@ hr{
 .search-input {
     font-size: 1.4rem;                  /* Kích thước font cho input tìm kiếm */
     padding: 0.54rem;                   /* Padding cho input */
-    width: 80%;                      /* Chiều rộng cho input */
+    width: 60%;                      /* Chiều rộng cho input */
     border: 1px solid #ccc;            /* Viền cho input */
         /* Bo góc cho input */
 }
