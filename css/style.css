@@ -1003,10 +1003,10 @@ header .login a:hover {
 /*bắt đầu giao diện thanh toán*/
 .container-pay {
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
+    margin-top: 50px;
     height: 1480px;
 }
 

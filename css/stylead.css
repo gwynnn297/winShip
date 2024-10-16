@@ -180,3 +180,159 @@ hr{
 /* end header */
 
 
+
+
+
+
+/* bắt đầu danh sách mặt hàng */
+.product-list {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+/* Header and 'Thêm mặt hàng' button in one row */
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.product-list-header h2 {
+    font-size: 3rem;
+}
+
+/* Table styles */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.product-table thead {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.product-table th, .product-table td {
+    padding: 1rem;
+    border-bottom: 0.1rem solid #ccc;
+    font-size: 1.5rem;
+}
+
+/* Ô bao bọc checkbox và mũi tên */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    width: 100%; /* Đảm bảo nó chiếm toàn bộ chiều rộng của ô thẻ */
+
+
+
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.checkbox-wrapper i {
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    margin-left: 0.5rem; /* Thêm khoảng cách bên trái cho mũi tên */
+}
+
+
+/* Table images */
+.product-table img.product-img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+}
+
+.product-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Add Product Button */
+.product-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product-actions button {
+    font-size: 1.4rem;
+    background-color: var(--yellow);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.product-actions button:hover {
+    background-color: #fdb819;
+}
+
+/* Action buttons (Xuất/Nhập danh sách) placed under the table */
+.product-actions2 {
+    padding-bottom:2rem ;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.product-actions2 button {
+    font-size: 1.4rem;
+    padding: 0.7rem auto;
+    border-radius: 0.5rem;
+    border: none;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.product-actions2 i {
+    color: #fdb819;
+}
+
+
+
+.filter-container {
+    display: flex;                      /* Sử dụng Flexbox cho hộp lọc và tìm kiếm */
+    align-items: center;                /* Căn giữa theo chiều dọc */
+    margin-right: 2rem; 
+    margin-top: 2rem;               /* Khoảng cách bên phải giữa hộp lọc và nút */
+}
+
+.filter-select {
+    font-size: 1.4rem;                  /* Kích thước font cho select */
+    padding: 0.5rem;                   /* Padding cho select */
+
+    border: 1px solid #ccc;            /* Viền cho select */
+
+}
+
+.search-input {
+    font-size: 1.4rem;                  /* Kích thước font cho input tìm kiếm */
+    padding: 0.54rem;                   /* Padding cho input */
+    width: 80%;                      /* Chiều rộng cho input */
+    border: 1px solid #ccc;            /* Viền cho input */
+        /* Bo góc cho input */
+}
+
+
+#no-results {
+    display: none;
+    color: red;
+    font-size: 2rem;
+}
+
+/* kết thúc danh sách mặt hàng */
