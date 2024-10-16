@@ -12,8 +12,10 @@
        }
    });
 
-    
-//lọc mặt hàng
+
+
+//bắt đầu Giao diện danh sách mặt hàng
+//bắt đầu lọc mặt hàng
    document.querySelector('.filter-select').addEventListener('change', function() {
     var selectedValue = this.value;
     var rows = document.querySelectorAll('.product-table tbody tr');
@@ -44,10 +46,11 @@
         }
     });
 });
+//kết thúc lọc mặt hàng
 
 
 
-//tìm kiếm mặt hàng
+//bắt đầu tìm kiếm mặt hàng
 document.querySelector('.search-input').addEventListener('input', function() {
     var searchValue = this.value.toLowerCase().trim();  // Lấy giá trị tìm kiếm và chuẩn hóa
     var rows = document.querySelectorAll('.product-table tbody tr'); // Lấy tất cả hàng trong bảng
@@ -71,3 +74,23 @@ document.querySelector('.search-input').addEventListener('input', function() {
         document.getElementById('no-results').style.display = 'none';
     }
 });
+//kết thúc tìm kiếm mặt hàng
+
+
+//bắt đầu làm checkbox-wrapper
+// Lấy checkbox-wrapper
+const checkboxWrapper = document.querySelector('.checkbox-wrapper input');
+    
+// Lấy tất cả các checkbox trong bảng
+const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+
+// Thêm sự kiện khi nhấn vào checkbox-wrapper
+checkboxWrapper.addEventListener('change', function() {
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = checkboxWrapper.checked;
+    });
+});
+//kết thúc làm checkbox-wrapper
+
+
+//kết thúc Giao diện danh sách mặt hàng
