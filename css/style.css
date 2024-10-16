@@ -1011,9 +1011,10 @@ header .login a:hover {
 }
 
 .container-pay h1 {
-    font-size: 30px;
+    font-size: 5rem;
     color: #333;
     margin-bottom: 20px;
+    padding-top: 4rem;
 }
 
 .container-pay h1 i {
@@ -1285,7 +1286,7 @@ header .login a:hover {
     max-width: 800px;
     margin: 20px auto;
     /* Căn giữa phần tử */
-    height: 350px;
+    height: 450px;
 }
 
 .promo-entry h2 {
@@ -1434,7 +1435,18 @@ header .login a:hover {
     margin: 10px 20px;
 }
 
+.filter-select {
+    border-radius: 10px;
+    font-size: 1.5rem;                  /* Kích thước font cho select */
+    padding-right: 53rem;                   /* Padding cho select */
+    margin-left: 2rem;
+    border: 1px solid #ccc;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left:10px ;
+}
 
+/*footer*/
 .footer-pay {
     margin: 0;
     background-color: white;

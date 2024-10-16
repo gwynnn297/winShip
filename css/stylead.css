@@ -201,7 +201,7 @@ hr{
 }
 
 .product-list-header h2 {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 /* Table styles */
@@ -291,7 +291,7 @@ hr{
 }
 
 .product-actions2 button {
-    font-size: 1.4rem;
+    font-size: 2rem;
     padding: 0.7rem auto;
     border-radius: 0.5rem;
     border: none;
@@ -313,15 +313,15 @@ hr{
 }
 
 .filter-select {
-    font-size: 1.4rem;                  /* Kích thước font cho select */
+    font-size: 2rem;                  /* Kích thước font cho select */
     padding: 0.5rem;                   /* Padding cho select */
-
+    
     border: 1px solid #ccc;            /* Viền cho select */
 
 }
 
 .search-input {
-    font-size: 1.4rem;                  /* Kích thước font cho input tìm kiếm */
+    font-size: 2rem;                  /* Kích thước font cho input tìm kiếm */
     padding: 0.54rem;                   /* Padding cho input */
     width: 60%;                      /* Chiều rộng cho input */
     border: 1px solid #ccc;            /* Viền cho input */
