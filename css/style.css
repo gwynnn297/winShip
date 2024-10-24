@@ -1531,7 +1531,7 @@ header .login a:hover {
 
 .grid .grid_row1 .grid_column_2_4 {
     flex-basis: calc(15% - 10px);
-    margin-bottom: 20px;
+    
     padding: 0 10px;
 }
 
