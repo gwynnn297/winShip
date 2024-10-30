@@ -1758,3 +1758,205 @@ header .login a:hover {
 /* kết thúc nhiệm vụ  */
 
 /* start new */
+.cart {
+    width: 50%;
+    margin: 50px auto;
+    text-align: right;
+    padding: 20px;
+    background-color:  #fdb819;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem; /* Tăng kích thước chung cho phần giỏ hàng */
+    overflow-x: auto;
+    flex-direction: column;
+}
+
+/* Bảng sản phẩm trong giỏ hàng */
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.mony-cart{
+    font-size: 2rem;
+}
+/* Đầu đề của bảng */
+.cart table thead tr th {
+    font-size: 2.1rem; /* Tăng kích thước font của tiêu đề */
+    text-align: center;
+    padding: 12px 0;
+    color: #333;
+}
+
+
+/* Căn chỉnh nội dung của bảng */
+.cart table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 25px 0;
+    vertical-align: middle;
+    /* font-size: 1.4rem;  */
+    text-align: center;
+}
+
+.cart table tbody tr:hover {
+    background-color: #d39913;
+}
+
+/* Hình ảnh món ăn */
+.cart table tr td img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+   border-radius: 10px;
+   margin-right: 5px;
+}
+
+/* Ô nhập số lượng */
+.cart table tr td input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.2rem; /* Tăng kích thước font của input */
+    margin-right: 5px;
+}
+.cart table thead tr th:first-child{
+
+    text-align: left;
+    width: 30%;
+}
+
+/* Nút xóa */
+.cart table tr td:last-child {
+    text-align: center;
+    cursor: pointer;   
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 2rem; /* Tăng kích thước font của nút Xóa */
+}
+
+.cart table tr td:last-child:hover {
+    color: red;
+}
+
+/* Tổng tiền */
+.price-total {
+    text-align: right;
+    margin-top: 20px;
+    
+}
+
+.price-total p {
+    font-size: 2.3rem; /* Tăng kích thước font của tổng tiền */
+    font-weight: bold;
+    color: #333;
+}
+
+.price-total span {
+    color: #ff4c4c;
+    font-size: 2.5rem; /* Tăng kích thước font của số tiền */
+}
+
+.cart .item-text {
+    font-size: 1.3rem;
+    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 70%; /* Đặt chiều rộng cho văn bản */
+    margin-left: 10px;
+    
+}
+.cart table thead th:nth-child(2), 
+.cart table thead th:nth-child(3), 
+.cart table thead th:nth-child(4) {
+    width: 11%;
+    text-align: center;
+}
+
+.cart{
+    position: fixed;
+    height: 87vh;
+    width: 500px;
+    right: 0;
+    top: 60px;
+    background-color: #fdb819;
+    padding: 12px 20px;
+    overflow-y: auto;
+    right : -100%;
+    transition: right 0.3s ease;
+} 
+.cart.active {
+    right: 0; /* Khi có lớp .active, giỏ hàng sẽ được hiển thị */
+  }
+
+.cart .close-oder {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px; /* Đặt thêm khoảng cách phía dưới */
+    text-align: center;
+    align-self: center;
+    
+   
+
+  }
+
+.cart .close-oder:hover {
+    background-color: #ff2a3b;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+.cart  .close-oder:active {
+    background-color: #ff1a2b;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.cart i{
+    cursor: pointer;
+   font-size: 20px;
+   margin-bottom: 30px;
+   margin-left: 0;
+   float: left;
+   transition: all 0.3s ease; 
+  }
+.cart i:hover {
+    font-size: 24px; /* Tăng kích thước khi hover */
+}
+.scroll-item{
+    
+   
+    overflow-y: auto; 
+    padding-right: 10px;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    display: none; /* Mặc định ẩn */
+    z-index: 999; /* Đặt cao hơn các phần tử khác */
+}
+
+/* Hiển thị overlay và giỏ hàng khi mở */
+.cart.active {
+    z-index: 1000; /* Đặt cao hơn overlay để người dùng tương tác */
+}
+
+.overlay.active {
+    display: block;
+}
