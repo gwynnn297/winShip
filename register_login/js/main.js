@@ -3,14 +3,21 @@ function register(e){
     var username = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("pass").value;
-    var user = {
-        username : username,
-        email :email,
-        password : password
+    if(username =="" && email == "" && password == "" ){
+        alert("vui lòng nhập thông tin");
     }
-    var json = JSON.stringify(user);
+    else{
+        var user = {
+            username : username,
+            email :email,
+            password : password
+        }
+        var json = JSON.stringify(user);
     localStorage.setItem(username,json);
     alert("đăng ký thành công")
+    window.location.href="login.html"
+    }
+    
 }
 function login(e){
     event.preventDefault();
