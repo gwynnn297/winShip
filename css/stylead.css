@@ -336,3 +336,334 @@ hr{
 }
 
 /* kết thúc danh sách mặt hàng */
+/*bắt đầu giao diện thực đơn*/
+
+.header_menu{
+    display: flex; /* Đặt các phần tử bên trong thành hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều không gian giữa các phần tử */
+    padding: 6rem 2rem 2rem 2rem;
+    border-bottom: 1px solid black;
+}
+
+.header_menu h1{
+    color: black;
+    font-size: 5rem;
+}
+
+.header_menu a {
+    font-size: 1.4rem;
+    background-color: var(--yellow);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.all_menu {
+    padding: 1rem auto;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.all_menu .all_menu_content {
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+.all_menu_content h2 {
+    font-size: 2rem;
+    padding: 2rem 1.5rem 0.5rem;
+    font-weight: bold;
+}
+
+.all_menu a {
+    display: block;           /* Chuyển mỗi liên kết thành 1 hàng dọc */
+    padding: 2.5rem;            /* Tạo khoảng cách bên trong mỗi khung */
+    font-size: 1.7rem;
+    margin-bottom: 20px;  
+    margin-left: 1.5rem;  
+    margin-right: 1.5rem;   /* Khoảng cách giữa các khung */
+    border: 1px solid black;   /* Khung viền cho mỗi mục */
+    border-radius: 5px;       /* Bo góc cho khung viền */
+    font-weight: bold;
+    color: black;             /* Màu chữ đen */
+
+}
+
+.all_menu a:hover {
+    background-color: #e0e0e0; /* Thay đổi màu nền khi hover */
+
+}
+.all_menu i {
+    padding: 1rem;
+    font-size: 3rem; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between icon and text */
+    color: var(--yellow);
+    border: 1px solid black;
+}
+/*kết thúc giao diện thực đơn*/
+
+
+
+/*bắt đầu thêm mới thực đơn*/
+.header_new_menu {
+    margin: 6rem 2rem 2rem 2rem;
+}
+.header_new_menu a{
+    font-size: 2rem;
+    color: #ccc;
+
+}
+.header_new_menu h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.new_menu_layout {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử */
+    margin: 6rem 2rem 2rem 2rem; /* Thêm khoảng cách bên ngoài container */
+    gap: 10px;
+}
+
+.thumbnail_container {
+    flex: 0 0 35%; /* Chiếm 35% chiều rộng của new_menu_layout */
+    padding: 20px; /* Thêm khoảng cách xung quanh */
+    display: flex;
+    flex-direction: column; /* Để các phần tử con xếp dọc */
+    align-items: center; /* Căn giữa các phần tử con */
+    border: 1px solid black;
+    border-radius: 2px; /* Tùy chọn: bo góc cho container */
+}
+
+.thumbnail_container .icons-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icons {
+    font-size: 6rem;
+    border-radius: 2px;
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.icons-content :hover {
+    background-color: var(--yellow);
+}
+
+.icons.active {
+    color: yellow;
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+.thumbnail_container h6 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+
+
+.new_menu_container {
+
+    flex: 3; /* Chiếm 3/4 chiều rộng */
+    border: 1px solid black;
+    border-radius: 2px; /* Tùy chọn: bo góc cho container */
+}
+
+.new_menu_name {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    padding: 2rem; /* Tùy chọn: thêm padding bên trong */
+}
+
+.new_menu_name h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.new_menu_name textarea {
+    border: 1px solid black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%
+}
+
+.add_items {
+    padding: 2rem; /* Tùy chọn: thêm padding bên trong */
+}
+.add_items h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.add_items textarea{
+
+    border: 1px solid black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%
+}
+.input_with_button {
+    display: flex; /* Sử dụng flexbox để sắp xếp textarea và nút */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.input_with_button textarea {
+    flex: 1; /* Cho phép textarea chiếm toàn bộ không gian có sẵn */
+
+}
+
+.save_button {
+    padding: 1rem 4rem 1rem 4rem; /* Khoảng cách bên trong nút */
+    font-size: 1.5rem; /* Kích thước chữ */
+    background-color: white;
+    color: black; 
+    border: 1px solid black; 
+    border-radius: 2px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ chuột thành hình bàn tay khi hover */
+}
+
+/* Thay đổi màu nền khi hover vào nút */
+.save_button:hover {
+    background-color: var(--yellow) /* Màu nền khi hover */
+}
+
+.new_menu_layout .product-table {
+    display: none;
+}
+.product-table.show {
+    display: table;  /* Hiển thị lại bảng */
+}
+
+
+#savedItems {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center the text */
+}
+#savedItems i{
+    font-size: 10rem;
+    color:  var(--yellow);
+    margin-top: 10px;
+}
+#savedItems h4{
+    font-size: 2rem;
+    color:  var(--yellow);
+
+}
+#savedItems h5{
+    font-size: 1.9rem;
+    color:  var(--yellow);
+}
+/*kết thúc thêm mới thực đơn*/
+
+
+/*bắt đầu giao diện mang đi*/
+.new_menu_layout input {
+    border: 1px solid black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%
+}
+
+.product-table_takeAway {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+
+.product-table_takeAway th, .product-table_takeAway td {
+    padding: 1rem;
+    border-bottom: 0.1rem solid #ccc;
+    font-size: 1.5rem;
+}
+
+
+/* Table images */
+.product-table_takeAway img.product-img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+}
+
+.product-table_takeAway tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.product-table_takeAway tbody {
+    counter-reset: rowNumber;
+}
+
+.product-table_takeAway tbody tr {
+    counter-increment: rowNumber;
+}
+
+.product-table_takeAway tbody td::before {
+    content: counter(rowNumber) ". ";
+    font-weight: bold;
+    margin-left: 1.8rem;
+    margin-right: 20px;
+}
+
+
+.content_deleteTakeAway{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+}
+
+.content_deleteTakeAway .delete {
+    font-size: 2rem;
+    margin: 20px;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    cursor: c;
+}
+
+.content_deleteTakeAway .cancel {
+    font-size: 2rem;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: c;
+    margin-left: 80rem;
+}
+
+.content_deleteTakeAway .save {
+    font-size: 2rem;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: c;
+}
+
+.content_deleteTakeAway .save:hover {
+    background-color: var(--yellow);
+    cursor: pointer
+}
+
+.content_deleteTakeAway .cancel:hover {
+    background-color: var(--yellow);
+    cursor: pointer
+}
+
+.content_deleteTakeAway .delete:hover{
+    cursor: pointer
+}
+/*kết thúc giao diện mang đi*/
