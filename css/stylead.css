@@ -223,28 +223,6 @@ hr{
 }
 
 /* Ô bao bọc checkbox và mũi tên */
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    border-radius: 0.3rem;
-    width: 100%; /* Đảm bảo nó chiếm toàn bộ chiều rộng của ô thẻ */
-
-
-
-}
-
-.checkbox-wrapper input[type="checkbox"] {
-
-    width: 1.3rem;
-    height: 1.3rem;
-}
-
-.checkbox-wrapper i {
-    font-size: 1.2rem;
-    color: #666;
-    cursor: pointer;
-    margin-left: 0.5rem; /* Thêm khoảng cách bên trái cho mũi tên */
-}
 
 
 /* Table images */
@@ -259,7 +237,35 @@ hr{
 .product-table tbody tr:hover {
     background-color: #f9f9f9;
 }
+.product-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
 
+.product-table tbody {
+    counter-reset: rowNumber;
+}
+
+.product-tabletbody tr {
+    counter-increment: rowNumber;
+}
+
+.product-table tbody {
+    counter-reset: rowNumber; /* Reset the counter at the start of the tbody */
+}
+
+.product-table tbody tr {
+    counter-increment: rowNumber; /* Increment the counter for each row */
+}
+
+.product-table tbody td:first-child::before {
+    content: counter(rowNumber) ". "; /* Display the row number before the image */
+    font-weight: bold;
+    margin-right: 10px; /* Space between the number and the image */
+}
+
+.product-table tbody td img {
+    margin-left: 1.5rem; /* Adjust space between number and image */
+}
 /* Add Product Button */
 .product-actions {
     display: flex;
@@ -459,9 +465,11 @@ hr{
 }
 
 .icons.active {
-    color: yellow;
-    background-color: rgba(255, 255, 0, 0.2);
+    color: white;
+    background-color: var(--yellow)
 }
+
+
 
 .thumbnail_container h6 {
     font-size: 2rem;
@@ -537,13 +545,6 @@ hr{
     background-color: var(--yellow) /* Màu nền khi hover */
 }
 
-.new_menu_layout .product-table {
-    display: none;
-}
-.product-table.show {
-    display: table;  /* Hiển thị lại bảng */
-}
-
 
 #savedItems {
     display: flex;
@@ -612,12 +613,24 @@ hr{
     counter-increment: rowNumber;
 }
 
-.product-table_takeAway tbody td::before {
-    content: counter(rowNumber) ". ";
-    font-weight: bold;
-    margin-left: 1.8rem;
-    margin-right: 20px;
+.product-table_takeAway tbody {
+    counter-reset: rowNumber; /* Reset the counter at the start of the tbody */
 }
+
+.product-table_takeAway tbody tr {
+    counter-increment: rowNumber; /* Increment the counter for each row */
+}
+
+.product-table_takeAway tbody td:first-child::before {
+    content: counter(rowNumber) ". "; /* Display the row number before the image */
+    font-weight: bold;
+    margin-right: 10px; /* Space between the number and the image */
+}
+
+.product-table_takeAway tbody td img {
+    margin-left: 1.5rem; /* Adjust space between number and image */
+}
+
 
 
 .content_deleteTakeAway{
