@@ -1,9 +1,110 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/stylead.css">
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+<body>
+    <div class="body">
+        <div class="nav-bar">
+            <nav>
+                    <div><a href="" class="logo">
+                        <i id="main-icon" class="fa-solid fa-bowl-food"></i>
+                        <span class="nav-item">WinShip</span>
+                        </a>
+                    </div>
+                    <ul>  
+                        <hr>
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="nav-item">Tổng quan</span>
+                            </a>
+                        </li>
+
+                        <li class="report-item">
+                            <a href="javascript:void(0);" class="list-item" id="report-toggle">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span class="nav-item">Báo cáo</span>
+                            </a>
+                            <!-- Dropdown items (ẩn lúc đầu) -->
+                            <ul class="sub-menu">
+                                <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
+                                <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="" class="list-item">
+                            <i class="fas fa-file-invoice"></i>
+                            <span class="nav-item">Hóa đơn</span>
+                            </a>
+                        </li>
+                        
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span class="nav-item">Mặt hàng</span>
+                            </a>
+                        </li>
+
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-list"></i>
+                            <span class="nav-item">Danh sách khách hàng</span>
+                         </a>
+                        </li>
+
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-rectangle-ad"></i>
+                            <span class="nav-item">Khuyến mãi</span>
+                            </a>
+                        </li>
+
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-warehouse"></i>
+                            <span class="nav-item">Kho hàng</span>
+                            </a>
+                        </li>
+
+                        <li><a href="" class="list-item">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span class="nav-item">Thu chi</span>
+                            </a>
+                        </li>
+                        <hr>
+                    
+                    
+                    </ul>
+            </nav>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h3 class="name">GoodFood</h3>
+                <div class="header-scfunction">
+                    <a href="#" class="header-scfunction-money"><i class="fa-regular fa-credit-card"></i>
+                        Vay vốn kinh doanh
+                    </a>
+                    <a href="#" class="header-scfunction-support"><i class="fa-solid fa-question"></i>
+                        Trợ giúp
+                    </a>
+                    <a href="#" class="header-scfunction-share"><i class="fa-regular fa-heart"></i>
+                        góp ý
+                    </a>
+                    <a href="#" class="header-scfunction-login">
+                        Hoàng Ngọc Phúc <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <a href="#" class="header-scfunction-login"><i class="fa-solid fa-bell"></i>
+                        
+                    </a>
+                </div>
+            </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 <body class="bg-gray-100">
-    <div class="max-w-4xl mx-auto p-6">
+    <div class=" mx-auto p-6">
         <div class="mb-4">
             <a href="#" class="text-blue-500 text-sm">&larr; Quay lại danh sách khách hàng</a>
         </div>
