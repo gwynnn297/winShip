@@ -85,32 +85,16 @@ document.querySelector('.search-input').addEventListener('input', function() {
 
 
 
-//bắt đầu JS mang đi//
-
-// Lấy các phần tử cần xử lý sự kiện
-const deleteDiv = document.querySelector('.delete');
-const cancelDiv = document.querySelector('.cancel');
-const saveDiv = document.querySelector('.save');
-
-// Thêm sự kiện click vào phần tử "Xóa thực đơn"
-deleteDiv.addEventListener('click', function() {
-    alert('Đã xóa thực đơn');
-});
-
-// Thêm sự kiện click vào phần tử "Hủy"
-cancelDiv.addEventListener('click', function() {
-    alert('Đã hủy');
-});
-
-// Thêm sự kiện click vào phần tử "Lưu"
-saveDiv.addEventListener('click', function() {
-    alert('Đã lưu');
-});
 
 
 
 
-//kết thúc Js mang đi??
+
+
+
+
+
+//bắt đầu JS thực đơn mới
 
 function initFilter() {
 
@@ -136,28 +120,124 @@ icons.forEach(icon => {
 
 
 
-    // Lưu bảng sản phẩm và phần tử savedItems vào biến
-    const productTable = document.querySelector('.new_menu_content .product-table');
-    const savedItems = document.getElementById('savedItems');
+ // Get necessary elements
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+const productTableRows = document.querySelectorAll(".product-table tbody tr");
+const savedItems = document.getElementById("savedItems");
+const selectedItemsContainer = document.getElementById("selected-items"); // Display selected items
 
-    // Ẩn bảng khi tải trang
-    window.addEventListener('load', function() {
-        productTable.style.display = 'none'; // Ẩn bảng sản phẩm khi trang tải xong
-        savedItems.style.display = 'block'; // Hiển thị phần savedItems khi bảng ẩn
+// Array to store selected items
+let selectedFoods = [];
+
+// Initialize page - hide all items and show savedItems by default
+function initializePage() {
+    productTableRows.forEach(row => {
+        row.style.display = "none"; // Hide each food item
     });
+    savedItems.style.display = "block"; // Show savedItems on page load
+    selectedItemsContainer.innerHTML = ''; // Clear selected items list on page load
+    updateSavedItemsVisibility();  // Ensure savedItems visibility on page load
+}
 
-    // Lắng nghe sự kiện click trên nút "Tìm kiếm"
-    document.getElementById('search-button').addEventListener('click', function() {
-        // Kiểm tra trạng thái hiển thị của bảng và thay đổi giữa hiển thị và ẩn
-        if (productTable.style.display === 'none') {
-            productTable.style.display = 'table';  // Hiển thị bảng khi nút được nhấn
-            savedItems.style.display = 'none'; // Ẩn savedItems khi bảng được hiển thị
+// Update savedItems visibility based on the presence of selected items
+function updateSavedItemsVisibility() {
+    // Check if selected-items container has any child nodes (selected items)
+    if (selectedItemsContainer.children.length === 0) {
+        savedItems.style.display = "block"; // Show savedItems if no food selected
+    } else {
+        savedItems.style.display = "none"; // Hide savedItems if there’s a selected item
+    }
+}
+
+// Search function to filter food items based on input
+function searchFood(showAlert = false) {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    let found = false;
+
+    if (searchTerm === "") {
+        productTableRows.forEach(row => {
+            row.style.display = "none";
+        });
+        savedItems.style.display = "block";
+        return;
+    }
+
+    productTableRows.forEach(row => {
+        const foodName = row.querySelector("td").textContent.toLowerCase();
+
+        if (foodName.includes(searchTerm)) {
+            row.style.display = ""; // Show matching item
+            found = true;
+            row.addEventListener('click', () => addToSelectedItems(row)); // Allow re-selection after removal
         } else {
-            productTable.style.display = 'none';  // Ẩn bảng khi nút được nhấn
-            savedItems.style.display = 'block'; // Hiển thị savedItems khi bảng bị ẩn
+            row.style.display = "none";
         }
     });
 
+    // Display savedItems if no match is found, otherwise hide it
+    savedItems.style.display = found ? "none" : "block";
+
+    if (!found && showAlert) {
+        alert("Món ăn không tồn tại.");
+    }
 }
 
+// Add selected item to the selected-items container with full styling
+function addToSelectedItems(row) {
+    const foodName = row.querySelector("td").textContent;
 
+    // Check if the item is already selected
+    if (selectedFoods.includes(foodName)) {
+        alert("Món ăn đã được chọn."); // Alert if already selected
+        return;
+    }
+
+    // Clone the row element to keep original styling
+    const clonedRow = row.cloneNode(true);
+    clonedRow.classList.add("product-table-row");
+
+    // Create a delete button
+    const deleteButton = document.createElement("span");
+    deleteButton.textContent = "×";
+    deleteButton.classList.add("delete-button");
+    deleteButton.onclick = () => removeFromSelectedItems(foodName, clonedRow);
+
+    // Append the delete button to the last cell (price cell)
+    const priceCell = clonedRow.querySelector("td:last-child"); // Assuming price is in the last cell
+    priceCell.appendChild(deleteButton);
+
+    // Append the cloned row to the selected items container
+    selectedItemsContainer.appendChild(clonedRow);
+
+    // Add to selectedFoods to track selected items
+    selectedFoods.push(foodName);
+
+    // Update savedItems visibility based on selection
+    updateSavedItemsVisibility();
+}
+
+// Function to remove an item from selected items
+function removeFromSelectedItems(foodName, rowElement) {
+    // Remove item from selectedFoods array
+    selectedFoods = selectedFoods.filter(item => item !== foodName);
+
+    // Remove the row from the selected-items container
+    selectedItemsContainer.removeChild(rowElement);
+
+    // Update visibility of savedItems
+    updateSavedItemsVisibility();
+}
+
+// Add event listener to search button
+searchButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    searchFood(true);
+});
+
+// Initialize the page on load
+initializePage();
+
+}
+
+//kết hục js thực đơn mới

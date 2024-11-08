@@ -209,6 +209,7 @@ hr{
     width: 100%;
     border-collapse: collapse;
     margin-top: 1.5rem;
+    border: 2px solid var(--yellow);
 }
 
 .product-table thead {
@@ -266,6 +267,8 @@ hr{
 .product-table tbody td img {
     margin-left: 1.5rem; /* Adjust space between number and image */
 }
+
+
 /* Add Product Button */
 .product-actions {
     display: flex;
@@ -567,6 +570,72 @@ hr{
     font-size: 1.9rem;
     color:  var(--yellow);
 }
+
+
+
+
+
+
+/* Style for selected item rows in the selected-items container */
+.product-table-row {
+    display: table-row;
+    width: 100%;
+    border-bottom: 0.1rem solid #ccc;
+    font-size: 1.5rem;
+}
+
+/* Styling for each cell in .product-table-row */
+.product-table-row td {
+    padding: 1rem 2rem 1rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    
+}
+.product-table-row td + td {
+    padding-left: 300px;  /* Creates spacing only between td elements */
+}
+/* Adding row numbering before the item name */
+.product-table-row td:first-child::before {
+    content: counter(rowNumber) ". ";
+    counter-increment: rowNumber;
+    font-weight: bold;
+}
+
+#selected-items {
+    counter-reset: rowNumber; /* Reset the counter for row numbers */
+}
+
+/* Styling for images in selected items */
+.product-table-row img.product-img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+}
+
+/* Hover effect */
+.product-table-row:hover {
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+.delete-button{
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.delete-button:hover {
+    cursor: pointer
+}
+
 /*kết thúc thêm mới thực đơn*/
 
 
@@ -586,8 +655,8 @@ hr{
 
 
 .product-table_takeAway th, .product-table_takeAway td {
-    padding: 1rem;
-    border-bottom: 0.1rem solid #ccc;
+    padding: 1rem 1rem 1rem 40px;
+
     font-size: 1.5rem;
 }
 
@@ -607,6 +676,7 @@ hr{
 
 .product-table_takeAway tbody {
     counter-reset: rowNumber;
+
 }
 
 .product-table_takeAway tbody tr {
@@ -624,11 +694,11 @@ hr{
 .product-table_takeAway tbody td:first-child::before {
     content: counter(rowNumber) ". "; /* Display the row number before the image */
     font-weight: bold;
-    margin-right: 10px; /* Space between the number and the image */
+    margin-right: 0; /* Space between the number and the image */
 }
 
 .product-table_takeAway tbody td img {
-    margin-left: 1.5rem; /* Adjust space between number and image */
+    margin-left:0; /* Adjust space between number and image */
 }
 
 
@@ -679,4 +749,14 @@ hr{
 .content_deleteTakeAway .delete:hover{
     cursor: pointer
 }
+
+.product-table_takeAway .remove-item{
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 2px;
+}
 /*kết thúc giao diện mang đi*/
+

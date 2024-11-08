@@ -119,88 +119,160 @@
                         <div class="add_items">
                             <h3>Thêm mặt hàng, combo</h3>
                             <div class="input_with_button">
-                                <textarea class="search-input" rows="1" placeholder="Thêm mặt hàng, combo"></textarea>
-                                <button class="save_button">Tìm kiếm</button>
+                                <input type="text" class="search-input" placeholder="Thêm mặt hàng, combo" id="search-input">
+                                <button class="save_button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <div class="danhsachdachon" id="selected-items">
                             </div>
                         </div>
+                        <table class="product-table">
+                            <tbody>
+                                <tr>
+                                   
+                                    <td><img src="../images/img-giaodienxoila.html/xoi thit kho tau.webp" alt="" class="product-img"> Xôi thịt kho tàu</td>
+                                    <td>25.000 đ</td>
+                                </tr>
+                                <tr>
+                            
+                                    <td><img src="../images/img-giaodienxoila.html/xoi vo bong-phi.webp" alt="" class="product-img"> Xôi vò bông phi</td>
+                                    <td>25.000 đ</td>
+                                </tr>
+                                <tr>
+                                 
+                                    <td><img src="../images/img-giaodienxoila.html/Xôi mặn miền Trung.webp" alt="" class="product-img"> Xôi mặn miền Trung</td>
+                                    <td>25.000 đ</td>
+                                </tr>
+                                
+                                    <td><img src="../images/img-giaodienxoila.html/xôi ốp la.webp" alt="" class="product-img"> Xôi ốp la chả cá</td>
+                                    <td>25.000 đ</td>
+                                </tr>
+                                <tr>
+                                  
+                                    <td><img src="../images/img-giaodienxoila.html/xôp nếp trắng bông-pji.webp" alt="" class="product-img"> Xôi nếp trắng bông phi</td>
+                                    <td>25.000 đ</td>
+                                </tr>
+                                <tr>
+                               
+                                    <td><img src="../images/img-giaodienxoila.html/Xôi-sườn.webp" alt="" class="product-img"> Xôi sườn</td>
+                                    <td>35.000 đ</td>
+                                </tr>
+                                
+                                    <td><img src="../images/img-giaodienxoila.html/xôi gà.webp" alt="" class="product-img"> xôi gà</td>
+                                    <td>35.000 đ</td>
+                                </tr>
+                                <tr>
+                          
+                                    <td><img src="../images/img-giaodienxoila.html/Sửa bắp-chai.webp" alt="" class="product-img"> Sữa bắp chai</td>
+                                    <td>15.000 đ</td>
+                                </tr>
+                                <tr>
+ 
+                                    <td><img src="../images/img-giaodienxoila.html/Sữa dừa-chai.webp" alt="" class="product-img"> Sữa dừa chai</td>
+                                    <td>15.000 đ</td>
+                                </tr>
+                                <tr>
 
+                                    <td><img src="../images/img-giaodienxoila.html/Sữa hạt sen-chai.webp" alt="" class="product-img"> Sữa hạt sen chai</td>
+                                    <td>15.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/img-giaodienxoila.html/Sữa đậu nành-chai.webp" alt="" class="product-img"> Sữa đậu nành chai</td>
+                                    <td>15.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/img-giaodienxoila.html/Sữa đậu xanh-chai.webp" alt="" class="product-img"> Sữa đậu xanh chai</td>
+                                    <td>15.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/img-giaodienxoila.html/Aquafina.webp" alt="" class="product-img"> Aquafina</td>
+                                    <td>10.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/img-giaodienxoila.html/7up.webp" alt="" class="product-img"> 7up</td>
+                                    <td>12.000 đ</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/img-giaodienxoila.html/pepsi.webp" alt="" class="product-img"> Pepsi</td>
+                                    <td>12.000 đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
                         <table class="product-table_takeAway">
                             
                             <tbody>
                                 <tr>
                                     <td><img src="../images/img-giaodienxoila.html/xoi thit kho tau.webp" alt="" class="product-img"> Xôi thịt kho tàu</td>
-                                    <td>25.000 đ</td>
+                                    <td>25.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/xoi vo bong-phi.webp" alt="" class="product-img"> Xôi vò bông phi</td>
-                                    <td>25.000 đ</td>
+                                    <td>25.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Xôi mặn miền Trung.webp" alt="" class="product-img"> Xôi mặn miền Trung</td>
-                                    <td>25.000 đ</td>
+                                    <td>25.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/xôi ốp la.webp" alt="" class="product-img"> Xôi ốp la chả cá</td>
-                                    <td>25.000 đ</td>
+                                    <td>25.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/xôp nếp trắng bông-pji.webp" alt="" class="product-img"> Xôi nếp trắng bông phi</td>
-                                    <td>25.000 đ</td>
+                                    <td>25.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Xôi-sườn.webp" alt="" class="product-img"> Xôi sườn</td>
-                                    <td>35.000 đ</td>
+                                    <td>35.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/xôi gà.webp" alt="" class="product-img"> xôi gà</td>
-                                    <td>35.000 đ</td>
+                                    <td>35.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Sửa bắp-chai.webp" alt="" class="product-img"> Sữa bắp chai</td>
-                                    <td>15.000 đ</td>
+                                    <td>15.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Sữa dừa-chai.webp" alt="" class="product-img"> Sữa dừa chai</td>
-                                    <td>15.000 đ</td>
+                                    <td>15.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
  
                                     <td><img src="../images/img-giaodienxoila.html/Sữa hạt sen-chai.webp" alt="" class="product-img"> Sữa hạt sen chai</td>
-                                    <td>15.000 đ</td>
+                                    <td>15.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
    
                                     <td><img src="../images/img-giaodienxoila.html/Sữa đậu nành-chai.webp" alt="" class="product-img"> Sữa đậu nành chai</td>
-                                    <td>15.000 đ</td>
+                                    <td>15.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Sữa đậu xanh-chai.webp" alt="" class="product-img"> Sữa đậu xanh chai</td>
-                                    <td>15.000 đ</td>
+                                    <td>15.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/Aquafina.webp" alt="" class="product-img"> Aquafina</td>
-                                    <td>10.000 đ</td>
-                                </tr>
+                                    <td>12.000 đ <span class="remove-item">X</span></td>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/7up.webp" alt="" class="product-img"> 7up</td>
-                                    <td>12.000 đ</td>
+                                    <td>12.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                                 <tr>
 
                                     <td><img src="../images/img-giaodienxoila.html/pepsi.webp" alt="" class="product-img"> Pepsi</td>
-                                    <td>12.000 đ</td>
+                                    <td>12.000 đ <span class="remove-item">X</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -236,6 +308,40 @@
                 </div>
 
             </div>
+            <!-- HTML content here -->
+
+<script>
+    // Chọn các phần tử cần thiết
+    const deleteDiv = document.querySelector('.delete');
+    const cancelDiv = document.querySelector('.cancel');
+    const saveDiv = document.querySelector('.save');
+
+    // Thêm sự kiện click vào phần tử "Xóa thực đơn"
+    deleteDiv.addEventListener('click', function() {
+        alert('Đã xóa thực đơn');
+    });
+
+    // Thêm sự kiện click vào phần tử "Hủy"
+    cancelDiv.addEventListener('click', function() {
+        alert('Đã hủy');
+    });
+
+    // Thêm sự kiện click vào phần tử "Lưu"
+    saveDiv.addEventListener('click', function() {
+        alert('Đã lưu');
+    });
+
+    // Chọn tất cả các nút "X" và thêm sự kiện click
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function () {
+            // Tìm gần nhất <tr> (dòng bảng) và xóa nó
+            const row = this.closest('tr');
+            if (row) row.remove();
+        });
+    });
+</script>
+</body>
+</html>
 
 
         
