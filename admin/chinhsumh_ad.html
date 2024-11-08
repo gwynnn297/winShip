@@ -1,0 +1,167 @@
+<html></html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+                <i class="fas fa-arrow-left text-gray-500 mr-2"></i>
+                <span class="text-gray-500">Quay lại danh sách mặt hàng</span>
+            </div>
+            <div class="flex space-x-2">
+                <button class="bg-red-500 text-white px-4 py-2 rounded">Xóa mặt hàng</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">Hủy</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Lưu</button>
+            </div>
+        </div>
+        <h1 class="text-2xl font-semibold mb-6">Smoothies Heart Better</h1>
+        <div class="grid grid-cols-3 gap-6">
+            <div class="col-span-2">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Tên mặt hàng</label>
+                    <input type="text" class="w-full border border-gray-300 p-2 rounded" value="Smoothies Heart Better">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Loại mặt hàng</label>
+                    <select class="w-full border border-gray-300 p-2 rounded">
+                        <option>Tính tiền theo số lượng</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Giá mặt hàng</label>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-blue-500 cursor-pointer">Chỉnh sửa giá</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Mã mặt hàng</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" value="SHB">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Giá bán</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" value="50,000 đ">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Giá vốn</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" value="35,000 đ">
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <label class="text-gray-700">Nhập giá bán lẻ</label>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <span class="text-blue-500 cursor-pointer">+ Thêm giá</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Đơn vị</label>
+                    <select class="w-full border border-gray-300 p-2 rounded">
+                        <option>Cốc</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">In tem mặt hàng</label>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="mr-2" checked>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Quản lý mã</label>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="mr-2">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Liên kết kho hàng</label>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="mr-2">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Nhóm lựa chọn</label>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="mr-2">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Mô tả</label>
+                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4">Mô tả</textarea>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Hình đại diện</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="avatar" class="mr-2" checked>
+                        <label class="mr-4">Màu sắc</label>
+                        <input type="radio" name="avatar" class="mr-2">
+                        <label>Hình ảnh</label>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="w-10 h-10 bg-yellow-500 rounded"></div>
+                        <div class="w-10 h-10 bg-blue-500 rounded"></div>
+                        <div class="w-10 h-10 bg-green-500 rounded"></div>
+                        <div class="w-10 h-10 bg-red-500 rounded"></div>
+                        <div class="w-10 h-10 bg-purple-500 rounded"></div>
+                        <div class="w-10 h-10 bg-pink-500 rounded"></div>
+                        <div class="w-10 h-10 bg-indigo-500 rounded"></div>
+                        <div class="w-10 h-10 bg-gray-500 rounded"></div>
+                    </div>
+                    <div class="mt-2">
+                        <span class="text-blue-500 cursor-pointer">Thiết lập mặc định theo tên và màu</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Kênh bán hàng</label>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" checked>
+                        <label class="mr-4">Bán tại cửa hàng</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4">GrabFood</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4">GoFood</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4">Bán online</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Danh mục</label>
+                    <select class="w-full border border-gray-300 p-2 rounded">
+                        <option>Đồ uống</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Thực đơn</label>
+                    <div class="flex items-center mb-2">
+                        <input type="text" class="w-full border border-gray-300 p-2 rounded" placeholder="Tìm kiếm thực đơn">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2">Mang đi</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded">Hoa quả tươi</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Khu vực bar / bếp quản lý</label>
+                    <select class="w-full border border-gray-300 p-2 rounded">
+                        <option>Chọn và tìm kiếm bar / bếp quản lý</option>
+                    </select>
+                    <div class="mt-2 text-gray-500 text-sm">
+                        <p>* Mặt hàng được quản lý theo bar / bếp chế biến.</p>
+                        <p>* Mặt hàng chỉ được in khi đơn hàng được thanh toán và gửi đến khu vực bar / bếp quản lý.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
