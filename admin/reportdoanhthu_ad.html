@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>bao cao doanh thu </title>
     <link rel="stylesheet" href="../css/stylead.css">
     <!-- font link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -102,117 +103,134 @@
                     </a>
                 </div>
             </div>
+
             <div class="Overview-content">
-                <div class="dashboard">
-
-                    <div class="header-dashboard">
-                        <h2 style="font-size: 2.5rem;">Tổng quan kinh doanh</h2>
-                        <div class="item-button">
-                            <button class="item-greenbuton">Tải phần mền Sapo Host</button>
-                            <button class="item-bludebuton">Tải phần mềm thu ngân (Windows)</button>
+                <div class="overview-report">
+                    <div class="report-filter">
+                        <div class="filter-group">
+                            <label for="report-type" style="font-size: 1.5rem;">Loại báo cáo</label>
+                            <select id="report-type">
+                                <option>Doanh thu tổng quan</option>
+                                <!-- Thêm các tùy chọn khác ở đây nếu cần -->
+                            </select>
                         </div>
+                        <div class="filter-group">
+                            <label for="time-period" style="font-size: 1.5rem;">Thời gian</label>
+                            <select id="time-period">
+                                <option>Tháng này</option>
+                                <!-- Thêm các tùy chọn khác ở đây nếu cần -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="time-range" style="font-size: 1.5rem;">Giờ</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="time" id="start-time" value="00:00">
+                                <span style="display: flex; align-items: center;  font-size: 1.4rem;">-</span>
+                                <input type="time" id="end-time" value="00:00">
+                            </div>
+                        </div>
+                        <button>Xem báo cáo</button>
                     </div>
 
-                    <div class="filters">
-                        <select>
-                            <option>Tháng này</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                        <select>
-                            <option>Không so sánh</option>
-                            <!-- Add more options as needed -->
-                        </select>
+                    <div class ="report-xuat">
+                        <div class=report-header>
+                            <h3>DOANH THU TỔNG QUANG</h3>
+                            <P>Xem luc : 01:36 CH 05/10/2024</P>
+                        </div>
+                        <a href="#" class="export-button">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s" alt="Excel Logo">
+                            Xuất báo cáo
+                        </a>
                     </div>
 
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <a href="" class="stat-icon"><i class="fa-solid fa-money-bill"></i></i></a>
+                    <div class="stats-gridd">
+                        <div class="stat-itemm">
+                            <a href="" class="stat-iconn"><i class="fa-solid fa-money-bill"></i></i></a>
                             <div class="item-stat-con">
-                                <p>Tiền hàng</p>
+                                <p>tổng số hóa đơn</p>
                                 <span>0₫</span>
                             </div>
 
                         </div>
-                        <div class="stat-item">
-                            <a href="" class="stat-icon"><i class="fa-solid fa-trash"></i></a>
+                        <div class="stat-itemm">
+                            <a href="" class="stat-iconn"><i class="fa-solid fa-trash"></i></a>
                             <div class="item-stat-con">
-                                <p>Hoàn hủy</p>
+                                <p>Số hóa đơn hủy</p>
                                 <span>0₫</span>
                             </div>
                         </div>
-                        <div class="stat-item">
-                            <a href="" class="stat-icon"><i class="fa-solid fa-gift"></i></a>
+                        <div class="stat-itemm">
+                            <a href="" class="stat-iconn"><i class="fa-solid fa-gift"></i></a>
                             <div class="item-stat-con">
-                                <p>Giảm giá</p>
+                                <p>Số lượng mặt hàng </p>
                                 <span>0₫</span>
                             </div>
                         </div>
-                        <div class="stat-item">
-                            <a href="" class="stat-icon"><i class="fa-regular fa-file"></i></a>
+                        <div class="stat-itemm">
+                            <a href="" class="stat-iconn"><i class="fa-regular fa-file"></i></a>
                             <div class="item-stat-con">
-                                <p>Thuế phí</p>
+                                <p>TB mặt hàng/HĐ</p>
                                 <span>0₫</span>
                             </div>
                         </div>
-                        <div class="stat-item">
-                            <a href="" class="stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></i></a>
+                        <div class="stat-itemm">
+                            <a href="" class="stat-iconn"><i class="fa-solid fa-file-invoice-dollar"></i></i></a>
                             <div class="item-stat-con">
-                                <p>Doanh thu gồm thuế</p>
+                                <p>TB doanh thu/HĐ</p>
                                 <span>0₫</span>
                             </div>
                         </div>
 
                     </div>
 
-
-
-
-                    <div class="extra-stats">
-                        <div class="extra-item">
-                            <div class="extra-border" style="background-color: orange;"></div>
-                            <div class="extra-content">
-                                <p class="extra-title" style="color: orange;">Số khách hàng</p>
-                                <span class="extra-count">0</span>
-                            </div>
+                    <div class="chart-container">
+                        <h5>Doanh thu bán hàng trung bình theo giờ</h5>
+                        <canvas id="revenueChartt" width="800" height="400"></canvas>
+                        <div class="legend">
+                          <div class="legend-color"></div>
+                          <span>Doanh thu gồm thuế</span>
                         </div>
-                        <div class="extra-item">
-                            <div class="extra-border" style="background-color:  #FF6347"></div>
-                            <div class="extra-content">
-                                <p class="extra-title" style="color:  #FF6347;">Số hoá đơn</p>
-                                <span class="extra-count">0</span>
-                            </div>
-                        </div>
-                        <div class="extra-item">
-                            <div class="extra-border" style="background-color: #808000"></div>
-                            <div class="extra-content">
-                                <p class="extra-title" style="color: #808000 ;">TB mặt hàng/ hoá đơn</p>
-                                <span class="extra-count">--</span>
-                            </div>
-                        </div>
-                        <div class="extra-item">
-                            <div class="extra-border" style="background-color: rosybrown"></div>
-                            <div class="extra-content">
-                                <p class="extra-title" style="color: rosybrown;">TB doanh thu/ hoá đơn</p>
-                                <span class="extra-count">--₫</span>
-                            </div>
-                        </div>
+                        <p class="note">*Doanh thu bán hàng trung bình theo giờ = Tổng doanh thu trong một giờ / Tổng số ngày trong kỳ</p>
                     </div>
-
-                    <h4 style="font-size: 2.5rem;">DOANH THU TỔNG HỢP</h4>
-
-
-                    <canvas id="revenueChart" width="800" height="400"></canvas>
+                    <div class="chart-container">
+                        <h5>Doanh thu bán hàng trung bình theo ngày</h5>
+                        <canvas id="revenueCharttt" width="800" height="400"></canvas>
+                        <div class="legend">
+                          <div class="legend-color"></div>
+                          <span>Doanh thu gồm thuế</span>
+                        </div>
+                       
+                    </div>
+                    <div class="header_ds">
+                        <span>Thứ</span>
+                        <span>Ngày</span>
+                        <span>Tiền hàng</span>
+                        <span>Tiền hủy</span>
+                        <span>Tiền hoàn</span>
+                        <span>Giảm giá</span>
+                        <span>Giảm trừ combo</span>
+                        <span>Thuế</span>
+                        <span>Phí dịch vụ</span>
+                        <span>Phí giao hàng</span>
+                        <span>Tiền trả ĐTGH</span>
+                        <span>Tiền tip</span>
+                        <span>Công nợ KH</span>
+                        <span>Doanh thu</span>
+                    </div>
+                    <div class="contens">
+                        <img src="https://c8.alamy.com/comp/2HWG033/chart-increase-profit-growth-raise-single-isolated-icon-with-sticker-outline-cut-style-vector-2HWG033.jpg" alt="Biểu đồ">
+                        <div class="message">Chưa ghi nhận báo cáo</div>
+                    </div>
                 </div>
+                
             </div>
-
         </div>
 
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/../js/scrip_ad.js" defer></script>
-  
+
 </body>
 
 </html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>báo cáo mặt hàng</title>
+    <link rel="stylesheet" href="../css/stylead.css">
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="nav-bar">
+            <nav>
+                <div><a href="" class="logo">
+                        <i id="main-icon" class="fa-solid fa-bowl-food"></i>
+                        <span class="nav-item">WinShip</span>
+                    </a>
+                </div>
+                <ul>
+                    <hr>
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="nav-item">Tổng quan</span>
+                        </a>
+                    </li>
+
+                    <li class="report-item">
+                        <a href="javascript:void(0);" class="list-item" id="report-toggle">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span class="nav-item">Báo cáo</span>
+                        </a>
+                        <!-- Dropdown items (ẩn lúc đầu) -->
+                        <ul class="sub-menu">
+                            <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
+                            <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fas fa-file-invoice"></i>
+                            <span class="nav-item">Hóa đơn</span>
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span class="nav-item">Mặt hàng</span>
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-list"></i>
+                            <span class="nav-item">Danh sách khách hàng</span>
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-rectangle-ad"></i>
+                            <span class="nav-item">Khuyến mãi</span>
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-warehouse"></i>
+                            <span class="nav-item">Kho hàng</span>
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <span class="nav-item">Thu chi</span>
+                        </a>
+                    </li>
+                    <hr>
+
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h3 class="name">GoodFood</h3>
+                <div class="header-scfunction">
+                    <a href="#" class="header-scfunction-money"><i class="fa-regular fa-credit-card"></i>
+                        Vay vốn kinh doanh
+                    </a>
+                    <a href="#" class="header-scfunction-support"><i class="fa-solid fa-question"></i>
+                        Trợ giúp
+                    </a>
+                    <a href="#" class="header-scfunction-share"><i class="fa-regular fa-heart"></i>
+                        góp ý
+                    </a>
+                    <a href="#" class="header-scfunction-login">
+                        Hoàng Ngọc Phúc <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <a href="#" class="header-scfunction-login"><i class="fa-solid fa-bell"></i>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="Overview-content">
+                <div class="overview-report">
+                    <div class="report-filter">
+                        <div class="filter-group">
+                            <label for="report-type" style="font-size: 1.5rem;">Loại báo cáo</label>
+                            <select id="report-type">
+                                <option>Doanh thu tổng quan</option>
+                                <!-- Thêm các tùy chọn khác ở đây nếu cần -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="time-period" style="font-size: 1.5rem;">Thời gian</label>
+                            <select id="time-period">
+                                <option>Tháng này</option>
+                                <!-- Thêm các tùy chọn khác ở đây nếu cần -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="time-range" style="font-size: 1.5rem;">Giờ</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="time" id="start-time" value="00:00">
+                                <span style="display: flex; align-items: center;  font-size: 1.4rem;">-</span>
+                                <input type="time" id="end-time" value="00:00">
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label for="time-period" style="font-size: 1.5rem;">Thời gian</label>
+                            <select id="time-period">
+                                <option>Tháng này</option>
+                                <!-- Thêm các tùy chọn khác ở đây nếu cần -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class = "report-btncontent">
+                        <button class="btn-item-reprot">Xem báo cáo</button>
+                    </div>
+
+                    <div class ="report-xuat">
+                        <div class=report-header>
+                            <h3>DOANH THU TỔNG QUANG</h3>
+                            <P>Xem luc : 01:36 CH 05/10/2024</P>
+                        </div>
+                        <a href="#" class="export-button">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s" alt="Excel Logo">
+                            Xuất báo cáo
+                        </a>
+                    </div>
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <div class="tab active" onclick="openTab('revenue')">Tổng tiền thu</div>
+                            <div class="tab" onclick="openTab('quantity')">Số lượng</div>
+                        </div>
+                        <div id="revenue" class="tab-content active" >
+                            <!-- Nội dung của tab "Tổng tiền thu" -->
+                            <p style="font-size: 1.5rem;">Đây là nội dung của tab Tổng tiền thu.</p>
+                        </div>
+                        <div id="quantity" class="tab-content">
+                            <!-- Nội dung của tab "Số lượng" -->
+                            <p style="font-size: 1.5rem;">Đây là nội dung của tab Số lượng.</p>
+                        </div>
+                    </div>
+                    <div class="header_dss">
+                        <span>Danh mục</span>
+                        <span>Giá khi bán</span>
+                        <span>Đơn vị</span>
+                        <span>SL(TL/TG)</span>
+                        <span>Tỷ lệ số lượng</span>
+                        <span>Tiền hàng</span>
+                        <span>Tỷ lệ tiền hàng</span>
+                       
+                    </div>
+                    <div class="contens">
+                        <img src="https://c8.alamy.com/comp/2HWG033/chart-increase-profit-growth-raise-single-isolated-icon-with-sticker-outline-cut-style-vector-2HWG033.jpg" alt="Biểu đồ">
+                        <div class="message">Chưa ghi nhận báo cáo</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/../js/scrip_ad.js"></script>
+
+</body>
+
+</html>
