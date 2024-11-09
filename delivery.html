@@ -1,11 +1,224 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Order Tracking - Winship
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+  
+  </style>
+ </head>
+ <body>
+  <!-- Header Section -->
+  <header class="header_c">
+   <div class="logo_c">
+    <h1>
+     Winship
+    </h1>
+   </div>
+   <nav class="nav_c">
+    <ul>
+     <li>
+      <a href="#">
+       Nhà
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Lệnh
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Tài khoản
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <!-- Main Content -->
+  <section class="order-tracking_c">
+   <h2>
+    Chi tiết đơn hàng -
+    <span class="order-id_c">
+     #2023DEMKT192
+    </span>
+   </h2>
+   <!-- Tracking Status -->
+   <div class="tracking-status_c">
+    <ul>
+     <li class="completed_c">
+      Đặt hàng✅
+     </li>
+     <li class="completed_c">
+      Đơn hàng đã thanh toán✅
+     </li>
+     <li class="completed_c">
+      Đang gửi hàng✅
+     </li>
+     <li class="completed_c">
+      Gửi hàng thành công
+     </li>
+    </ul>
+   </div>
+   <!-- Order Information -->
+   <div class="order-info_c">
+    <h3>
+     Thông tin vận chuyển
+    </h3>
+    <p>
+     <strong>
+      Tên:
+     </strong>
+     Doãn Chí Bình
+    </p>
+    <p>
+     <strong>
+      Điện Thoại:
+     </strong>
+     <a href="tel:03543204688">
+      03543204688
+     </a>
+    </p>
+    <p>
+     <strong>
+      Địa Chỉ:
+     </strong>
+     81 An Khê, Thanh Khê, Đà Nẵng, VietNam
+    </p>
+   </div>
+   <!-- Product List -->
+   <div class="product-list_c">
+    <h3>
+     Sản phẩm đặt hàng
+    </h3>
+    <div class="product_c">
+     <img alt="Image of a traditional Vietnamese dish called Cơm Thố 73, served in a clay pot with rice and various toppings" height="80" src="https://storage.googleapis.com/a1aa/image/MP5mGAhSQe0fiEypeeKaHEaIzCZXSpJqZU2fu2iEs6uaDG6dC.jpg" width="80"/>
+     <p class="product-name_c">
+      Cơm Thố 73
+     </p>
+    </div>
+   </div>
+   <!-- Order Summary -->
+   <div class="order-summary_c">
+    <h3>
+     Tóm tắt đơn hàng
+    </h3>
+    <p>
+     Tổng số mặt hàng:
+     <span>
+      ₫50,000
+     </span>
+    </p>
+    <p>
+     Phí vận chuyển:
+     <span>
+      ₫29,700
+     </span>
+    </p>
+    <p>
+     Giảm giá phí vận chuyển:
+     <span>
+      ₫-7,000
+     </span>
+    </p>
+    <p>
+     <strong>
+      Tổng tiền phải thanh toán:
+      <span>
+       ₫72,700
+      </span>
+     </strong>
+    </p>
+   </div>
+   <div class="contact-container_c">
+    <!-- Success Message -->
+    <div class="success-message_c" id="successMessage">
+     <i>
+      ✓
+     </i>
+     <!-- Icon for success -->
+     <span>
+      Thông tin đã được gửi thành công!
+     </span>
+     <button class="close-btn_c" onclick="document.getElementById('successMessage').style.display='none';">
+      ×
+     </button>
+    </div>
+   </div>
+  </section>
+  <!-- Footer Section -->
+  <footer class="footer_c">
+   <div class="container_c">
+    <!-- Contact Info -->
+    <div class="footer-column_c">
+     <h2>
+      Thông tin liên hệ
+     </h2>
+     <div class="contact-item_c">
+      📧 Email hỗ trợ:
+      <a href="mailto:hotrowinShip@lozi.vn">
+       hotrowinShip@lozi.vn
+      </a>
+     </div>
+     <div class="contact-item_c">
+      📞 Điện thoại hỗ trợ:
+      <span style="font-weight: bold;">
+       028.7308.5778
+      </span>
+     </div>
+     <div class="contact-item_c">
+      📧 Email kinh doanh:
+      <a href="mailto:BachKhi@lozi.vn">
+       BachKhi@lozi.vn
+      </a>
+     </div>
+     <div class="contact-item_c">
+      📞 Điện thoại kinh doanh:
+      <span style="font-weight: bold;">
+       028.3441.2482
+      </span>
+     </div>
+     <div class="contact-item_c">
+      🔗
+      <a href="#">
+       Quy chế hoạt động trên Loship.vn
+      </a>
+     </div>
+     <div class="contact-item_c">
+      🔗
+      <a href="#">
+       Chính sách bảo mật
+      </a>
+     </div>
+    </div>
+    <div class="section-divider_c">
+    </div>
+    <h2>
+     Thông tin pháp lý
+    </h2>
+    <div class="legal-details_c">
+     Giấy CNĐKDN: 0313548039 – Ngày cấp: 24/11/2015, sửa đổi lần thứ 1 ngày 01/04/2016.
+     <br/>
+     Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở Kế hoạch và Đầu tư TP.HCM
+     <br/>
+     Cơ sở đăng ký kinh doanh: Lầu 4, Tòa nhà Mirae, 268 Tô Hiến Thành, Phường 15, Quận 10, TP. Hồ Chí Minh, Việt Nam.
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Code to automatically hide the success message after 5 seconds
+        setTimeout(() => {
+            const successMessage = document.getElementById('successMessage');
+            if (successMessage) {
+                successMessage.style.display = 'none';
+            }
+        }, 5000);
+  </script>
+ </body>
 </html>
