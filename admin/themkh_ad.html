@@ -116,34 +116,34 @@
         </head>
         <body class="bg-gray-100">
             <div>
-                <div class="mb-4">
-                    <a href="../admin/danhsachkh.html" class="text-blue-500 text-sm "style="font-size: 2rem;">&larr; Quay lại danh sách khách hàng</a>
+                <div class="mb-6">
+                    <a href="../admin/danhsachkh.html" class="text-yellow-500 text-sm "style="font-size: 2rem;">&larr; Quay lại d.s khách hàng</a>
                 </div>
-                <h1 class="text-2xl font-semibold mb-6"style="font-size: 2rem;">Thêm mới khách hàng</h1>
-                <div class="grid grid-cols-3 gap-6">
+                <h1 class="text-2xl font-semibold mb-10"style="font-size: 4rem;">Thêm mới khách hàng</h1>
+                <div class="grid grid-cols-3 gap-6  mb-15">
                     <div class="col-span-2 bg-white p-6 rounded-lg shadow">
                         <h2 class="text-lg font-semibold mb-4" style="font-size: 2rem;">Thông tin cơ bản</h2>
                         <form>
                             <div class="mb-4">
                                 <label class="block text-gray-700" style="font-size: 2rem;">Họ tên <span class="text-red-500">*</span></label>
-                                <input type="text" placeholder="Nhập họ tên" class="w-full mt-1 p-2 border rounded">
+                                <input type="text" placeholder="Nhập họ tên" class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                             </div>
                             <div class="mb-4">
                                 <label class="block text-gray-700" style="font-size: 2rem;">Số điện thoại <span class="text-red-500">*</span></label>
-                                <input type="text" placeholder="Nhập số điện thoại" class="w-full mt-1 p-2 border rounded">
+                                <input type="text" placeholder="Nhập số điện thoại" class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                             </div>
                             <div class="mb-4">
                                 <label class="block text-gray-700" style="font-size: 2rem;">Email (Tùy chọn)</label>
-                                <input type="email" placeholder="Nhập email" class="w-full mt-1 p-2 border rounded">
+                                <input type="email" placeholder="Nhập email" class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                             </div>
                             <div class="grid grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label class="block text-gray-700" style="font-size: 2rem;">Ngày sinh</label>
-                                    <input type="date" class="w-full mt-1 p-2 border rounded">
+                                    <input type="date" class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                                 </div>
                                 <div>
                                     <label class="block text-gray-700" style="font-size: 2rem;">Giới tính</label>
-                                    <select class="w-full mt-1 p-2 border rounded">
+                                    <select class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                                         <option>Nam</option>
                                         <option>Nữ</option>
                                         <option>Khác</option>
@@ -153,7 +153,7 @@
                             <div class="grid grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label class="block text-gray-700" style="font-size: 2rem;">Tỉnh / Thành phố</label>
-                                    <select class="w-full mt-1 p-2 border rounded style="font-size: 2rem;"">
+                                    <select class="w-full mt-1 p-2 border rounded" style="font-size: 1.5rem;">
                                         <option>Chọn tỉnh/thành phố</option>
                                         <option>Hà Nội</option>
                                         <option>Hồ Chí Minh</option>
@@ -164,7 +164,7 @@
                                 </div>
                                 <div>
                                     <label class="block text-gray-700" style="font-size: 2rem;">Quận / Huyện</label>
-                                    <select class="w-full mt-1 p-2 border rounded">
+                                    <select class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;">
                                         <option>Chọn quận/huyện</option>
                                         <option>Ba Đình</option>
                                         <option>Hoàn Kiếm</option>
@@ -176,19 +176,37 @@
                             </div>
                             <div class="mb-4">
                                 <label class="block text-gray-700" style="font-size: 2rem;">Địa chỉ cụ thể</label>
-                                <textarea placeholder="Nhập địa chỉ cụ thể" class="w-full mt-1 p-2 border rounded"></textarea>
+                                <textarea placeholder="Nhập địa chỉ cụ thể" class="w-full mt-1 p-2 border rounded"style="font-size: 1.5rem;"></textarea>
                             </div>
                         </form>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow">
                         <h2 class="text-lg font-semibold mb-4" style="font-size: 2rem;">Ghi chú</h2>
-                        <textarea placeholder="Nhập ghi chú" class="w-full h-40 mt-1 p-2 border rounded"></textarea>
+                        <textarea placeholder="Nhập ghi chú" class="w-full h-40 mt-1 p-2 border rounded"style="font-size: 1.5rem;"></textarea>
                     </div>
                 </div>
-                <div class="flex justify-end mt-6">
-                    <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded mr-2">Hủy</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Lưu</button>
+                <div class="flex justify-between mt-6">
+                 
+                    <div>
+                        <button id="cancelButton" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mr-2" style="font-size: 2rem;">
+                            Hủy
+                        </button>
+                        <button id="saveButton" class="bg-yellow-500 text-white px-4 py-2 rounded-lg" style="font-size: 2rem;">
+                            Lưu
+                        </button>
+                    </div>
                 </div>
+                <script>
+  
+            
+                    document.getElementById('cancelButton').addEventListener('click', function() {
+                        alert('Bạn đã nhấn nút Hủy');
+                    });
+            
+                    document.getElementById('saveButton').addEventListener('click', function() {
+                        alert('Bạn đã nhấn nút Lưu');
+                    });
+                </script>
             </div>
         </body>
         </html>

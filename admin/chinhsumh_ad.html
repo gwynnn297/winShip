@@ -108,13 +108,34 @@
         <i class="fas fa-arrow-left text-gray-500 mr-2"></i>
         <a href="../admin/dsmathang_ad.html"class="text-gray-500" style="font-size: 2rem;">Quay lại danh sách mặt hàng</a>
     </div>
-    <div class="flex space-x-2">
-        <button class="bg-red-500 text-white px-4 py-2 rounded">Xóa mặt hàng</button>
-        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">Hủy</button>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">Lưu</button>
+    <div class="flex justify-between mt-6">
+        <button id="deleteButton" class="bg-red-500 text-white px-4 py-2 rounded-lg" style="font-size: 1.5rem;">
+            Xóa Mặt hàng
+        </button>
+        <div>
+            <button id="cancelButton" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mr-2" style="font-size: 1.5rem;">
+                Hủy
+            </button>
+            <button id="saveButton" class="bg-yellow-500 text-white px-4 py-2 rounded-lg" style="font-size: 1.5rem;">
+                Lưu
+            </button>
+        </div>
     </div>
+    <script>
+        document.getElementById('deleteButton').addEventListener('click', function() {
+            alert('Đã Xóa Mặt Hàng');
+        });
+
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            alert('Bạn đã nhấn nút Hủy');
+        });
+
+        document.getElementById('saveButton').addEventListener('click', function() {
+            alert('Bạn đã nhấn nút Lưu');
+        });
+    </script>
 </div>
-<h1 class="text-2xl font-semibold mb-6" style="font-size: 2.3rem;">Smoothies Heart Better</h1>
+<h1 class="text-2xl font-semibold mb-6" style="font-size: 4rem;">Xôi thịt kho tàu</h1>
 <body class="bg-gray-100 p-4">
     <div class="mx-auto bg-white p-6 rounded-lg shadow-md">
         
@@ -122,11 +143,11 @@
             <div class="col-span-2">
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Tên mặt hàng</label>
-                    <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;" value="Smoothies Heart Better">
+                    <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" value="Smoothies Heart Better">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Loại mặt hàng</label>
-                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;">
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;">
                         <option>Tính tiền theo số lượng</option>
                     </select>
                 </div>
@@ -138,15 +159,15 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Mã mặt hàng</label>
-                            <input type="text" class="w-full border border-gray-300 p-2 rounded"  style="font-size: 1.3rem;" value="SHB">
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded"  style="font-size: 1.5rem;" value="SHB">
                         </div>
                         <div>
                             <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Giá bán</label>
-                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;"  value="50,000 đ">
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  value="25,000 đ">
                         </div>
                         <div>
                             <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Giá vốn</label>
-                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;"  value="35,000 đ">
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  value="20,000 đ">
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" class="mr-2">
@@ -159,15 +180,12 @@
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Đơn vị</label>
-                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;" >
-                        <option>Cốc</option>
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
+                        <option>Phần</option>
                     </select>
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">In tem mặt hàng</label>
-                    <div class="flex items-center">
-                        <input type="checkbox" class="mr-2" checked>
-                    </div>
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">In tem mặt hàng<input type="checkbox" class="mr-2"style="float: right;"></label>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Quản lý mã<input type="checkbox" class="mr-2"style="float: right;"></label>
@@ -180,7 +198,7 @@
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Mô tả</label>
-                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" style="font-size: 1.3rem;" >Mô tả</textarea>
+                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" style="font-size: 1.5rem;"type="text" id="nhap-mo-ta" placeholder="Nhập mô tả" ></textarea>
                 </div>
             </div>
             <div>
@@ -210,40 +228,40 @@
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Kênh bán hàng</label>
                     <div class="flex items-center mb-2">
                         <input type="checkbox" class="mr-2" checked>
-                        <label class="mr-4" style="font-size: 1.3rem;" >Bán tại cửa hàng</label>
+                        <label class="mr-4" style="font-size: 1.5rem;" >Bán tại cửa hàng</label>
                     </div>
                     <div class="flex items-center mb-2">
                         <input type="checkbox" class="mr-2">
-                        <label class="mr-4" style="font-size: 1.3rem;" >GrabFood</label>
+                        <label class="mr-4" style="font-size: 1.5rem;" >GrabFood</label>
                     </div>
                     <div class="flex items-center mb-2">
                         <input type="checkbox" class="mr-2">
-                        <label class="mr-4" style="font-size: 1.3rem;" >GoFood</label>
+                        <label class="mr-4" style="font-size: 1.5rem;" >GoFood</label>
                     </div>
                     <div class="flex items-center mb-2">
                         <input type="checkbox" class="mr-2">
-                        <label class="mr-4" style="font-size: 1.3rem;" >Bán online</label>
+                        <label class="mr-4" style="font-size: 1.5rem;" >Bán online</label>
                     </div>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Danh mục</label>
-                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;" >
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
                         <option>Đồ uống</option>
                     </select>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Thực đơn</label>
                     <div class="flex items-center mb-2">
-                        <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;"  placeholder="Tìm kiếm thực đơn">
+                        <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  placeholder="Tìm kiếm thực đơn">
                     </div>
                     <div class="flex items-center mb-2">
-                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2" style="font-size: 1.3rem;" >Mang đi</span>
-                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded" style="font-size: 1.3rem;" >Hoa quả tươi</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2" style="font-size: 1.5rem;" >Mang đi</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded" style="font-size: 1.5rem;" >Hoa quả tươi</span>
                     </div>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Khu vực bar / bếp quản lý</label>
-                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.3rem;" >
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
                         <option>Chọn và tìm kiếm bar / bếp quản lý</option>
                     </select>
                     <div class="mt-2 text-gray-500 text-sm">
@@ -254,6 +272,7 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
 
