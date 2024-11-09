@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,77 +9,78 @@
     <!-- font link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
     <div class="body">
         <div class="nav-bar">
             <nav>
-                    <div><a href="" class="logo">
+                <div><a href="" class="logo">
                         <i id="main-icon" class="fa-solid fa-bowl-food"></i>
                         <span class="nav-item">WinShip</span>
-                        </a>
-                    </div>
-                    <ul>  
-                        <hr>
-                        <li><a href="" class="list-item">
+                    </a>
+                </div>
+                <ul>
+                    <hr>
+                    <li><a href="" class="list-item">
                             <i class="fa-solid fa-house"></i>
                             <span class="nav-item">Tổng quan</span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
-                        <li class="report-item">
-                            <a href="javascript:void(0);" class="list-item" id="report-toggle">
-                                <i class="fa-solid fa-chart-simple"></i>
-                                <span class="nav-item">Báo cáo</span>
-                            </a>
-                            <!-- Dropdown items (ẩn lúc đầu) -->
-                            <ul class="sub-menu">
-                                <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
-                                <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
-                            </ul>
-                        </li>
+                    <li class="report-item">
+                        <a href="javascript:void(0);" class="list-item" id="report-toggle">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span class="nav-item">Báo cáo</span>
+                        </a>
+                        <!-- Dropdown items (ẩn lúc đầu) -->
+                        <ul class="sub-menu">
+                            <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
+                            <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a href="" class="list-item">
+                    <li><a href="" class="list-item">
                             <i class="fas fa-file-invoice"></i>
                             <span class="nav-item">Hóa đơn</span>
-                            </a>
-                        </li>
-                        
-                        <li><a href="" class="list-item">
+                        </a>
+                    </li>
+
+                    <li><a href="" class="list-item">
                             <i class="fa-solid fa-mug-hot"></i>
                             <span class="nav-item">Mặt hàng</span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
-                        <li><a href="" class="list-item">
+                    <li><a href="../admin/danhsachkh.html" class="list-item">
                             <i class="fa-solid fa-list"></i>
                             <span class="nav-item">Danh sách khách hàng</span>
-                         </a>
-                        </li>
+                        </a>
+                    </li>
 
-                        <li><a href="" class="list-item">
+                    <li><a href="" class="list-item">
                             <i class="fa-solid fa-rectangle-ad"></i>
                             <span class="nav-item">Khuyến mãi</span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
-                        <li><a href="" class="list-item">
+                    <li><a href="" class="list-item">
                             <i class="fa-solid fa-warehouse"></i>
                             <span class="nav-item">Kho hàng</span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
-                        <li><a href="" class="list-item">
+                    <li><a href="" class="list-item">
                             <i class="fa-solid fa-money-bill"></i>
                             <span class="nav-item">Thu chi</span>
-                            </a>
-                        </li>
-                        <hr>
-                    
-                    
-                    </ul>
+                        </a>
+                    </li>
+                    <hr>
+
+
+                </ul>
             </nav>
         </div>
-        
+
         <div class="main-content">
             <div class="header">
                 <h3 class="name">GoodFood</h3>
@@ -96,7 +98,7 @@
                         Hoàng Ngọc Phúc <i class="fa-solid fa-angle-down"></i>
                     </a>
                     <a href="#" class="header-scfunction-login"><i class="fa-solid fa-bell"></i>
-                        
+
                     </a>
                 </div>
             </div>
@@ -106,16 +108,16 @@
                 <div class="product-list-header">
                     <h2>Danh sách mặt hàng</h2>
                     <div class="product-actions">
-                        <button class="add-product-btn">+ Thêm mặt hàng</button>
+                        <a href="../admin/themmh_aad.html" class="add-product-btn">+ Thêm mặt hàng</a>
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="product-actions2">
                     <button class="export-btn"><i class="fa-solid fa-cloud-arrow-down"></i>Xuất danh sách</button>
                     <button class="import-btn"><i class="fa-solid fa-cloud-arrow-up"></i>Nhập danh sách</button>
                 </div>
-                
+
                 <div class="filter-container">
                     <select class="filter-select">
                         <option value="">Lọc mặt hàng ⬇</option>
@@ -123,10 +125,10 @@
                         <option value="beverages">Nước uống</option>
                     </select>
                     <input type="text" placeholder="Tìm kiếm mặt hàng" class="search-input">
-                     <!--hiển thị thông báo -->
-                        <p id="no-results">Không có mặt hàng này</p>
+                    <!--hiển thị thông báo -->
+                    <p id="no-results">Không có mặt hàng này</p>
                 </div>
-                
+
 
                 <table class="product-table">
                     <thead>
@@ -142,92 +144,143 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr onclick="window.location.href='../admin/chinhsumh_ad.html';" style="cursor: pointer;">
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/xoi thit kho tau.webp" alt="" class="product-img"> Xôi thịt kho tàu</td>
+                            <td>
+                                <a href="../admin/chinhsumh_ad.html">
+                                    <img src="../images/img-giaodienxoila.html/xoi thit kho tau.webp" alt="" class="product-img"> Xôi thịt kho tàu
+                                </a>
+                            </td>
+                            <td>25.000 đ</td>
+                        </tr>
+                        
+                            <td><input type="checkbox"></td>
+                            <td><img src="../images/img-giaodienxoila.html/xoi vo bong-phi.webp" alt=""
+                                    class="product-img"> Xôi vò bông phi</td>
                             <td>25.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/xoi vo bong-phi.webp" alt="" class="product-img"> Xôi vò bông phi</td>
+                            <td><img src="../images/img-giaodienxoila.html/Xôi mặn miền Trung.webp" alt=""
+                                    class="product-img"> Xôi mặn miền Trung</td>
                             <td>25.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Xôi mặn miền Trung.webp" alt="" class="product-img"> Xôi mặn miền Trung</td>
+                            <td><img src="../images/img-giaodienxoila.html/xôi ốp la.webp" alt="" class="product-img">
+                                Xôi ốp la chả cá</td>
                             <td>25.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/xôi ốp la.webp" alt="" class="product-img"> Xôi ốp la chả cá</td>
+                            <td><img src="../images/img-giaodienxoila.html/xôp nếp trắng bông-pji.webp" alt=""
+                                    class="product-img"> Xôi nếp trắng bông phi</td>
                             <td>25.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/xôp nếp trắng bông-pji.webp" alt="" class="product-img"> Xôi nếp trắng bông phi</td>
-                            <td>25.000 đ</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Xôi-sườn.webp" alt="" class="product-img"> Xôi sườn</td>
+                            <td><img src="../images/img-giaodienxoila.html/Xôi-sườn.webp" alt="" class="product-img">
+                                Xôi sườn</td>
                             <td>35.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/xôi gà.webp" alt="" class="product-img"> xôi gà</td>
+                            <td><img src="../images/img-giaodienxoila.html/xôi gà.webp" alt="" class="product-img"> xôi
+                                gà</td>
                             <td>35.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Sửa bắp-chai.webp" alt="" class="product-img"> Sữa bắp chai</td>
+                            <td><img src="../images/img-giaodienxoila.html/Sửa bắp-chai.webp" alt=""
+                                    class="product-img"> Sữa bắp chai</td>
                             <td>15.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Sữa dừa-chai.webp" alt="" class="product-img"> Sữa dừa chai</td>
+                            <td><img src="../images/img-giaodienxoila.html/Sữa dừa-chai.webp" alt=""
+                                    class="product-img"> Sữa dừa chai</td>
                             <td>15.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Sữa hạt sen-chai.webp" alt="" class="product-img"> Sữa hạt sen chai</td>
+                            <td><img src="../images/img-giaodienxoila.html/Sữa hạt sen-chai.webp" alt=""
+                                    class="product-img"> Sữa hạt sen chai</td>
                             <td>15.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Sữa đậu nành-chai.webp" alt="" class="product-img"> Sữa đậu nành chai</td>
+                            <td><img src="../images/img-giaodienxoila.html/Sữa đậu nành-chai.webp" alt=""
+                                    class="product-img"> Sữa đậu nành chai</td>
                             <td>15.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Sữa đậu xanh-chai.webp" alt="" class="product-img"> Sữa đậu xanh chai</td>
+                            <td><img src="../images/img-giaodienxoila.html/Sữa đậu xanh-chai.webp" alt=""
+                                    class="product-img"> Sữa đậu xanh chai</td>
                             <td>15.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/Aquafina.webp" alt="" class="product-img"> Aquafina</td>
+                            <td><img src="../images/img-giaodienxoila.html/Aquafina.webp" alt="" class="product-img">
+                                Aquafina</td>
                             <td>10.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/7up.webp" alt="" class="product-img"> 7up</td>
+                            <td><img src="../images/img-giaodienxoila.html/7up.webp" alt="" class="product-img"> 7up
+                            </td>
                             <td>12.000 đ</td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><img src="../images/img-giaodienxoila.html/pepsi.webp" alt="" class="product-img"> Pepsi</td>
+                            <td><img src="../images/img-giaodienxoila.html/pepsi.webp" alt="" class="product-img"> Pepsi
+                            </td>
                             <td>12.000 đ</td>
                         </tr>
                     </tbody>
                 </table>
-            
+
                 <!-- Action buttons for export/import placed again after the product list -->
             </div>
-            
-            
-        
-    </div>
 
-    
-    <script src="../js/scrip_ad.js"></script>
+            <script>
+                function initFilter() {
+                    // Lấy phần tử .filter-select và kiểm tra nếu tồn tại
+                    const filterSelect = document.querySelector('.filter-select');
+                    if (!filterSelect) return; // Thoát sớm nếu không tìm thấy filter-select
+
+                    // Gán sự kiện khi thay đổi lựa chọn trong dropdown
+                    filterSelect.addEventListener('change', function () {
+                        const selectedValue = this.value;
+                        const rows = document.querySelectorAll('.product-table tbody tr');
+
+                        rows.forEach(function (row) {
+                            // Lấy tên mặt hàng từ cột thứ 2 của bảng
+                            const productName = row.querySelector('td:nth-child(2)').innerText.toLowerCase();
+
+                            // Kiểm tra và lọc mặt hàng theo danh mục
+                            if (selectedValue === 'food') {
+                                // Hiển thị mặt hàng thức ăn nếu chứa "xôi", ẩn nếu không phải thức ăn
+                                row.style.display = productName.includes('xôi') ? '' : 'none';
+                            } else if (selectedValue === 'beverages') {
+                                // Hiển thị mặt hàng nước uống nếu không chứa "xôi", ẩn nếu là thức ăn
+                                row.style.display = !productName.includes('xôi') ? '' : 'none';
+                            } else {
+                                // Hiển thị tất cả mặt hàng nếu không chọn gì
+                                row.style.display = '';
+                            }
+                        });
+                    });
+                }
+
+                // Gọi hàm initFilter sau khi DOM được tải
+                document.addEventListener('DOMContentLoaded', initFilter);
+            </script>
+
+        </div>
+
+
+        <script src="../js/scrip_ad.js"></script>
 </body>
+
 </html>

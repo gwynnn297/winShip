@@ -275,7 +275,7 @@ hr{
     justify-content: flex-start;
 }
 
-.product-actions button {
+.product-actions .add-product-btn {
     font-size: 1.4rem;
     background-color: var(--yellow);
     color: white;
@@ -286,7 +286,7 @@ hr{
     cursor: pointer;
 }
 
-.product-actions button:hover {
+.product-actions .add-product-btn:hover {
     background-color: #fdb819;
 }
 
