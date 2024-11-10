@@ -453,11 +453,10 @@ hr{
 }
 
 .icons {
-    font-size: 6rem;
     border-radius: 2px;
     border: 1px solid black;
     margin: 1rem;
-    padding: 2rem;
+    padding: 1.8rem;
     background-color: white;
     cursor: pointer;
     transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu */
