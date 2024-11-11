@@ -864,7 +864,7 @@ hr{
   
   .dashboard .stat-item p {
     font-size: 14px;
-    color: blue;
+   color:#fdb819 ; 
   }
   
   .dashboard .stat-item span {
@@ -880,7 +880,8 @@ hr{
     /* grid-template-columns: repeat(4, 1fr); */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
+    flex: 1 1 calc(25% - 10px);
 }
 
 .extra-item {
@@ -989,7 +990,7 @@ hr{
 .report-filter button {
     align-self: flex-end;
     padding: 8px 12px;
-    background-color: #007bff;
+    background-color:var(--yellow) ; 
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -997,7 +998,7 @@ hr{
     cursor: pointer;
 }
 .report-filter button:hover {
-    background-color: #0056b3;
+    background-color: #fdb819;
 }
 .report-header{
     margin-top: 20px;
@@ -1053,14 +1054,14 @@ hr{
   }
   .stat-itemm p {
     font-size: 14px;
-    color: blue;
+    color: #fdb819;
   }
   .stat-itemm span {
     font-size: 18px;
     font-weight: bold;
   }
   .overview-report .chart-container {
-    width: 98%;
+    width: 100%;
   
     background-color: #ffffff;
     padding: 20px;
@@ -1100,46 +1101,75 @@ hr{
     height: 100% ;
   }
 
-  .overview-report  .header_ds {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding : 20px;
+  /* Bảng toàn bộ */
+.sales-report-table {
+    margin-top: 15px ;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Phần tiêu đề */
+.sales-report-table thead tr.header_ds {
     font-weight: bold;
     color: #5a5a5a;
-    font-size: 14px;
     background-color: #e4f0fb;
-    margin-bottom:2px;
-    margin-top: 20px;
+    border-radius: 8px;
+    padding: 15px 10px;
 }
 
-.overview-report .contens{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #a0a0a0;
-    height: 300px;
+/* Các ô tiêu đề */
+.sales-report-table thead th {
+    padding: 10px;
+    text-align: center;
+    color: #5a5a5a;
     background-color: #e4f0fb;
-    margin-top: 0px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
 }
 
-.overview-report .contens img {
-    width:200px;
-    height: 200px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Phần nội dung bảng */
+.sales-report-table tbody {
+    background-color: #f9f9f9;
 }
 
-.overview-report .message {
-    font-size: 16px;
+/* Các dòng dữ liệu */
+.sales-report-table tbody tr.row_ds {
+    color: #4a4a4a;
+    background-color: #ffffff;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.sales-report-table tbody tr.row_ds:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+/* Các ô dữ liệu */
+.sales-report-table tbody td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Căn chỉnh các ô đầu tiên và cuối cùng */
+.sales-report-table tbody td:first-child,
+.sales-report-table thead th:first-child {
+    width: 5%; /* Điều chỉnh độ rộng của cột đầu tiên */
+}
+
+.sales-report-table tbody td:last-child,
+.sales-report-table thead th:last-child {
+    width: 15%; /* Điều chỉnh độ rộng của cột cuối cùng */
+}
+
+
 .btn-item-reprot {
     align-self: flex-end;
     padding: 8px 12px;
-    background-color: #007bff;
+    background-color: #fdb819;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -1185,118 +1215,246 @@ hr{
    
    
 }
+/* Container tổng quan báo cáo */
 .overview-report .tab-container {
     width: 100%;
-    background-color: #ffffff;
+    margin: auto;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 20px;
 }
 
+/* Định dạng cho các tab */
 .overview-report .tabs {
     display: flex;
-    border-bottom: 1px solid #ddd;
-    margin-top: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
 }
 
-.overview-report .tab {
-    padding: 10px 20px;
+.tab-container .tab {
+    padding: 12px 24px;
     cursor: pointer;
     color: #666;
     font-weight: bold;
     font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-.overview-report .tab.active {
+.tab-container .tab:hover {
     color: #4a90e2;
-    border-bottom: 2px solid #4a90e2;
 }
 
-/* Nội dung bên trong các tab */
-.overview-report .tab-content {
+.tab-container .tab.active {
+    color: #4a90e2;
+    border-bottom: 3px solid #4a90e2;
+    font-size: 1.5rem;
+}
+
+/* Nội dung của từng tab */
+.tab-container .tab-content {
+    display: none;
     padding: 20px;
-    height: 150px;
-
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #333;
+    animation: fadeIn 0.3s ease;
 }
-.overview-report .tab-content.active {
+
+.tab-container .tab-content.active {
     display: block;
 }
 
-.overview-report  .header_dss {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding : 20px;
+/* Hiệu ứng khi hiển thị nội dung tab */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tiêu đề trong nội dung của từng tab */
+.tab-content h3 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+/* Danh sách hóa đơn */
+.tab-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.tab-content ul li {
+    padding: 10px 0;
+    font-size: 1.4rem;
+    color: #333;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.tab-content ul li:last-child {
+    border-bottom: none;
+}
+
+/* Tổng cộng */
+.tab-content p {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Nội dung bên trong các tab */
+
+/* Bảng toàn bộ */
+.sales-category-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+/* Phần tiêu đề */
+.sales-category-table thead tr.header_dss {
     font-weight: bold;
     color: #5a5a5a;
-    font-size: 14px;
     background-color: #e4f0fb;
-    margin-bottom:2px;
-    margin-top: 20px;
 }
-.overview-report .header_dss span{
-   margin-right: 70px;
+
+.sales-category-table thead th {
+    padding: 10px;
+    text-align: center;
+    color: #5a5a5a;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
 }
+
+/* Phần nội dung bảng */
+.sales-category-table tbody tr td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Thông báo không có báo cáo */
+.sales-category-table .message {
+    color: #a0a0a0;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
 
 
 /* phần css hóa đơn */
-.overview-report .invoice-container {
-    background-color: #ffffff;
+
+/* Invoice container */
+/* Tổng thể cho container hóa đơn */
+.invoice-container {
+    font-family: Arial, sans-serif;
     width: 100%;
-    
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #e3e3e3;
     border-radius: 8px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.overview-report .invoice-header {
+/* Header và tabs */
+.invoice-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.overview-report .invoice-tabs {
-    display: flex;
-    gap: 25px;
-}
-
-.overview-report .invoice-tab {
-    color: #666;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.overview-report .invoice-tab.active {
-    color: #007bff;
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
-
-.overview-report .invoice-customize a {
-    color: #007bff;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.overview-report .invoice-customize a:hover {
-    text-decoration: underline;
-}
-
-.overview-report .invoice-content {
-    text-align: center;
-    padding: 40px;
-}
-
-.overview-report .invoice-illustration {
-    width: 150px;
-    height: 150px;
     margin-bottom: 20px;
 }
 
-.overview-report .invoice-message {
-    color: #666;
-    font-size: 16px;
+.invoice-tabs {
+    display: flex;
 }
-/* kêt thục nhiệm vụ của đạt */
+
+.invoice-tab {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+}
+
+.invoice-tab:hover {
+    background-color: #e3f2fd;
+}
+
+.invoice-tab.active {
+    background-color: #4a90e2;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Liên kết tùy chỉnh */
+.invoice-customize a {
+    font-size: 1.2rem;
+    color: #4a90e2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.invoice-customize a:hover {
+    text-decoration: underline;
+}
+
+/* Nội dung hiển thị trong từng tab */
+.invoice-tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+.invoice-tab-content.active {
+    display: block;
+}
+
+/* Tiêu đề cho nội dung từng tab */
+.invoice-tab-content h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+/* Danh sách hóa đơn */
+.invoice-tab-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.invoice-tab-content ul li {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: #333;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.invoice-tab-content ul li:last-child {
+    border-bottom: none;
+}

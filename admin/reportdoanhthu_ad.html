@@ -132,13 +132,14 @@
                         <button>Xem báo cáo</button>
                     </div>
 
-                    <div class ="report-xuat">
+                    <div class="report-xuat">
                         <div class=report-header>
                             <h3>DOANH THU TỔNG QUANG</h3>
                             <P>Xem luc : 01:36 CH 05/10/2024</P>
                         </div>
                         <a href="#" class="export-button">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s" alt="Excel Logo">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s"
+                                alt="Excel Logo">
                             Xuất báo cáo
                         </a>
                     </div>
@@ -187,49 +188,142 @@
                         <h5>Doanh thu bán hàng trung bình theo giờ</h5>
                         <canvas id="revenueChartt" width="800" height="400"></canvas>
                         <div class="legend">
-                          <div class="legend-color"></div>
-                          <span>Doanh thu gồm thuế</span>
+                            <div class="legend-color"></div>
+                            <span>Doanh thu gồm thuế</span>
                         </div>
-                        <p class="note">*Doanh thu bán hàng trung bình theo giờ = Tổng doanh thu trong một giờ / Tổng số ngày trong kỳ</p>
+                        <p class="note">*Doanh thu bán hàng trung bình theo giờ = Tổng doanh thu trong một giờ / Tổng số
+                            ngày trong kỳ</p>
                     </div>
-                    <div class="chart-container">
-                        <h5>Doanh thu bán hàng trung bình theo ngày</h5>
-                        <canvas id="revenueCharttt" width="800" height="400"></canvas>
-                        <div class="legend">
-                          <div class="legend-color"></div>
-                          <span>Doanh thu gồm thuế</span>
-                        </div>
-                       
-                    </div>
-                    <div class="header_ds">
-                        <span>Thứ</span>
-                        <span>Ngày</span>
-                        <span>Tiền hàng</span>
-                        <span>Tiền hủy</span>
-                        <span>Tiền hoàn</span>
-                        <span>Giảm giá</span>
-                        <span>Giảm trừ combo</span>
-                        <span>Thuế</span>
-                        <span>Phí dịch vụ</span>
-                        <span>Phí giao hàng</span>
-                        <span>Tiền trả ĐTGH</span>
-                        <span>Tiền tip</span>
-                        <span>Công nợ KH</span>
-                        <span>Doanh thu</span>
-                    </div>
-                    <div class="contens">
-                        <img src="https://c8.alamy.com/comp/2HWG033/chart-increase-profit-growth-raise-single-isolated-icon-with-sticker-outline-cut-style-vector-2HWG033.jpg" alt="Biểu đồ">
-                        <div class="message">Chưa ghi nhận báo cáo</div>
-                    </div>
+                   
+                    <table class="sales-report-table">
+                        <thead>
+                            <tr class="header_ds">
+                                <th>Thứ</th>
+                                <th>Ngày</th>
+                                <th>Tiền hàng</th>
+                                <th>Tiền hủy</th>
+                                <th>Tiền hoàn</th>
+                                <th>Giảm giá</th>
+                                <th>Giảm trừ combo</th>
+                                <th>Thuế</th>
+                                <th>Phí dịch vụ</th>
+                                <th>Phí giao hàng</th>
+                                <th>Tiền trả ĐTGH</th>
+                                <th>Tiền tip</th>
+                                <th>Công nợ KH</th>
+                                <th>Doanh thu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row_ds">
+                                <td>Thứ 2</td>
+                                <td>01/10</td>
+                                <td>500,000 đ</td>
+                                <td>20,000 đ</td>
+                                <td>30,000 đ</td>
+                                <td>50,000 đ</td>
+                                <td>10,000 đ</td>
+                                <td>25,000 đ</td>
+                                <td>15,000 đ</td>
+                                <td>20,000 đ</td>
+                                <td>100,000 đ</td>
+                                <td>5,000 đ</td>
+                                <td>200,000 đ</td>
+                                <td>630,000 đ</td>
+                            </tr>
+                            
+                            <tr class="row_ds">
+                                <td>Thứ 3</td>
+                                <td>02/10</td>
+                                <td>450,000 đ</td>
+                                <td>10,000 đ</td>
+                                <td>40,000 đ</td>
+                                <td>30,000 đ</td>
+                                <td>15,000 đ</td>
+                                <td>22,000 đ</td>
+                                <td>12,000 đ</td>
+                                <td>18,000 đ</td>
+                                <td>110,000 đ</td>
+                                <td>8,000 đ</td>
+                                <td>180,000 đ</td>
+                                <td>590,000 đ</td>
+                            </tr>
+                            <tr class="row_ds">
+                                <td>Thứ 4</td>
+                                <td>03/10</td>
+                                <td>500,000 đ</td>
+                                <td>12,000 đ</td>
+                                <td>45,000 đ</td>
+                                <td>35,000 đ</td>
+                                <td>18,000 đ</td>
+                                <td>25,000 đ</td>
+                                <td>14,000 đ</td>
+                                <td>20,000 đ</td>
+                                <td>120,000 đ</td>
+                                <td>9,000 đ</td>
+                                <td>190,000 đ</td>
+                                <td>620,000 đ</td>
+                            </tr>
+                            <tr class="row_ds">
+                                <td>Thứ 5</td>
+                                <td>04/10</td>
+                                <td>480,000 đ</td>
+                                <td>11,000 đ</td>
+                                <td>42,000 đ</td>
+                                <td>33,000 đ</td>
+                                <td>16,000 đ</td>
+                                <td>23,000 đ</td>
+                                <td>13,000 đ</td>
+                                <td>19,000 đ</td>
+                                <td>115,000 đ</td>
+                                <td>8,500 đ</td>
+                                <td>185,000 đ</td>
+                                <td>600,000 đ</td>
+                            </tr>
+                            <tr class="row_ds">
+                                <td>Thứ 6</td>
+                                <td>05/10</td>
+                                <td>470,000 đ</td>
+                                <td>10,500 đ</td>
+                                <td>41,000 đ</td>
+                                <td>32,000 đ</td>
+                                <td>17,500 đ</td>
+                                <td>21,000 đ</td>
+                                <td>12,500 đ</td>
+                                <td>18,500 đ</td>
+                                <td>113,000 đ</td>
+                                <td>8,200 đ</td>
+                                <td>180,000 đ</td>
+                                <td>590,000 đ</td>
+                            </tr>
+                            <tr class="row_ds">
+                                <td>Thứ 7</td>
+                                <td>06/10</td>
+                                <td>460,000 đ</td>
+                                <td>10,200 đ</td>
+                                <td>43,000 đ</td>
+                                <td>34,000 đ</td>
+                                <td>16,500 đ</td>
+                                <td>24,000 đ</td>
+                                <td>13,500 đ</td>
+                                <td>19,500 đ</td>
+                                <td>118,000 đ</td>
+                                <td>8,400 đ</td>
+                                <td>185,000 đ</td>
+                                <td>600,000 đ</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+
                 </div>
-                
             </div>
+
         </div>
 
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/../js/scrip_ad.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/../js/scrip_ad.js" defer></script>
 
 </body>
 

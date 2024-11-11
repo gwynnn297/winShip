@@ -106,37 +106,103 @@
 
             <div class="Overview-content">
                 <div class="overview-report">
-                    <div class ="report-xuat">
+                    <div class="report-xuat">
                         <div class=report-header>
                             <h7 style="font-size: 3rem;  font-weight: bold;">Hóa đơn</h7>
-                           
+
                         </div>
                         <a href="#" class="export-button">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s" alt="Excel Logo">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Q7uAliKafMRkGOmu8MfK2PBckVZ-nwToOg&s"
+                                alt="Excel Logo">
                             Xuất báo cáo
                         </a>
                     </div>
                     <div class="invoice-container">
                         <div class="invoice-header">
                             <div class="invoice-tabs">
-                                <span class="invoice-tab active">Tất cả hóa đơn</span>
-                                <span class="invoice-tab">Đã thanh toán</span>
-                                <span class="invoice-tab">Chờ xác nhận thanh toán</span>
-                                <span class="invoice-tab">Đã hủy</span>
-                                <span class="invoice-tab">Hoàn tiền toàn bộ</span>
-                                <span class="invoice-tab">Hoàn tiền một phần</span>
-                                <span class="invoice-tab">Ghi nợ</span>
+                                <div class="invoice-tab active" onclick="openInvoiceTab(event, 'allBills')">Tất cả hóa
+                                    đơn</div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'paidBills')">Đã thanh toán
+                                </div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'pendingBills')">Chờ xác nhận
+                                    thanh toán</div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'canceledBills')">Đã hủy</div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'fullRefundBills')">Hoàn tiền
+                                    toàn bộ</div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'partialRefundBills')">Hoàn tiền
+                                    một phần</div>
+                                <div class="invoice-tab" onclick="openInvoiceTab(event, 'debtBills')">Ghi nợ</div>
                             </div>
                             <div class="invoice-customize">
                                 <a href="#">Tùy chỉnh hiển thị</a>
                             </div>
                         </div>
-                        <div class="invoice-content">
-                            <img src="https://png.pngtree.com/png-clipart/20230811/original/pngtree-bill-invoice-bill-receipt-vector-picture-image_10399500.png" alt="Invoice Illustration" class="invoice-illustration">
-                            <p class="invoice-message">Chưa có hóa đơn nào</p>
+
+
+                        <!-- Nội dung sẽ được hiển thị ở đây -->
+                        <!-- Ví dụ tab "Tất cả hóa đơn" -->
+                        <div id="allBills" class="invoice-tab-content active">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Tất cả hóa đơn</h3>
+                            <ul style="font-size: 1.4rem;">
+                                <li>Hóa đơn #1: 1.000.000 đ</li>
+                                <li>Hóa đơn #2: 2.000.000 đ</li>
+                                <li>Hóa đơn #3: 1.500.000 đ</li>
+                            </ul>
                         </div>
+
+                        <!-- Tab "Đã thanh toán" -->
+                        <div id="paidBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn đã thanh toán</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 1.000.000 đ</li>
+                                <li>Hóa đơn #2: 2.000.000 đ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab "Chờ xác nhận thanh toán" -->
+                        <div id="pendingBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn chờ xác nhận thanh toán</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 1.500.000 đ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab "Đã hủy" -->
+                        <div id="canceledBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn đã hủy</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 2.000.000 đ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab "Hoàn tiền toàn bộ" -->
+                        <div id="fullRefundBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn hoàn tiền toàn bộ</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 500.000 đ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab "Hoàn tiền một phần" -->
+                        <div id="partialRefundBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn hoàn tiền một phần</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 200.000 đ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab "Ghi nợ" -->
+                        <div id="debtBills" class="invoice-tab-content">
+                            <h3 style="font-size: 1.5rem; color: #4a90e2;">Hóa đơn ghi nợ</h3>
+                            <ul style="font-size: 1.5rem;">
+                                <li>Hóa đơn #1: 1.000.000 đ</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
                 </div>
-                
+
             </div>
         </div>
 
