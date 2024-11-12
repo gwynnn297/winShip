@@ -1,22 +1,23 @@
 //slectec cart
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
+
     function inputchange(){
-        var cartItem = document.querySelectorAll('tbody tr')
+        var cartItem = document.querySelectorAll("tbody tr")
         for( var i = 0 ; i < cartItem.length ; i++){
-            var inputValue = cartItem[i].querySelector('.value-number')
-            inputValue.addEventListener('change' , function(){
+            var inputValue = cartItem[i].querySelector(".value-number")
+            inputValue.addEventListener("change" , function(){
                 carttotall()
             })
         }
         
         }
         function deleteCart(){
-            var cartItem = document.querySelectorAll('tbody tr');
+            var cartItem = document.querySelectorAll("tbody tr");
                
             for (var i = 0; i < cartItem.length; i++){
-                var productT = document.querySelectorAll('.delete-xoa')
-               productT[i].addEventListener('click',function(event){
-                var cartDelete =event.targe
+                var productT = document.querySelectorAll(".delete-xoa")
+               productT[i].addEventListener("click",function(event){
+                var cartDelete =event.target
                 var cartItemR = cartDelete.parentElement.parentElement
                 cartItemR.remove()
                 carttotall()
@@ -27,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
         
         function carttotall() {
             // Lấy tất cả các hàng (tr) trong tbody
-            var cartItem = document.querySelectorAll('tbody tr');
+            var cartItem = document.querySelectorAll("tbody tr");
         
             var sum = 0;
             for (var i = 0; i < cartItem.length; i++) {
                 // Lấy giá trị từ cột mony-cart và value-number trong mỗi hàng
-                var itemValue = parseInt(cartItem[i].querySelector('.mony-cart').textContent || cartItem[i].querySelector('.mony-cart').innerText);
-                var itemQuantity = parseInt(cartItem[i].querySelector('.value-number').value || cartItem[i].querySelector('.value-number').textContent);
+                var itemValue = parseInt(cartItem[i].querySelector(".mony-cart").textContent || cartItem[i].querySelector(".mony-cart").innerText);
+                var itemQuantity = parseInt(cartItem[i].querySelector(".value-number").value || cartItem[i].querySelector(".value-number").textContent);
         
                 // Kiểm tra nếu cả giá trị tiền và số lượng là số (không phải NaN)
                 if (!isNaN(itemValue) && !isNaN(itemQuantity)) {
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         
             // Cập nhật tổng cộng trong thẻ .total
-            var totalDiv = document.querySelector('.total');
+            var totalDiv = document.querySelector(".total");
             if (totalDiv) {
                 totalDiv.textContent = "Tổng cộng: " + (sum * 1000).toLocaleString('vi-VN') + " đ"; // Hiển thị tổng số tiền
                 inputchange()
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         
         // bắt đau chọn giỏ hàng
-        const bnt = document.querySelectorAll('.btn-xoi');
+        const bnt = document.querySelectorAll(".btn-xoi");
         //console.log(bnt);
         
         bnt.forEach(function (button, index) {
@@ -60,19 +61,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 {
                     var btnItem = event.target
                     var product = btnItem.parentElement
-                    var productImg = product.querySelector('img').src
-                    var productName = product.querySelector('.first-p').innerText
-                    var productPrice = product.querySelector('.money-p').innerText
+                    var productImg = product.querySelector("img").src
+                    var productName = product.querySelector(".first-p").innerText
+                    var productPrice = product.querySelector(".money-p").innerText
                     //    console.log(productImg,productName,productPrice)
                     addcart(productImg, productName, productPrice)
                 }
             })
         })
         function addcart(productImg, productName, productPrice) {
-            var addtr = document.createElement('tr')
-            var cartItem = document.querySelectorAll('tbody tr');
+            var addtr = document.createElement("tr")
+            var cartItem = document.querySelectorAll("tbody tr");
             for (var i = 0; i < cartItem.length; i++){
-                var productT = document.querySelectorAll('.item-text')
+                var productT = document.querySelectorAll(".item-text")
                 if(productT[i].innerHTML== productName){
         
                     alert("Sản phảm của bạn đã có trong giỏ hàng")
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             var trcontent = ' <tr><td style="display: flex; text-align: left;  align-items: center;"><img  src="' + productImg + '" alt="">  <span class="item-text">' + productName + '</span></td> <td><p><span class = "mony-cart" >' + productPrice + '</span><sup style="font-size: 2rem;">đ</sup></p></td> <td><input class = "value-number"style="width: 30px; outline: none; font-size: 2rem ; " value="1" min="1"></td>  <td><span class ="delete-xoa">Xóa</span></td></tr>'
             addtr.innerHTML = trcontent
-            var cartTable = document.querySelector('tbody')
+            var cartTable = document.querySelector("tbody")
             //console.log(cartTable);
             cartTable.append(addtr)
         
@@ -89,45 +90,45 @@ document.addEventListener("DOMContentLoaded", function() {
             deleteCart()
         }
         
-        const cartbtn = document.querySelector('.fa-circle-xmark');
-        const cartshow = document.querySelectorAll('.btn-xoi');
-        const cart = document.querySelector('.cart');
-        const overlay = document.querySelector('.overlay');
+        const cartbtn = document.querySelector(".fa-circle-xmark");
+        const cartshow = document.querySelectorAll(".btn-xoi");
+        const cart = document.querySelector(".cart");
+        const overlay = document.querySelector(".overlay");
         
         // Lặp qua tất cả các phần tử nút "btn-xoi" và thêm sự kiện click cho mỗi nút
         cartshow.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                cart.classList.add('active'); // Thêm lớp active để hiển thị giỏ hàng
+            btn.addEventListener("click", function() {
+                cart.classList.add("active"); // Thêm lớp active để hiển thị giỏ hàng
             });
         });
         
-        cartbtn.addEventListener('click', function() {
-            cart.classList.remove('active'); // Xóa lớp active để ẩn giỏ hàng
+        cartbtn.addEventListener("click", function() {
+            cart.classList.remove("active"); // Xóa lớp active để ẩn giỏ hàng
         });
         
         cartshow.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                cart.classList.add('active'); // Hiển thị giỏ hàng
-                overlay.classList.add('active'); // Hiển thị overlay
+            btn.addEventListener("click", function() {
+                cart.classList.add("active"); // Hiển thị giỏ hàng
+                overlay.classList.add("active"); // Hiển thị overlay
             });
         });
         
         // Đóng giỏ hàng và overlay khi nhấn nút đóng
-        cartbtn.addEventListener('click', function() {
-            cart.classList.remove('active');
-            overlay.classList.remove('active');
+        cartbtn.addEventListener("click", function() {
+            cart.classList.remove("active");
+            overlay.classList.remove("active");
         });
         
         // Đóng giỏ hàng và overlay khi nhấn vào overlay
-        overlay.addEventListener('click', function() {
-            cart.classList.remove('active');
-            overlay.classList.remove('active');
+        overlay.addEventListener("click", function() {
+            cart.classList.remove("active");
+            overlay.classList.remove("active");
         });
+    
     
     
     
     });
-
 
 //end slect cart
 

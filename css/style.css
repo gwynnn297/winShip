@@ -1763,7 +1763,7 @@ header .login a:hover {
     margin: 50px auto;
     text-align: right;
     padding: 20px;
-    background-color:  #fdb819;
+    background-color:  #f5f5f5;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem; /* Tăng kích thước chung cho phần giỏ hàng */
@@ -1802,7 +1802,7 @@ header .login a:hover {
 }
 
 .cart table tbody tr:hover {
-    background-color: #d39913;
+    background-color: #e0e0e0;
 }
 
 /* Hình ảnh món ăn */
@@ -1883,7 +1883,7 @@ header .login a:hover {
     width: 500px;
     right: 0;
     top: 60px;
-    background-color: #fdb819;
+    background-color:#f5f5f5;
     padding: 12px 20px;
     overflow-y: auto;
     right : -100%;
@@ -1894,7 +1894,7 @@ header .login a:hover {
   }
 
 .cart .close-oder {
-    background-color: #ff4b5c;
+    background-color: #fdb819;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -1913,12 +1913,12 @@ header .login a:hover {
   }
 
 .cart .close-oder:hover {
-    background-color: #ff2a3b;
+    background-color: #d39913;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
   }
 
 .cart  .close-oder:active {
-    background-color: #ff1a2b;
+    background-color: #fdb819;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -1933,14 +1933,6 @@ header .login a:hover {
 .cart i:hover {
     font-size: 24px; /* Tăng kích thước khi hover */
 }
-.scroll-item{
-    
-   
-    overflow-y: auto; 
-    padding-right: 10px;
-    height: 100%;
-}
-
 .overlay {
     position: fixed;
     top: 0;
@@ -1960,8 +1952,6 @@ header .login a:hover {
 .overlay.active {
     display: block;
 }
-
-
 
 
 
