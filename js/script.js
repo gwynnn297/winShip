@@ -1,4 +1,61 @@
-//slectec cart
+document.addEventListener("DOMContentLoaded", function() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const loginBtn = document.querySelector(".login .login-btn");
+
+    if (user && user.userName) {
+        // Nếu người dùng đã đăng nhập, hiển thị tên người dùng trên nút
+        loginBtn.textContent = user.userName;
+        loginBtn.href = "#"; // Ngăn chuyển hướng khi nhấp vào tên người dùng
+
+        // Thêm sự kiện đăng xuất khi nhấp vào tên người dùng
+        const handleLogout = function(event) {
+            event.preventDefault(); // Ngăn không cho trang tải lại hoặc chuyển hướng
+            const confirmLogout = confirm("Bạn có chắc chắn muốn đăng xuất?");
+            if (confirmLogout) {
+                localStorage.removeItem("user"); // Xóa thông tin người dùng
+
+                // Đổi lại nút thành "Đăng Nhập" sau khi đăng xuất
+                loginBtn.textContent = "Đăng Nhập";
+                loginBtn.removeAttribute("href"); // Loại bỏ liên kết hiện tại để không chuyển hướng
+
+                // Xóa sự kiện đăng xuất sau khi người dùng đã đăng xuất
+                loginBtn.removeEventListener("click", handleLogout);
+
+                // Thêm sự kiện mới cho nút để khi nhấp sẽ chuyển hướng đến trang đăng nhập
+                loginBtn.addEventListener("click", function() {
+                    window.location.href = "register_login/login.html"; // Chuyển hướng đến trang đăng nhập khi nhấp vào nút
+                }, { once: true }); // Sử dụng { once: true } để sự kiện chỉ xảy ra 1 lần
+            }
+        };
+
+        // Gán sự kiện đăng xuất ban đầu cho nút
+        loginBtn.addEventListener("click", handleLogout);
+    } else {
+        // Nếu người dùng chưa đăng nhập, nút sẽ luôn là "Đăng Nhập" và chuyển hướng đến trang đăng nhập
+        loginBtn.textContent = "Đăng Nhập";
+        loginBtn.href = "register_login/login.html"; // Liên kết đến trang đăng nhập
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const locationInput = document.getElementById("location-input_Q");
+    const submitBtn = document.querySelector(".submitBtn_Q");
+
+    if (!user) {
+        // Nếu người dùng chưa đăng nhập, vô hiệu hóa trường nhập và nút tìm kiếm
+        locationInput.disabled = true;
+        submitBtn.addEventListener("click", function() {
+            alert("Vui lòng đăng nhập để nhập địa chỉ tìm kiếm!");
+        });
+    } else {
+        // Nếu người dùng đã đăng nhập, kích hoạt trường nhập
+        locationInput.disabled = false;
+    }
+});
+
+
+// slectec cart
 document.addEventListener('DOMContentLoaded', function() {
 
     function inputchange(){
@@ -358,3 +415,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //ket thuc thanh toan
+
+

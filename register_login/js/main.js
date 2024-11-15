@@ -26,7 +26,8 @@ function register(e){
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            alert("Thông báo thành công");
+            alert("Đăng ký thành công");
+            window.location.href = "login.html";
         })
         .catch((error) => console.log(error.message));
     }
@@ -73,6 +74,7 @@ function login(e){
             if (data.user) {
                 localStorage.setItem("user", JSON.stringify(data.user));
                 alert(data.message); // Đăng nhập thành công
+                window.location.href = "../../../winShip/home.html";
             }
         })
         .catch((error) => {
