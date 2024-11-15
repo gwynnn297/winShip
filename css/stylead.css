@@ -1458,3 +1458,96 @@ hr{
 .invoice-tab-content ul li:last-child {
     border-bottom: none;
 }
+
+
+
+.back-link_q {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link_q i {
+    margin-right: 5px;
+}
+.container_q h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.form-section_q {
+    display: flex;
+    justify-content: space-between;
+}
+.form-group_q {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+.form-group_q h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.form-group_q label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.form-group_q input, .form-group_q select, .form-group_q textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.form-group_q input[type="date"] {
+    padding-right: 30px;
+}
+.form-group_q input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.form-row_q {
+    display: flex;
+    justify-content: space-between;
+}
+.form-row_q .form-group_q {
+    width: 48%;
+}
+.form-group-no-border_q {
+    background-color: #fff;
+    padding: 0;
+    width: 48%;
+}
+.form-group_q span{
+    color:red;
+}
+
+#cancelButton{
+    background-color: yellow; 
+    color: black;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 5px;
+}
+#saveButton{
+    background-color: yellow; 
+    color: black;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 5px;
+}
+#cancelButton, #saveButton {
+    float: right; 
+    margin-left: 10px; 
+}
