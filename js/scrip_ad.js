@@ -220,6 +220,21 @@ new Chart(ctx, config);
            subMenu.style.display = "block";
        }
    });
+   // Chọn phần tử "Mặt hàng" và menu con
+const reportToggleMathang = document.getElementById("report-toggle-mathang");
+const subMenuMathang = document.querySelector(".subnav-mathang .sub-menu");
+
+// Thêm sự kiện click vào mục "Mặt hàng"
+reportToggleMathang.addEventListener("click", function(event) {
+    event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+
+    // Chuyển đổi giữa hiển thị và ẩn menu con
+    if (subMenuMathang.style.display === "block") {
+        subMenuMathang.style.display = "none";
+    } else {
+        subMenuMathang.style.display = "block";
+    }
+});
 
 
 

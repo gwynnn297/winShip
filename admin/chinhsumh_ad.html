@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,78 +7,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Document</title>
 </head>
-
 <body>
     <div class="body">
         <div class="nav-bar">
             <nav>
-                <div><a href="" class="logo">
+                    <div><a href="" class="logo">
                         <i id="main-icon" class="fa-solid fa-bowl-food"></i>
                         <span class="nav-item">WinShip</span>
-                    </a>
-                </div>
-                <ul>
-                    <hr>
-                    <li><a href="" class="list-item">
+                        </a>
+                    </div>
+                    <ul>  
+                        <hr>
+                        <li><a href="" class="list-item">
                             <i class="fa-solid fa-house"></i>
                             <span class="nav-item">Tổng quan</span>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
 
-                    <li class="report-item">
-                        <a href="javascript:void(0);" class="list-item" id="report-toggle">
-                            <i class="fa-solid fa-chart-simple"></i>
-                            <span class="nav-item">Báo cáo</span>
-                        </a>
-                        <!-- Dropdown items (ẩn lúc đầu) -->
-                        <ul class="sub-menu">
-                            <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
-                            <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
-                        </ul>
-                    </li>
+                        <li class="report-item">
+                            <a href="javascript:void(0);" class="list-item" id="report-toggle">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span class="nav-item">Báo cáo</span>
+                            </a>
+                            <!-- Dropdown items (ẩn lúc đầu) -->
+                            <ul class="sub-menu">
+                                <li><a href="" id="click-item" class="sub-item">Báo cáo doanh thu</a></li>
+                                <li><a href="" id="click-item" class="sub-item">Báo cáo mặt hàng</a></li>
+                            </ul>
+                        </li>
 
-                    <li><a href="" class="list-item">
+                        <li><a href="" class="list-item">
                             <i class="fas fa-file-invoice"></i>
                             <span class="nav-item">Hóa đơn</span>
-                        </a>
-                    </li>
-
-                    <li><a href="" class="list-item">
+                            </a>
+                        </li>
+                        
+                        <li><a href="" class="list-item">
                             <i class="fa-solid fa-mug-hot"></i>
                             <span class="nav-item">Mặt hàng</span>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
 
-                    <li><a href="../admin/danhsachkh.html" class="list-item">
+                        <li><a href="../admin/danhsachkh.html" class="list-item">
                             <i class="fa-solid fa-list"></i>
                             <span class="nav-item">Danh sách khách hàng</span>
-                        </a>
-                    </li>
+                         </a>
+                        </li>
 
-                    <li><a href="" class="list-item">
+                        <li><a href="" class="list-item">
                             <i class="fa-solid fa-rectangle-ad"></i>
                             <span class="nav-item">Khuyến mãi</span>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
 
-                    <li><a href="" class="list-item">
+                        <li><a href="" class="list-item">
                             <i class="fa-solid fa-warehouse"></i>
                             <span class="nav-item">Kho hàng</span>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
 
-                    <li><a href="" class="list-item">
+                        <li><a href="" class="list-item">
                             <i class="fa-solid fa-money-bill"></i>
                             <span class="nav-item">Thu chi</span>
-                        </a>
-                    </li>
-                    <hr>
-
-
-                </ul>
+                            </a>
+                        </li>
+                        <hr>
+                    
+                    
+                    </ul>
             </nav>
         </div>
-
+        
         <div class="main-content">
             <div class="header">
                 <h3 class="name">GoodFood</h3>
@@ -97,165 +95,185 @@
                         Hoàng Ngọc Phúc <i class="fa-solid fa-angle-down"></i>
                     </a>
                     <a href="#" class="header-scfunction-login"><i class="fa-solid fa-bell"></i>
-
+                        
                     </a>
                 </div>
             </div>
-            <div class="container_csmh">
-                <a href="../admin/dsmathang_ad.html" class="back-link_csmh"><i class="fas fa-arrow-left"></i> Quay lại danh sách mặt hàng</a>
-                <div class="header_csmh">Xôi thịt kho tàu</div>
-                <div class="form-row_csmh">
-                    <div class="form-column_csmh">
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label for="item-name">Tên mặt hàng</label>
-                                <input type="text" id="item-name" value="xôi thịt kho tàu">
-                            </div>
-                            <div class="form-group_csmh">
-                                <label for="item-type">Loại mặt hàng</label>
-                                <select id="item-type">
-                                    <option>Thực tính theo số lượng</option>
-                                </select>
-                            </div>
-                            <div class="form-group_csmh">
-                                <label for="item-price">Giá mặt hàng</label>
-                                <div class="price-group_csmh">
-                                    <div class="price-label_csmh">Mã mặt hàng</div>
-                                    <input type="text" id="item-code" value="SHB">
-                                    <div class="price-label_csmh">Giá bán</div>
-                                    <input type="text" id="item-price" value="50,000">
-                                    <div class="price-label_csmh">Giá vốn</div>
-                                    <input type="text" value="35,000">
-                                </div>
-                                <a href="#" class="back-link_csmh">+ Thêm giá</a>
-                            </div>
-                            <div class="form-group_csmh">
-                                <label for="unit">Đơn vị</label>
-                                <input type="text" id="unit" placeholder="Nhập đơn vị">
-                            </div>
-                        </div>
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label for="description">Mô tả</label>
-                                <textarea id="description" class="description_csmh" placeholder="Mô tả"></textarea>
-                            </div>
-                            <div class="form-group-inline_csmh">
-                                <label for="print-label">In tem mặt hàng</label>
-                                <input type="checkbox" id="print-label" style="margin-left: auto;">
-                            </div>
-                            <div class="form-group-inline_csmh">
-                                <label for="manage-code">Quản lý mã</label>
-                                <input type="checkbox" id="manage-code" style="margin-left: auto;">
-                            </div>
-                            <div class="form-group-inline_csmh">
-                                <label for="link-warehouse">Liên kết kho hàng</label>
-                                <input type="checkbox" id="link-warehouse" style="margin-left: auto;">
-                            </div>
-                            <div class="form-group-inline_csmh">
-                                <label for="option-group">Nhóm lựa chọn</label>
-                                <input type="checkbox" id="option-group" style="margin-left: auto;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-column_csmh">
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label>Hình đại diện</label>
-                                <div class="avatar-options_csmh">
-                                    <label><input type="radio" name="avatar-option" value="color" checked> Màu sắc</label>
-                                    <label><input type="radio" name="avatar-option" value="image"> Hình ảnh</label>
-                                </div>
-                                <div class="color-picker_csmh">
-                                    <div class="selected_csmh" style="background-color: #ff0000;"></div>
-                                    <div style="background-color: #ff9900;"></div>
-                                    <div style="background-color: #ffff00;"></div>
-                                    <div style="background-color: #00ff00;"></div>
-                                    <div style="background-color: #00ffff;"></div>
-                                    <div style="background-color: #0000ff;"></div>
-                                    <div style="background-color: #9900ff;"></div>
-                                    <div style="background-color: #ff00ff;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label for="category">Danh mục</label>
-                                <select id="category">
-                                    <option>Nhập danh mục</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label>Kênh bán hàng</label>
-                                <div class="sales-channels_csmh">
-                                    <label>Bán tại nhà hàng<input type="checkbox" style="margin-left: auto;"></label>
-                                    <label>GrabFood<input type="checkbox" style="margin-left: auto;"></label>
-                                    <label>GoFood<input type="checkbox" style="margin-left: auto;"></label>
-                                    <label>Bán online<input type="checkbox" style="margin-left: auto;"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label for="menu">Thực đơn</label>
-                                <select id="menu">
-                                    <option>Tìm kiếm thực đơn</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-box_csmh">
-                            <div class="form-group_csmh">
-                                <label for="area">Khu vực bar / bếp quản lý</label>
-                                <select id="area">
-                                    <option>Chọn vị trí khu vực / bếp quản lý</option>
-                                </select>
-                            </div>
-                            <div class="form-group_csmh">
-                                <label>Bếp mặc định</label>
-                                <div class="note_csmh">
-                                    Mặt hàng được quản lý theo bếp chế biến.
-                                    Mặt hàng này sẽ chỉ được gửi vào bếp/bar (khu vực) quản lý khi thiết bị gửi món.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons_ttkh">
-                    <button id="deleteButton" class="delete_ttkh">
-                        xóa
-                    </button>
-                    <button id="cancelButton2" class="cancel_ttk">
-                        Hủy
-                    </button>
-                    <button id="saveButton2" class="save_ttkh">
-                        Lưu
-                    </button>
-                    </div>
-
-                </div>
-               </div>
-               <script>
-  
             
-                document.getElementById('cancelButton2').addEventListener('click', function() {
-                    alert('Bạn đã nhấn nút Hủy');
-                });
-        
-                document.getElementById('saveButton2').addEventListener('click', function() {
-                    alert('Bạn đã nhấn nút Lưu');
-                });
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 
-                document.getElementById('deleteButton').addEventListener('click', function() {
-                    alert('Bạn đã nhấn nút xóa');
-                });
-            </script>
-    
+<div class="flex justify-between items-center mb-4">
+    <div class="flex items-center">
+        <i class="fas fa-arrow-left text-gray-500 mr-2"></i>
+        <a href="../admin/dsmathang_ad.html"class="text-gray-500" style="font-size: 2rem;">Quay lại danh sách mặt hàng</a>
+    </div>
+    <div class="flex justify-between mt-6">
+        <button id="deleteButton" class="bg-red-500 text-white px-4 py-2 rounded-lg" style="font-size: 1.5rem;">
+            Xóa Mặt hàng
+        </button>
+        <div>
+            <button id="cancelButton" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mr-2" style="font-size: 1.5rem;">
+                Hủy
+            </button>
+            <button id="saveButton" class="bg-yellow-500 text-white px-4 py-2 rounded-lg" style="font-size: 1.5rem;">
+                Lưu
+            </button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('deleteButton').addEventListener('click', function() {
+            alert('Đã Xóa Mặt Hàng');
+        });
 
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            alert('Bạn đã nhấn nút Hủy');
+        });
 
-
+        document.getElementById('saveButton').addEventListener('click', function() {
+            alert('Bạn đã nhấn nút Lưu');
+        });
+    </script>
 </div>
-<script src="../js/scrip_ad.js"></script>
+<h1 class="text-2xl font-semibold mb-6" style="font-size: 4rem;">Xôi thịt kho tàu</h1>
+<body class="bg-gray-100 p-4">
+    <div class="mx-auto bg-white p-6 rounded-lg shadow-md">
+        
+        <div class="grid grid-cols-3 gap-6">
+            <div class="col-span-2">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Tên mặt hàng</label>
+                    <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" value="Xôi thịt kho tàu">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Loại mặt hàng</label>
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;">
+                        <option>Tính tiền theo số lượng</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Giá mặt hàng</label>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-blue-500 cursor-pointer">Chỉnh sửa giá</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Mã mặt hàng</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded"  style="font-size: 1.5rem;" value="SHB">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Giá bán</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  value="25,000 đ">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Giá vốn</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  value="20,000 đ">
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <label class="text-gray-700" style="font-size: 2rem;">Nhập giá bán lẻ</label>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <span class="text-blue-500 cursor-pointer">+ Thêm giá</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Đơn vị</label>
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
+                        <option>Phần</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">In tem mặt hàng<input type="checkbox" class="mr-2"style="float: right;"></label>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Quản lý mã<input type="checkbox" class="mr-2"style="float: right;"></label>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Liên kết kho hàng<input type="checkbox" class="mr-2"style="float: right;"></label>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Nhóm lựa chọn<input type="checkbox" class="mr-2"style="float: right;"></label>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Mô tả</label>
+                    <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" style="font-size: 1.5rem;"type="text" id="nhap-mo-ta" placeholder="Nhập mô tả" ></textarea>
+                </div>
+            </div>
+            <div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Hình đại diện</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="avatar" class="mr-2" checked>
+                        <label class="mr-4" style="font-size: 2rem;">Màu sắc</label>
+                        <input type="radio" name="avatar" class="mr-2">
+                        <label>Hình ảnh</label>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button class="w-10 h-10 bg-yellow-500 rounded"></button>
+                        <button class="w-10 h-10 bg-blue-500 rounded"></button>
+                        <button class="w-10 h-10 bg-green-500 rounded"></button>
+                        <button class="w-10 h-10 bg-red-500 rounded"></button>
+                        <button class="w-10 h-10 bg-purple-500 rounded"></button>
+                        <button class="w-10 h-10 bg-pink-500 rounded"></button>
+                        <button class="w-10 h-10 bg-indigo-500 rounded"></button>
+                        <button class="w-10 h-10 bg-gray-500 rounded"></button>
+                    </div>
+                    <div class="mt-2">
+                        <span class="text-blue-500 cursor-pointer">Thiết lập mặc định theo tên và màu</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Kênh bán hàng</label>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" checked>
+                        <label class="mr-4" style="font-size: 1.5rem;" >Bán tại cửa hàng</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4" style="font-size: 1.5rem;" >GrabFood</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4" style="font-size: 1.5rem;" >GoFood</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2">
+                        <label class="mr-4" style="font-size: 1.5rem;" >Bán online</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Danh mục</label>
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
+                        <option>Đồ uống</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Thực đơn</label>
+                    <div class="flex items-center mb-2">
+                        <input type="text" class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;"  placeholder="Tìm kiếm thực đơn">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2" style="font-size: 1.5rem;" >Mang đi</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2" style="font-size: 1.5rem;" >Đồ uống</span>
+                        <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2" style="font-size: 1.5rem;" >Thêm thức ăn </span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" style="font-size: 2rem;">Khu vực bar / bếp quản lý</label>
+                    <select class="w-full border border-gray-300 p-2 rounded" style="font-size: 1.5rem;" >
+                        <option>Chọn và tìm kiếm bar / bếp quản lý</option>
+                    </select>
+                    <div class="mt-2 text-gray-500 text-sm">
+                        <p>* Mặt hàng được quản lý theo bar / bếp chế biến.</p>
+                        <p>* Mặt hàng chỉ được in khi đơn hàng được thanh toán và gửi đến khu vực bar / bếp quản lý.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
+</html>
 
-</html> 
