@@ -1,42 +1,62 @@
-document.addEventListener("DOMContentLoaded", function() {
+// login logout
+document.addEventListener("DOMContentLoaded", function () {
     const user = JSON.parse(localStorage.getItem("user"));
     const loginBtn = document.querySelector(".login .login-btn");
+    const dropdownMenu = document.querySelector(".login .dropdown-menu");
+    const logoutBtn = document.querySelector(".logout-btn");
+    const ordersBtn = document.querySelector(".orders-btn");
+
+    function toggleDropdown(event) {
+        event.preventDefault(); // Ngăn không cho chuyển hướng
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    }
+
+    function setupLoggedOutState() {
+        // Thiết lập trạng thái cho người dùng chưa đăng nhập
+        loginBtn.textContent = "Đăng Nhập";
+        loginBtn.href = "register_login/login.html"; // Chuyển hướng tới trang đăng nhập
+        loginBtn.removeEventListener("click", toggleDropdown); // Loại bỏ sự kiện dropdown
+        dropdownMenu.style.display = "none"; // Đảm bảo menu bị ẩn
+    }
 
     if (user && user.userName) {
-        // Nếu người dùng đã đăng nhập, hiển thị tên người dùng trên nút
+        // Người dùng đã đăng nhập
         loginBtn.textContent = user.userName;
-        loginBtn.href = "#"; // Ngăn chuyển hướng khi nhấp vào tên người dùng
+        loginBtn.href = "#"; // Ngăn chuyển hướng
+        loginBtn.addEventListener("click", toggleDropdown);
 
-        // Thêm sự kiện đăng xuất khi nhấp vào tên người dùng
-        const handleLogout = function(event) {
-            event.preventDefault(); // Ngăn không cho trang tải lại hoặc chuyển hướng
+        // Xử lý đăng xuất
+        logoutBtn.addEventListener("click", function (event) {
+            event.preventDefault();
             const confirmLogout = confirm("Bạn có chắc chắn muốn đăng xuất?");
             if (confirmLogout) {
                 localStorage.removeItem("user"); // Xóa thông tin người dùng
-
-                // Đổi lại nút thành "Đăng Nhập" sau khi đăng xuất
-                loginBtn.textContent = "Đăng Nhập";
-                loginBtn.removeAttribute("href"); // Loại bỏ liên kết hiện tại để không chuyển hướng
-
-                // Xóa sự kiện đăng xuất sau khi người dùng đã đăng xuất
-                loginBtn.removeEventListener("click", handleLogout);
-
-                // Thêm sự kiện mới cho nút để khi nhấp sẽ chuyển hướng đến trang đăng nhập
-                loginBtn.addEventListener("click", function() {
-                    window.location.href = "register_login/login.html"; // Chuyển hướng đến trang đăng nhập khi nhấp vào nút
-                }, { once: true }); // Sử dụng { once: true } để sự kiện chỉ xảy ra 1 lần
+                setupLoggedOutState(); // Chuyển về trạng thái chưa đăng nhập
             }
-        };
+        });
 
-        // Gán sự kiện đăng xuất ban đầu cho nút
-        loginBtn.addEventListener("click", handleLogout);
+        // Xử lý chuyển hướng tới đơn hàng
+        ordersBtn.addEventListener("click", function () {
+            window.location.href = "delivery.html"; // Chuyển hướng tới trang đơn hàng
+        });
     } else {
-        // Nếu người dùng chưa đăng nhập, nút sẽ luôn là "Đăng Nhập" và chuyển hướng đến trang đăng nhập
-        loginBtn.textContent = "Đăng Nhập";
-        loginBtn.href = "register_login/login.html"; // Liên kết đến trang đăng nhập
+        // Người dùng chưa đăng nhập
+        setupLoggedOutState();
     }
+
+    // Đóng menu khi click bên ngoài
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".login")) {
+            dropdownMenu.style.display = "none";
+        }
+    });
 });
 
+
+// end login logout
+
+
+// xử tìm kiếm nếu chưa đăng nhập
 document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user"));
     const locationInput = document.getElementById("location-input_Q");
@@ -186,29 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //end slect cart
 
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const loginBtn = document.querySelector(".login-btn");
-    const loggedInUser = localStorage.getItem("loggedInUser");
-
-    if (loggedInUser) {
-        // Thay nút đăng nhập bằng tên người dùng
-        loginBtn.textContent = loggedInUser;
-        loginBtn.href = "#"; // Ngăn chặn chuyển trang
-        loginBtn.classList.add("logged-in");
-
-        // Tùy chọn: Thêm chức năng đăng xuất
-        loginBtn.addEventListener("click", function() {
-            if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
-                localStorage.removeItem("loggedInUser"); // Xóa tên người dùng đã đăng nhập
-                location.reload(); // Tải lại trang
-            }
-        });
-    }
-});
-    
     
 
 
@@ -406,9 +403,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
 
 
 //ket thuc thanh toan
