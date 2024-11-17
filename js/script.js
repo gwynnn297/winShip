@@ -136,8 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Thêm sản phẩm vào giỏ hàng
+    // Thêm sản phẩm vào giỏ hàng và hiển thị giỏ hàng
     const bnt = document.querySelectorAll(".btn-xoi");
+    const cart = document.querySelector(".cart");
+    const overlay = document.querySelector(".overlay");
+
     bnt.forEach(function (button) {
         button.addEventListener("click", function (event) {
             const btnItem = event.target;
@@ -152,32 +155,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 quantity: 1,
             };
             addItemToCart(item);
+
+            // Hiển thị giỏ hàng và overlay
+            cart.classList.add("active");
+            overlay.classList.add("active");
         });
     });
 
-    // Hiển thị giỏ hàng khi nhấn icon
-    function viewCartt() {
-        document.querySelector('.cart').style.right = '0';
-        document.querySelector('.cart').classList.add('active'); // Hiển thị giỏ hàng
-        document.querySelector('.overlay').classList.add('active'); // Hiển thị overlay
-        renderCart(); // Render giỏ hàng mỗi khi mở
-    }
-
+    // Hiển thị giỏ hàng khi nhấn vào biểu tượng giỏ hàng
     const cartshow2 = document.querySelector('.fa-shopping-cart');
-    cartshow2.addEventListener('click', viewCartt);
+    cartshow2.addEventListener('click', function () {
+        cart.classList.add("active");
+        overlay.classList.add("active");
+        renderCart(); // Render giỏ hàng mỗi khi mở
+    });
 
     // Đóng giỏ hàng
     const cartbtn = document.querySelector(".fa-circle-xmark");
-    const overlay = document.querySelector(".overlay");
+    overlay.addEventListener("click", closeCart);
+    cartbtn.addEventListener("click", closeCart);
 
     function closeCart() {
-        document.querySelector(".cart").classList.remove("active");
-        document.querySelector(".cart").style.right = "-100%"; // Ẩn giỏ hàng
+        cart.classList.remove("active");
         overlay.classList.remove("active");
     }
-
-    cartbtn.addEventListener("click", closeCart);
-    overlay.addEventListener("click", closeCart);
 
     // Khởi tạo giỏ hàng khi load trang
     renderCart();
