@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user"));
     const locationInput = document.getElementById("location-input_Q");
     const submitBtn = document.querySelector(".submitBtn_Q");
+    const loginBtn = document.querySelector(".login .login-btn");
 
     if (!user) {
         // Nếu người dùng chưa đăng nhập, vô hiệu hóa trường nhập và nút tìm kiếm
