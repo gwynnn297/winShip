@@ -624,6 +624,7 @@ header .login a:hover {
 
 #sticky-food .content-food .two-p,
 #sticky-drink .content-drink .two-p,
+#sticky-combo .content-combo .two-p,
 #sticky-promotion .content-promotion .two-p {
     font-size: 1.5rem;
     margin: 10px 0;
@@ -1029,7 +1030,7 @@ header .login a:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
-    height: 1480px;
+    overflow: hidden;
 }
 
 .container-pay h1 {
@@ -1191,7 +1192,8 @@ header .login a:hover {
     max-width: 800px;
     margin: 20px auto;
     /* Căn giữa phần tử */
-    height: 200px;
+    overflow: hidden; /* Đảm bảo nội dung không bị tràn */
+    box-sizing: border-box;
 }
 
 .order-summary h3 {
@@ -1206,29 +1208,23 @@ header .login a:hover {
 
 .order-summary .order-item {
     display: flex;
-    align-items: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
     margin-bottom: 10px;
     border-bottom: 0.5px solid var(--black);
-    padding: 0;
-    /* Loại bỏ padding để sát lề trái */
-    gap: 10px;
-    /* Khoảng cách giữa các phần tử */
+    padding: 10px 20px;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
 }
 
-.order-summary .order-item img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 0;
-    /* Đảm bảo không có khoảng cách giữa ảnh và span */
-}
+
 
 .order-summary .order-item span {
     font-size: 20px;
     color: #333;
-    margin-left: 0;
-    /* Đảm bảo không có khoảng cách giữa span và ảnh */
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
     font-weight: bold;
+
+    flex: 1; /* Đảm bảo mỗi span chiếm một không gian bằng nhau */
 }
 
 .order-summary .order-item h6 {
@@ -1257,6 +1253,7 @@ header .login a:hover {
     margin-right: 3%;
     /* Cách lề phải 3% */
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .quantity-controls {
@@ -1328,6 +1325,10 @@ header .login a:hover {
     margin: 20px;
     font-size: 16px;
     resize: none;
+}
+.promo-entry button:hover {
+    background-color: var(--yellow); /* Màu nền sẽ chuyển sang vàng */
+    color: white; /* Thay đổi màu chữ (tuỳ chọn) */
 }
 
 .content-price-code {
@@ -1514,7 +1515,7 @@ header .login a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 6%;
-    background-color: #eee;
+    background-color: black;
     margin-top: 20px;
     margin-bottom: 5px;
     border-top: 1px solid #eaeaea;
@@ -1562,7 +1563,7 @@ header .login a:hover {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-
+    color: white;
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list {
@@ -1576,7 +1577,7 @@ header .login a:hover {
 
 .grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link {
     text-decoration: none;
-    color: #555;
+    color: white;
     font-size: 16px;
 }
 
@@ -1608,7 +1609,7 @@ header .login a:hover {
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline {
-    color: #555;
+    color: white;
     font-size: 20px;
     margin-top: 15px;
     display: flex;
@@ -1645,6 +1646,7 @@ header .login a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 /* end footer*/
@@ -2161,4 +2163,56 @@ header .login a:hover {
     font-size: 7rem;          
     margin: 0;   
     color: var(--yellow);               
+}
+
+
+/* CSS cho các món ăn trong Order-placed-delivery */
+.Order-placed-delivery .order-item {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid var(--black); /* Đường viền dưới mỗi món */
+    padding: 5px 20px;
+    gap: 85%; /* Khoảng cách giữa các phần tử */
+    font-size: 1.5rem;
+}
+
+
+.Order-placed-delivery {
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    margin: 20px auto;
+    /* Căn giữa phần tử */
+    overflow: hidden; /* Đảm bảo nội dung không bị tràn */
+    box-sizing: border-box;
+}
+/* CSS cho các span chứa thông tin món ăn */
+.Order-placed-delivery .order-item span {
+    font-size: 20px;
+    color: #333;
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
+    font-weight: bold;
+    flex: 1; /* Đảm bảo mỗi span chiếm một không gian bằng nhau */
+}
+
+/* CSS để chỉnh kích thước ảnh trong order-item */
+.Order-placed-delivery .order-item-img img {
+    max-width: 50px; /* Giới hạn chiều rộng tối đa của ảnh */
+    max-height: 50px; /* Giới hạn chiều cao tối đa của ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+/* CSS cho h6 (giá trị hoặc thông tin khác) */
+.Order-placed-delivery .order-item h6 {
+    font-size: 20px;
+    color: #333;
+    margin-left: auto; /* Đẩy h6 về phía bên phải */
+    padding-left: 0;
+    padding-right: 3%;
+    font-weight: bold;
 }

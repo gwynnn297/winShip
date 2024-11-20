@@ -128,24 +128,15 @@
 
         <div class="order-summary">
             <h3>Tóm tắt đơn hàng</h3>
-            <div class="order-item">
-                <!-- Nút trừ, số lượng, và nút cộng -->
-                <div class="quantity-controls">
-                    <button id="decrease">-</button>
-                    <span id="quantity">1</span>
-                    <button id="increase">+</button>
-                </div>
-                <img src="images/img-giaodienxoila.html/sell-combo.png" alt="Bún bò Huế">
-                <span>combo</span>
-                <h6 id="price">99.000</h6> <!-- Thêm id cho giá -->
-
-
+            <div class="order-items-container">
+                <!-- Các món sẽ được thêm động tại đây -->
             </div>
             <div class="total-cost">
-                <p><span>Tạm tính</span><span id="total-price">99.000</span></p>
-                <p><span>Phí vận chuyển</span><span>29,000</span></p>
+                <p><span>Tạm tính</span><span id="total-price">0 đ</span></p>
+                <p><span>Phí vận chuyển</span><span>29,000 đ</span></p>
             </div>
         </div>
+        
 
         <!--chi tiết thanh toán-->
         <div class="payment-details">
@@ -175,11 +166,10 @@
                 <p>Promo Code: <span id="promo-code-text">MFPSLNMM</span></p>
                 <div class="promo-validity">
                     <p>Valid 2024-09-30 to 2024-12-30</p>
-                    <button id="apply-button2" onclick="applyPromoCode()">APPLY</button>
+                    <button id="apply-button2">APPLY</button>
                 </div>
             </div>
         </div>
-
 
 
         <!--footer-->
@@ -198,7 +188,114 @@
 
         <div class="overlay"></div>
 
+<script>
+//hiển thị món ăn đã chọn
+    document.addEventListener("DOMContentLoaded", function () {
+    const orderContainer = document.querySelector(".order-items-container");
+    const totalPriceElement = document.getElementById("total-price");
 
+    // Lấy dữ liệu từ Local Storage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Hàm render giỏ hàng
+    function renderCart() {
+        let total = 0; // Tổng giá trị đơn hàng
+        orderContainer.innerHTML = ""; // Xóa nội dung cũ
+
+        // Lặp qua các món trong Local Storage
+        cart.forEach((item) => {
+            // Tạo phần tử HTML cho từng món
+            const orderItem = document.createElement("div");
+            orderItem.classList.add("order-item");
+            orderItem.innerHTML = `
+                <img src="${item.img}" alt="${item.name}" style="width: 50px; height: 50px;">
+                <span>${item.name}</span>
+                <span>Số lượng: ${item.quantity}</span>
+                <h6>${(item.price * item.quantity).toLocaleString('vi-VN')} đ</h6>
+            `;
+            orderContainer.appendChild(orderItem);
+
+            // Cộng tổng tiền
+            total += item.price * item.quantity;
+        });
+
+        // Hiển thị tổng tiền
+        totalPriceElement.textContent = total.toLocaleString("vi-VN") + " đ";
+    }
+
+    // Gọi hàm để render dữ liệu
+    renderCart();
+});
+
+
+
+//tổng cộng tiền
+document.addEventListener('DOMContentLoaded', function () {
+    // Giá trị tạm tính và phí vận chuyển
+    const temporaryTotalElement = document.querySelector("#total-price"); // Phần tử chứa giá trị tạm tính
+    const finalTotalElement = document.querySelector("#final-total-pay"); // Phần tử chứa tổng cộng
+
+    const shippingFee = 29000; // Phí vận chuyển (29,000)
+
+    function calculateFinalTotal() {
+        // Lấy giá trị tạm tính (loại bỏ ký tự không phải số và chuyển sang số nguyên)
+        const temporaryTotal = parseInt(temporaryTotalElement.textContent.replace(/\D/g, ""));
+        
+        // Tính tổng cộng
+        const finalTotal = temporaryTotal + shippingFee;
+
+        // Cập nhật tổng cộng vào phần tử
+        finalTotalElement.textContent = finalTotal.toLocaleString('vi-VN') + " đ";
+    }
+
+    // Tính tổng cộng ngay khi trang được tải
+    calculateFinalTotal();
+});
+
+
+
+//mã khuyến mãi
+document.addEventListener("DOMContentLoaded", function () {
+    const promoCodeText = document.querySelector("#promo-code-text").textContent; // Mã khuyến mãi
+    const promoCodeInput = document.querySelector("#promo-code"); // Ô nhập mã khuyến mãi
+    const applyButton = document.querySelector("#apply-button"); // Nút "Áp dụng"
+    const applyButton2 = document.querySelector("#apply-button2"); // Nút "APPLY" trong phần promo
+    const finalTotalElement = document.querySelector("#final-total-pay"); // Tổng cộng
+    const originalTotal = parseInt(finalTotalElement.textContent.replace(/\D/g, "")); // Lấy giá trị ban đầu
+    let discountApplied = false; // Trạng thái đã áp dụng mã khuyến mãi
+
+    // Khi nhấn nút "APPLY" để tự động điền mã vào ô nhập mã khuyến mãi
+    applyButton2.addEventListener("click", function () {
+        promoCodeInput.value = promoCodeText; // Gán mã khuyến mãi vào ô nhập
+    });
+
+    // Khi nhấn nút "Áp dụng"
+    applyButton.addEventListener("click", function () {
+        if (!discountApplied) {
+            const inputCode = promoCodeInput.value.trim(); // Lấy giá trị từ ô nhập
+            if (inputCode === promoCodeText) {
+                // Kiểm tra mã có hợp lệ không
+                discountApplied = true; // Đánh dấu mã đã áp dụng
+                const discountedTotal = originalTotal - 7000; // Tính tổng sau khi giảm 7K
+                finalTotalElement.textContent = discountedTotal.toLocaleString("vi-VN") + " đ";
+
+                // Chuyển nút "Áp dụng" thành "Xóa"
+                applyButton.textContent = "Xóa";
+                applyButton.classList.add("remove-button");
+            } else {
+                alert("Mã khuyến mãi không hợp lệ!"); // Thông báo mã không hợp lệ
+            }
+        } else {
+            // Khi nhấn vào nút "Xóa"
+            discountApplied = false; // Hủy trạng thái áp dụng mã
+            finalTotalElement.textContent = originalTotal.toLocaleString("vi-VN") + " đ"; // Trả tổng cộng về giá trị cũ
+            applyButton.textContent = "Áp dụng"; // Đổi nút thành "Áp dụng"
+            applyButton.classList.remove("remove-button");
+            promoCodeInput.value = ""; // Xóa nội dung trong ô nhập
+        }
+    });
+});
+</script>
 
         <!-- js link -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

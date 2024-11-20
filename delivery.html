@@ -1,363 +1,392 @@
-<html>
- <head>
-  <title>
-   Order Details
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css">
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinShip</title>
+    <!-- js slider link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
-    <div id="body">
-        <header class="header">
-            <a href="home.html" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
-            <nav class="navbar">
-                <div class="subnav">
-                    <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="subnav-content">
-                        <li><a href="#">Hà Nội</a></li>
-                        <li><a href="#">Hồ Chí Minh</a></li>
-                        <li><a href="#">Quảng Trị</a></li>
-                        <li><a href="#">Đà Lạt</a></li>
-                        <li><a href="#">Nha Trang</a></li>
-                        <li><a href="#">Hải Phòng</a></li>
-                        <li><a href="#">Vũng Tàu</a></li>
-                        <li><a href="#">Huế</a></li>
-                        <li><a href="#">Cần Thơ</a></li>
-                    </ul>
-                </div>
-                <a class="navbar-hover-firt-item" href="./restaurants.html#display-row">Thử Quán Mới</a>
+    <header class="header">
+        <!-- start header -->
+        <a href="home.html" class="logo"><i class="fa-solid fa-bowl-food"></i>winship</a>
+        <nav class="navbar">
+            <div class="subnav">
+                <a href="#" class="subnav-location">Đà Nẵng <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="subnav-content">
+                    <li><a href="#">Hà Nội</a></li>
+                    <li><a href="#">Hồ Chí Minh</a></li>
+                    <li><a href="#">Quảng Trị</a></li>
+                    <li><a href="#">Đà Lạt</a></li>
+                    <li><a href="#">Nha Trang</a></li>
+                    <li><a href="#">Hải Phòng</a></li>
+                    <li><a href="#">Vũng Tàu</a></li>
+                    <li><a href="#">Huế</a></li>
+                    <li><a href="#">Cần Thơ</a></li>
+                </ul>
+            </div>
+            <a class="navbar-hover-firt-item" href="./restaurants.html#display-row">Thử Quán Mới</a>
             <a href="./restaurants.html#on-sale">Đang Khuyến Mãi</a>
             <a href="./restaurants.html#familiar-brand">Thương Hiệu Quen Thuộc</a>
             <a href="./restaurants.html#near-store">Cửa Hàng Gần Bạn</a>
             <a href="./restaurants.html#recently-booked">Vừa Đặt Gần Đây</a>
-            </nav>
-            <div class="icons">
-                <i class="fas fa-bars" id="menu-bars"></i>
-                <i class="fas fa-search" id="search-icon"></i>
-                <a href="#" class="fas fa-shopping-cart"></a>
-            </div>
-            <div class="login">
-                <a href="#" class="login-btn">Đăng Nhập</a>
-            </div>
-        </header>
-        <!-- cart -->
-        <div class="select-details">
-           
-            <section class="cart">
-                <i class="fa-solid fa-circle-xmark"></i>
-                <h2>Cart</h2>
-                <form action="">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Món ăn</th>
-                                <th>Giá</th>
-                                <th>SL</th>
-                                <th>Chọn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+        <div class="login">
+            <a href="#" class="login-btn">Đăng Nhập</a>
+        </div>
+    </header>
+    <!-- start header -->
 
-                        </tbody>
-    
-                    </table>
-    
-                    <div style="text-align: right;" class="price-total">
-                        <p class="total" style="font-weight: bold;">Tổng tiền :<span>0</span><sup>đ</sup></p>
-    
+
+    <div class="select-details">
+
+        <section class="cart">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h2>Cart</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Món ăn</th>
+                            <th>Giá</th>
+                            <th>SL</th>
+                            <th>Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+                <div style="text-align: right;" class="price-total">
+                    <p class="total" style="font-weight: bold;">Tổng tiền :<span>0</span><sup>đ</sup></p>
+
+                </div>
+                <div class="oder-close"> </div>
+                <a href="./thanhtoan.html" class="close-oder">Chốt đơn </a>
+            </form>
+        </section>
+
+    </div>
+    <!-- end cart -->
+
+    <body>
+        <div class="container_c">
+            <div class="header_c">
+                <i class="fas fa-arrow-left">
+                </i>
+                <h1>
+                    Mã Đơn Hàng: 241027MSE4WGMN
+                </h1>
+            </div>
+            <div class="order-status_c">
+                <div class="active_c">
+                    <i class="fas fa-check-circle">
+                    </i>
+                    <span>
+                        Đơn Hàng Đã Đặt
+                    </span>
+                </div>
+                <div class="active_c">
+                    <i class="fas fa-check-circle">
+                    </i>
+                    <span>
+                        Đơn Hàng Đã Thanh Toán
+                    </span>
+                </div>
+                <div class="active_c">
+                    <i class="fas fa-truck">
+                    </i>
+                    <span>
+                        Đã Giao Cho ĐVVC
+                    </span>
+                </div>
+                <div class="active_c">
+                    <i class="fas fa-box-open">
+                    </i>
+                    <span>
+                        Đã Nhận Được Hàng
+                    </span>
+                </div>
+                <div>
+                    <i class="fas fa-star">
+                    </i>
+                    <span>
+                        Đánh Giá
+                    </span>
+                </div>
+            </div>
+            <div class="order-actions_c">
+                <button>
+                    Đánh Giá
+                </button>
+                <button>
+                    Mua Lại
+                </button>
+            </div>
+            <div class="address_c">
+                <h2>
+                    Địa Chỉ Nhận Hàng
+                </h2>
+                <p>
+                    Doãn Chí Bình
+                </p>
+                <p>
+                    (+84) 19008083
+                </p>
+                <p>
+                    k181/10 Phan Thanh, Phường An Khê, Quận Thanh Khê, Đà Nẵng
+                </p>
+            </div>
+            <div class="tracking_c">
+                <h2>
+                    Theo Dõi Đơn Hàng
+                </h2>
+                <ul>
+                    <li>
+                        <span>
+                            17:04 22-11-2024
+                        </span>
+                        <span class="status_c">
+                            ✅ Đã nhận được hàng
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            16:55 22-111-2024
+                        </span>
+                        <span class="status_c">
+                            🚛 Đang vận chuyển đơn hàng
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            16:22 22-112024
+                        </span>
+                        <span class="status_c">
+                            📦 Đã sắp xếp để giao hàng
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            15:11 22-11-2024
+                        </span>
+                        <span class="status_c">
+                            🏭 Đơn hàng đã sẵn sàng để giao
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            14:21 22-11-2024
+                        </span>
+                        <span class="status_c">
+                            🗳 Xác nhận đơn hàng
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-details_c">
+                <h2>
+                    Chi tiết đơn hàng
+                </h2>
+                <div class="Order-placed-delivery">
+
+                </div>
+            </div>
+            <div class="order-summary_c">
+                <p>
+                    Tổng tiền hàng: <span id="total-items">25.000</span>
+                </p>
+                <p>
+                    Phí vận chuyển: ₫ 20.000
+                </p>
+                <p>
+                    Giảm giá phí vận chuyển: -₫10.000
+                </p>
+                <p>
+                    Voucher từ Shopee: -₫5.000
+                </p>
+                <p class="total_c">
+                    Thành tiền: ₫30.000
+                </p>
+                <p>
+                    Phương thức thanh toán: Tài khoản ngân hàng đã liên kết Winship
+                </p>
+            </div>
+            
+        </div>
+
+
+        <div class="footer">
+            <div class="grid">
+                <div class="grid_row1">
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading_Winship">Winship</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i class="fa-solid fa-house"></i> Công ty TNHH
+                                    nhiều thành viên Winship </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i
+                                        class="fa-solid fa-envelope"></i>Email:boy@winship.com</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-solid fa-location-dot"></i> Địa chỉ:
+                                    252 Nguyễn Văn Linh</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"> <i class="fa-solid fa-clock"></i> Giờ làm việc:Từ
+                                    7h-21h với tất cả ngày trong tuần</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link_hooline"> Tổng đài hỗ trợ </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link_number"> 1900 1001 </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="oder-close"> </div>
-                    <a href="./thanhtoan.html"class="close-oder">Chốt đơn </a>
-                </form>
-            </section>
-        
-        </div>
-        <!-- end cart -->
- <body>
-  <div class="container_c">
-   <div class="header_c">
-    <i class="fas fa-arrow-left">
-    </i>
-    <h1>
-     Mã Đơn Hàng: 241027MSE4WGMN
-    </h1>
-   </div>
-   <div class="order-status_c">
-    <div class="active_c">
-     <i class="fas fa-check-circle">
-     </i>
-     <span>
-      Đơn Hàng Đã Đặt
-     </span>
-    </div>
-    <div class="active_c">
-     <i class="fas fa-check-circle">
-     </i>
-     <span>
-      Đơn Hàng Đã Thanh Toán 
-     </span>
-    </div>
-    <div class="active_c">
-     <i class="fas fa-truck">
-     </i>
-     <span>
-      Đã Giao Cho ĐVVC
-     </span>
-    </div>
-    <div class="active_c">
-     <i class="fas fa-box-open">
-     </i>
-     <span>
-      Đã Nhận Được Hàng
-     </span>
-    </div>
-    <div>
-     <i class="fas fa-star">
-     </i>
-     <span>
-      Đánh Giá
-     </span>
-    </div>
-   </div>
-   <div class="order-actions_c">
-    <button>
-     Đánh Giá
-    </button>
-    <button>
-     Mua Lại
-    </button>
-   </div>
-   <div class="address_c">
-    <h2>
-     Địa Chỉ Nhận Hàng
-    </h2>
-    <p>
-     Doãn Chí Bình
-    </p>
-    <p>
-     (+84) 19008083
-    </p>
-    <p>
-     k181/10 Phan Thanh, Phường An Khê, Quận Thanh Khê, Đà Nẵng
-    </p>
-   </div>
-   <div class="tracking_c">
-    <h2>
-    Theo Dõi Đơn Hàng
-    </h2>
-    <ul>
-     <li>
-      <span>
-        17:04 22-11-2024
-      </span>
-      <span class="status_c">
-        ✅  Đã nhận được hàng
-      </span>
-     </li>
-     <li>
-      <span>
-       16:55 22-111-2024
-      </span>
-      <span class="status_c">
-        🚛  Đang vận chuyển đơn hàng 
-      </span>
-     </li>
-     <li>
-      <span>
-       16:22 22-112024
-      </span>
-      <span class="status_c">
-        📦 Đã sắp xếp để giao hàng
-      </span>
-     </li>
-     <li>
-      <span>
-       15:11 22-11-2024
-      </span>
-      <span class="status_c">
-        🏭  Đơn hàng đã sẵn sàng để giao
-      </span>
-     </li>
-     <li>
-      <span>
-       14:21 22-11-2024
-      </span>
-      <span class="status_c">
-        🗳  Xác nhận đơn hàng
-      </span>
-     </li>
-    </ul>
-   </div>
-   <div class="order-details_c">
-    <h2>
-        Chi tiết đơn hàng
-    </h2>
-    <table>
-     <tr>
-      <th>
-        Sản phẩm
-      </th>
-      <th>
-        Chi tiết
-      </th>
-      <th>
-        Giá
-      </th>
-     </tr>
-     <tr>
-      <td>
-       <img alt="" height="50" src="https://th.bing.com/th/id/OIP.rgomLfxfgWbBhtPMtfZy0gHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="50"/>
-      </td>
-      <td>
-      
-         Xôi Lá Viết - Nóng hổi vừa thổi vừa ăn 
-        
-       <br/>
-       Số lượng: x1 
-       <br/>
-       Phân loại hàng: Xôi, Thịt + Gà
-      </td>
-      <td>
-       ₫25.000
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="order-summary_c">
-    <p>
-     Tổng tiền hàng: 25.000
-    </p>
-    <p>
-     Phí vận chuyển: ₫ 20.000
-    </p>
-    <p>
-     Giảm giá phí vận chuyển: -₫10.000
-    </p>
-    <p>
-     Voucher từ Shopee: -₫5.000
-    </p>
-    <p class="total_c">
-     Thành tiền: ₫30.000
-    </p>
-    <p>
-     Phương thức thanh toán: Tài khoản ngân hàng đã liên kết Winship
-    </p>
-   </div>
-  </div>
-  
-  <div class="footer">
-    <div class="grid">
-        <div class="grid_row1">
-            <div class="grid_column_2_4">
-                <h3 class="footer_heading_Winship">Winship</h3>
-                <ul class="footer_list">
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"> <i class="fa-solid fa-house"></i> Công ty TNHH nhiều thành viên Winship </a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"> <i class="fa-solid fa-envelope"></i>Email:boy@winship.com</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"><i class="fa-solid fa-location-dot"></i> Địa chỉ: 252 Nguyễn Văn Linh</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"> <i class="fa-solid fa-clock"></i> Giờ làm việc:Từ 7h-21h với tất cả ngày trong tuần</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link_hooline"> Tổng đài hỗ trợ </a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link_number"> 1900 1001 </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid_column_2_4">
-                <h3 class="footer_heading">GIỚI THIỆU</h3>
-                <ul class="footer_list">
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Về chúng tôi</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Liên hệ</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Phương thức thanh toán</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Tuyển dụng</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid_column_2_4">
-                <h3 class="footer_heading">DỊCH VỤ</h3>
-                <ul class="footer_list">
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Premium services</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Gói quà biếu tặng</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Tích điểm khách hàng</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">Tích điểm khác</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid_column_2_4">
-                <h3 class="footer_heading">THEO DÕI NGAY</h3>
-                <ul class="footer_list">
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
-                    </li>
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid_column_2_4">
-                <h3 class="footer_heading">Vào cửa hàng bằng ứng dụng khác</h3>
-                <ul class="footer_list">
-                    <li class="footer_item">
-                        <a href="" class="footer_item_link">
-                            <div class="footer_dowload">
-                                <img src="https://khangnguyenco.vn/pub/media/magefan_blog/ma-qr-code.jpg" alt="" class="footer_dowload_qr">
-                                <div class="footer_dowload_app">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Google_Play_Store_badge_FR.svg" alt="" class="dowload_app-img">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="" class="dowload_app-img">
-                                </div>
-                            </div>
-                            <div class="footer_recognize">
-                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7W0B12D6YhARZsKN8zHJASoNVjP53yi8ShA&s" alt="" class="footer_recognize-image">      
-                            </div>
-                            
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    </div>
-        <div class="footer_bottom">
-            <div class="grid_row2">
-                <p class="footer_text">Copyrights © 2016 - 2024 Winship. All Rights Reserved</p>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">GIỚI THIỆU</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Về chúng tôi</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Liên hệ</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Phương thức thanh toán</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">DỊCH VỤ</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Premium services</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Gói quà biếu tặng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tích điểm khách hàng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">Tích điểm khác</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">THEO DÕI NGAY</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link"><i class="fa-brands fa-youtube"></i> Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column_2_4">
+                        <h3 class="footer_heading">Vào cửa hàng bằng ứng dụng khác</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item_link">
+                                    <div class="footer_dowload">
+                                        <img src="https://khangnguyenco.vn/pub/media/magefan_blog/ma-qr-code.jpg" alt=""
+                                            class="footer_dowload_qr">
+                                        <div class="footer_dowload_app">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Google_Play_Store_badge_FR.svg"
+                                                alt="" class="dowload_app-img">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                                                alt="" class="dowload_app-img">
+                                        </div>
+                                    </div>
+                                    <div class="footer_recognize">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7W0B12D6YhARZsKN8zHJASoNVjP53yi8ShA&s"
+                                            alt="" class="footer_recognize-image">
+                                    </div>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="grid_row2">
+                        <p class="footer_text">Copyrights © 2016 - 2024 Winship. All Rights Reserved</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-<div class="overlay"></div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
-</body>
- </body>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    // Lấy giỏ hàng từ localStorage
+    let cartt = JSON.parse(localStorage.getItem('cart')) || []; 
+
+    // Hàm để render giỏ hàng vào Order-placed-delivery
+    function renderOrderDetails() {
+        const orderDetailsDiv = document.querySelector(".Order-placed-delivery");
+        orderDetailsDiv.innerHTML = ""; // Xóa nội dung cũ trước khi render
+
+        if (cartt.length === 0) {
+            orderDetailsDiv.innerHTML = "<p>Giỏ hàng của bạn hiện tại trống.</p>";
+        } else {
+            cartt.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("order-item");
+                itemDiv.innerHTML = `
+                    <div class="order-item-img">
+                        <img src="${item.img}" alt="${item.name}">
+                    </div>
+                    <div class="order-item-details">
+                        <p class="order-item-name">${item.name}</p>
+                        <p class="order-item-price">${item.price} đ</p>
+                        <p class="order-item-quantity">Số lượng: ${item.quantity}</p>
+                    </div>
+                `;
+                orderDetailsDiv.appendChild(itemDiv);
+            });
+        }
+    }
+
+    // Gọi hàm renderOrderDetails để hiển thị giỏ hàng vào Order-placed-delivery
+    renderOrderDetails();
+});
+
+
+
+
+        </script>
+        <!-- js link -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
 </html>
