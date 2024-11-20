@@ -1466,7 +1466,7 @@ hr{
 
 
 .back-link_q {
-    color: #6c757d;
+    background-color:  #fdb819;
     text-decoration: none;
     font-size: 14px;
 }
@@ -1536,7 +1536,7 @@ hr{
 }
 
 #cancelButton{
-    background-color: yellow; 
+    background-color:   #ddd; 
     color: black;
     padding: 10px 20px; 
     cursor: pointer; 
@@ -1544,7 +1544,7 @@ hr{
     border-radius: 5px;
 }
 #saveButton{
-    background-color: yellow; 
+    background-color:  #fdb819; 
     color: black;
     padding: 10px 20px; 
     cursor: pointer; 
@@ -1574,7 +1574,7 @@ hr{
     margin: 0;
 }
 .Header_q a {
-    background-color:yellow;
+    background-color: #fdb819;
     color:black;
     border:black;
     padding: 10px 20px;
@@ -1591,7 +1591,7 @@ hr{
     margin-bottom: 20px;
 }
 .Actions_q button {
-    background-color: yellow;
+    background-color:  #fdb819;
     color:black;
     border: 1px solid black;
     padding: 10px 20px;
@@ -1613,7 +1613,7 @@ hr{
     border-radius: 5px;
 }
 .Filter_q button {
-    background-color:yellow;
+    background-color: #fdb819;
     color:black;
     border: black;
     padding: 10px 20px;
@@ -1642,7 +1642,7 @@ table th {
     font-size: 14px;
 }
 .Pagination_q button {
-    background-color:yellow;
+    background-color: #fdb819;
     color:black;
     border: black;
     padding: 5px 10px;
@@ -1663,7 +1663,7 @@ table th {
 }
 .header_ttkh a {
     text-decoration: none;
-    color: #007bff;
+    color: #fdb819;
     font-size: 14px;
 }
 .header_ttkh h1 {
@@ -1718,7 +1718,7 @@ table th {
 }
 .profile-right_ttkh .edit-link_ttkh a {
     text-decoration: none;
-    color: #007bff;
+    color: #fdb819;
     font-size: 14px;
 }
 .stats_ttkh {
@@ -1759,12 +1759,12 @@ table th {
 }
 .tabs_ttkh a {
     text-decoration: none;
-    color: #007bff;
+    color: #fdb819;
     padding: 10px 20px;
     border-bottom: 2px solid transparent;
 }
 .tabs_ttkh a.active_ttkh {
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #fdb819;
 }
 .tab-content_ttkh {
     text-align: center;
@@ -1791,7 +1791,7 @@ table th {
     color: #fff;
 }
 .buttons_ttkh .save_ttkh {
-    background-color: #007bff;
+    background-color: #fdb819;
     color: #fff;
 }
 .buttons_ttkh .cancel_ttkh {
@@ -1813,7 +1813,7 @@ table th {
 }
 .back-link_tmh {
     font-size: 14px;
-    color: #007bff;
+    color: #fdb819;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
@@ -1908,7 +1908,7 @@ table th {
     color: #fff;
 }
 .form-actions_tmh .save-btn_tmh {
-    background-color: #007bff;
+    background-color: #fdb819;
     color: #fff;
 }
 .form-row_tmh {
@@ -1955,7 +1955,7 @@ table th {
 }
 .back-link_csmh {
     font-size: 14px;
-    color: #007bff;
+    color: #fdb819;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
@@ -2050,7 +2050,7 @@ table th {
     color: #fff;
 }
 .form-actions_csmh .save-btn_csmh {
-    background-color: #007bff;
+    background-color: #fdb819;
     color: #fff;
 }
 .form-row_csmh {
