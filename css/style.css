@@ -1515,7 +1515,7 @@ header .login a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px 6%;
-    background-color: black;
+    background-color: #eee;
     margin-top: 20px;
     margin-bottom: 5px;
     border-top: 1px solid #eaeaea;
@@ -1563,7 +1563,7 @@ header .login a:hover {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: white;
+
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list {
@@ -1577,7 +1577,7 @@ header .login a:hover {
 
 .grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link {
     text-decoration: none;
-    color: white;
+    color: #555;
     font-size: 16px;
 }
 
@@ -1609,7 +1609,7 @@ header .login a:hover {
 }
 
 .grid .grid_row1 .grid_column_2_4 .footer_list .footer_item .footer_item_link_hooline {
-    color: white;
+    color: #555;
     font-size: 20px;
     margin-top: 15px;
     display: flex;
@@ -1646,9 +1646,7 @@ header .login a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
-
 /* end footer*/
 
 
