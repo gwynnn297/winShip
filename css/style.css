@@ -2130,6 +2130,7 @@ header .login a:hover {
 .order-summary_c p {
     margin: 5px 0;
     font-size: 14px;
+    font-weight: bold;
 }
 .order-summary_c p.total_c {
     font-weight: bold;

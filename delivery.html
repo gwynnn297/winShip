@@ -211,17 +211,12 @@
                     Tổng tiền hàng: <span id="total-items">25.000</span>
                 </p>
                 <p>
-                    Phí vận chuyển: ₫ 20.000
+                    Phí vận chuyển: 29.000 đ
                 </p>
                 <p>
-                    Giảm giá phí vận chuyển: -₫10.000
+                    Giảm giá phí vận chuyển: 7.000 đ
                 </p>
-                <p>
-                    Voucher từ Shopee: -₫5.000
-                </p>
-                <p class="total_c">
-                    Thành tiền: ₫30.000
-                </p>
+                <p class="total">Thành tiền: <span id="final-total"></span> VND</p>
                 <p>
                     Phương thức thanh toán: Tài khoản ngân hàng đã liên kết Winship
                 </p>
@@ -346,19 +341,26 @@
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     // Lấy giỏ hàng từ localStorage
-    let cartt = JSON.parse(localStorage.getItem('cart')) || []; 
+    let cartt = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Hàm để render giỏ hàng vào Order-placed-delivery
+    // Hàm để render giỏ hàng vào Order-placed-delivery và tính tổng tiền
     function renderOrderDetails() {
         const orderDetailsDiv = document.querySelector(".Order-placed-delivery");
+        const totalAmountElement = document.getElementById("total-items");  // Phần tử hiển thị tổng tiền
+
         orderDetailsDiv.innerHTML = ""; // Xóa nội dung cũ trước khi render
+        let totalPrice = 0; // Biến để lưu tổng tiền hàng
 
         if (cartt.length === 0) {
             orderDetailsDiv.innerHTML = "<p>Giỏ hàng của bạn hiện tại trống.</p>";
         } else {
             cartt.forEach(item => {
+                // Tính giá trị cho mỗi món: giá món * số lượng
+                const itemTotalPrice = item.price * item.quantity;
+                totalPrice += itemTotalPrice;  // Cộng dồn vào tổng tiền
+
                 const itemDiv = document.createElement("div");
                 itemDiv.classList.add("order-item");
                 itemDiv.innerHTML = `
@@ -369,19 +371,30 @@
                         <p class="order-item-name">${item.name}</p>
                         <p class="order-item-price">${item.price} đ</p>
                         <p class="order-item-quantity">Số lượng: ${item.quantity}</p>
+                        <p class="order-item-total">Thành tiền: ${itemTotalPrice} đ</p>
                     </div>
                 `;
                 orderDetailsDiv.appendChild(itemDiv);
             });
         }
+
+        // Cập nhật tổng tiền vào phần hiển thị
+        totalAmountElement.textContent = totalPrice.toLocaleString();
+
+        // Tính thành tiền sau khi cộng phí vận chuyển và giảm giá
+        const shippingFee = 29000; // Phí vận chuyển
+        const discount = 7000; // Giảm giá
+
+        // Tính thành tiền (final total)
+        const finalTotal = totalPrice + shippingFee - discount;
+
+        // Hiển thị thành tiền vào phần tử final-total
+        document.getElementById("final-total").innerText = finalTotal.toLocaleString() + " đ";
     }
 
-    // Gọi hàm renderOrderDetails để hiển thị giỏ hàng vào Order-placed-delivery
+    // Gọi hàm renderOrderDetails để hiển thị giỏ hàng vào Order-placed-delivery và tính tổng tiền
     renderOrderDetails();
 });
-
-
-
 
         </script>
         <!-- js link -->

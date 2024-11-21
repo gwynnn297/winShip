@@ -274,62 +274,8 @@ document.querySelector('#close').onclick = () => {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Lấy giỏ hàng từ localStorage
-    let cartt = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Hàm tính tổng tiền của các món ăn trong giỏ hàng
-    function calculateTotal() {
-        let total = 0;
 
-        // Tính tổng tiền hàng (tính theo giá và số lượng của các món)
-        cartt.forEach(item => {
-            const itemPrice = parseInt(item.price.replace(/\D/g, '')); // Lấy giá trị số từ chuỗi (ví dụ: "25.000 đ" -> 25000)
-            total += itemPrice * item.quantity; // Tổng tiền của món ăn = giá * số lượng
-        });
-
-        // Hiển thị tổng tiền vào phần "Tổng tiền hàng"
-        const totalItemsElement = document.querySelector("#total-items");
-        if (totalItemsElement) {
-            totalItemsElement.textContent = total.toLocaleString('vi-VN'); // Hiển thị dưới dạng có dấu phân cách hàng nghìn
-        }
-
-        // Cập nhật phần "Tổng tiền" trong phần Order-placed-delivery
-        const totalMoneyElement = document.querySelector('.total_c');
-        if (totalMoneyElement) {
-            totalMoneyElement.textContent = `Thành tiền: ₫${total.toLocaleString('vi-VN')}`;
-        }
-    }
-
-    // Hàm để hiển thị các món ăn trong phần Order-placed-delivery
-    function renderOrderDetails() {
-        const orderPlacedDelivery = document.querySelector(".Order-placed-delivery");
-        orderPlacedDelivery.innerHTML = ""; // Xóa nội dung cũ trước khi thêm món mới
-
-        cartt.forEach(item => {
-            const div = document.createElement("div");
-            div.classList.add("order-item");
-
-            div.innerHTML = `
-                <div class="order-item-img">
-                    <img src="${item.img}" alt="${item.name}">
-                </div>
-                <div class="order-item-details">
-                    <span class="order-item-name">${item.name}</span>
-                    <span class="order-item-price">₫ ${item.price}</span>
-                    <h6 class="order-item-quantity">Số lượng: ${item.quantity}</h6>
-                </div>
-            `;
-            orderPlacedDelivery.appendChild(div);
-        });
-
-        // Tính tổng tiền sau khi hiển thị các món ăn
-        calculateTotal();
-    }
-
-    // Gọi hàm để hiển thị các món ăn ngay khi trang được load
-    renderOrderDetails();
-});
 
 
 
